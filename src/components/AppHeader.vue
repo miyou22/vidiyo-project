@@ -31,7 +31,7 @@ export default {};
 
 <style scoped>
 header {
-  width: 1680px;
+  width: 100%;
   height: 56px;
   background-color: #171717;
   display: flex;
@@ -40,6 +40,7 @@ header {
   position: fixed;
   right: 0;
   top: 0;
+  padding-left: 240px;
 }
 .login-header {
   display: flex;
