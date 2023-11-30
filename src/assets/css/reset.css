@@ -1,4 +1,4 @@
-:root{
+:root {
   --main-color1: #444444;
   --sub-color2: #171717;
   --sub-color3: #EDEDED;
@@ -8,11 +8,11 @@
   --text-color1: #B3B3B3;
   --text-color2: #7C7B84;
   --text-color3: #FFFFFF;
-  --size1: 36px; 
-  --size2: 28px; 
-  --size3: 24px; 
-  --size4: 16px; 
-  --size5: 12px; 
+  --size1: 36px;
+  --size2: 28px;
+  --size3: 24px;
+  --size4: 16px;
+  --size5: 12px;
 }
 
 
@@ -121,7 +121,6 @@ strong {
 
 img {
   vertical-align: top;
-  width: 100%;
 }
 
 /* table */
