@@ -19,8 +19,10 @@
       </div>
     </div>
     <div class="logout-header">
-      <button type="button" class="login"><a href="#">로그인</a></button>
-      <button type="button" class="join"><a href="#">회원가입</a></button>
+      <router-link to="/login"><button type="button" class="login">로그인</button></router-link>
+      <router-link to="/joinmembership"><button type="button" class="join">회원가입</button></router-link>
+      
+      
     </div>
   </header>
 </template>

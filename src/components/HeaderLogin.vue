@@ -1,60 +1,44 @@
 <template>
   <div class="container-fluid">
     <div class="header-header">
-      <img src="../assets/vidiyo logo 5.png" alt="" />
-      <div class="header-login">
-        <p>로그인</p>
+      <router-link to="/"><img src="../assets/image/vidiyo logo 5.png" alt="" /></router-link>
+      <div class="header-login"> 
+        <router-link to="/joinmembership"><p>회원가입</p></router-link>
       </div>
     </div>
-    <h1>회원가입</h1>
+    <h1>로그인</h1>
     <form>
-      <input type="text" class="login id" placeholder="이름" />
-      <br />
       <input
         type="text"
         class="login email"
         placeholder="이메일(example@gmail.com)"
+        v-model="idValue"
+        name="id"
+        
       />
       <br />
-      <input
-        type="password"
-        class="login pw"
-        placeholder="비밀번호(영어,숫자,특문 중 2개 이상 조합 10자리 이상)"
-      />
+      <input type="password" class="login pw" placeholder="비밀번호" v-model="pwValue" name="pw" />
       <br />
-      <div class="terms">
-        <label v-for="checkbox in checkbox" :key="checkbox">
-          <input class="checkbox" type="checkbox" />{{ checkbox.txt }} <br />
-        </label>
+      <div class="button">
+        <button 
+        class="join" 
+        type="submit"
+        :disabled="idValue && pwValue == 0"
+        >로그인</button>
       </div>
     </form>
-    <header-footer />
+    <header-footer class="header-footer" />
   </div>
 </template>
 
 <script>
-import HeaderFooter from "../components/HeaderFooter.vue";
+import HeaderFooter from "./HeaderFooter.vue";
 export default {
   components: { HeaderFooter },
   data() {
     return {
-      checkbox: [
-        {
-          txt: "전체약관에 동의합니다",
-        },
-        {
-          txt: "만 14세 이상입니다.",
-        },
-        {
-          txt: "(필수) vidiyo서비스 이용약관",
-        },
-        {
-          txt: "(필수) 개인 정보 수집 및 이용 동의",
-        },
-        {
-          txt: "(필수) 신작 알림 이벤트 정보 수신",
-        },
-      ],
+      idValue: "",
+      pwValue: "",
     };
   },
 };
@@ -68,12 +52,12 @@ export default {
   border-style: none;
 }
 .container-fluid {
-  outline: 1px solid red;
+  outline: 1px solid green;
   width: 100%;
-  height: 1080px;
-  background: #444 url(../assets/image\ 25.png) center/cover;
+  height: 100vh;
+  background: #444 url(../assets/image/image\ 25.png) center/cover;
   background-blend-mode: overlay;
-  position: relative; 
+  position: relative;
 }
 .container-fluid img {
   margin: 20px 0 0 28px;
@@ -86,7 +70,7 @@ export default {
 .header-header {
 }
 .header-login {
-  width: 60px;
+  width: 80px;
   height: 24px;
   text-align: center;
   color: #fff;
@@ -105,6 +89,10 @@ form {
   border-radius: 10px;
   border: 2px solid #da0037;
 }
+input::placeholder {
+  /* outline: 1px solid red; */
+  padding-left: 12px;
+}
 
 .terms {
   width: 400px;
@@ -114,7 +102,28 @@ form {
   color: #b5b5b5;
   display: block;
 }
+.terms input[type="checkbox"] {
+  accent-color: color rgba;
+}
 .checkbox {
   margin-right: 20px;
 }
+.join:disabled {
+  background-color: #5a5a5a;
+  color: #898989;
+}
+.join {
+  outline: 1px solid reds;
+  margin-top: 36px;
+  width: 400px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #da0037;
+  color: #fff;
+}
+.header-footer {
+  position: absolute;
+  bottom: 10%;
+}
+
 </style>
