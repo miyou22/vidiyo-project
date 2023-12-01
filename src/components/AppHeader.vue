@@ -6,6 +6,7 @@
         class="search-all"
         placeholder="콘텐츠, 태그, 인물, 리스트 검색 "
         @input="searchGroup"
+        v-if="searchShow"
       />
       <!--items데이터 전달-->
       <!-- <product-list :items="items" /> -->
@@ -19,14 +20,25 @@
       </div>
     </div>
     <div class="logout-header">
-      <button type="button" class="login"><a href="#">로그인</a></button>
+      <button type="button" class="login" @click="logIn"><a href="#">로그인</a></button>
       <button type="button" class="join"><a href="#">회원가입</a></button>
     </div>
   </header>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      searchShow: false,
+    };
+  },
+  methods: {
+    logIn() {
+      this.searchShow = true;
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -40,7 +52,8 @@ header {
   position: fixed;
   right: 0;
   top: 0;
-  padding-left: 240px;
+  font-family: "Roboto";
+  padding-left:240px ;
 }
 .login-header {
   display: flex;
@@ -57,7 +70,7 @@ header {
   font-weight: 400;
   line-height: normal;
   letter-spacing: 0.36px;
-  font-family: Roboto;
+
 }
 
 .join {
@@ -87,5 +100,11 @@ header {
 input[type="text"] {
   width: 340px;
   height: 36px;
+  background: url(../assets/image/icon.png) no-repeat 10px center #222326;
+  text-indent: 40px;
+  margin-left: 40px;
+  border-radius: 7px;
+  border: none;
+  color: white;
 }
 </style>
