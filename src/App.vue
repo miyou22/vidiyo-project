@@ -3,6 +3,7 @@
     <app-header />
     <SideBar />
     <router-view />
+    <search-main />
   </nav>
 </template>
 <script>
@@ -16,5 +17,4 @@ export default {
 <style>
 @import "./assets/css/font.css";
 @import "./assets/css/reset.css";
-
 </style>
