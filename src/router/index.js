@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SearchMain from '../views/SearchMain.vue'
+import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
 import HeaderLogin from '../components/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
 
@@ -10,6 +11,11 @@ const routes = [
     component: SearchMain
   },
   
+  {
+    path: '/joinmembership',
+    name: 'joinmembership',
+    component: HeaderJoinMembership
+  },
   {
     path: '/login',
     name: 'login',
