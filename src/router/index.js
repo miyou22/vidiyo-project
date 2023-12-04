@@ -3,6 +3,8 @@ import SearchMain from '../views/SearchMain.vue'
 import HeaderJoinMembership from '../views/HeaderJoinMembership.vue'
 import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
+import SearchMovie from '../views/SearchMovie.vue'
+import DetailPage from '../views/DetailPage.vue'
 
 const routes = [
   {
