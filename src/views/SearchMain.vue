@@ -78,15 +78,7 @@ export default {
 
 
 
-main {
-  width: 100%;
-  background-color: var(--main-color1);
-  height: 100%;
-  margin-top: 56px;
-  user-select: none;
-  padding: 68px 0;
-  padding-left:240px;
-}
+
 .swiper {
   width: 100%;
   height: 100%;

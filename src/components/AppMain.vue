@@ -1,5 +1,6 @@
 <template>
   <div id="main">
+    <router-view />
   </div>
 </template>
 
@@ -12,14 +13,13 @@ export default {
 <style>
 #main{
   fiex: 1;
-
   background-color: var(--main-color1);
-
+  padding: 54px 40px 0;
 }
-.container-fluid{
+/* .container-fluid{
   max-width: 1600px;
   margin: 54px 0 0 40px;
-}
+} */
 
 
 </style>
