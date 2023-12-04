@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SearchMain from '../views/SearchMain.vue'
-import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
-import HeaderLogin from '../components/HeaderLogin.vue'
+import HeaderJoinMembership from '../views/HeaderJoinMembership.vue'
+import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
+
 
 const routes = [
   {
@@ -26,6 +27,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
 ]
 
 const router = createRouter({
