@@ -1,11 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SearchMain from '../views/SearchMain.vue'
-import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
-import HeaderLogin from '../components/HeaderLogin.vue'
+import HeaderJoinMembership from '../views/HeaderJoinMembership.vue'
+import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
-
-import SearchMovie from '../components/SearchMovie.vue'
-
+import SearchMovie from '../views/SearchMovie.vue'
 const routes = [
   {
     path: '/search',
