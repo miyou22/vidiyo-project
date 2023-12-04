@@ -5,6 +5,7 @@
       <SideBar />
       <search-main />
       <AppMain />
+      <app-footer />
     </div>
   </div> 
 </template>
@@ -13,9 +14,10 @@
 import AppHeader from "./components/AppHeader.vue";
 import SideBar from "./components/SideBar.vue"
 import AppMain from "./components/AppMain.vue";
+import AppFooter from './components/AppFooter.vue';
 
 export default {
-  components: { AppHeader, SideBar, AppMain },
+  components: { AppHeader, SideBar, AppMain, AppFooter },
 };
 </script>
 <style>

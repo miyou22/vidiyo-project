@@ -3,42 +3,43 @@
     <div class="search-list">
       <h1>최근 검색한 항목</h1>
 
-        <div class="row">
-          <div class="col">
-            <div class="img">
-              <img src="../assets/image/searchlist.png" />
-            </div>
-            <div class="txt">
-              <h2>악마를 보았다</h2>
-              <p>영화 • 김지훈 • 2010</p>
-            </div>
+      <div class="row">
+        <div class="col c1">
+          <div class="img">
+            <img src="../assets/image/searchlist.png" />
           </div>
-          <div class="col c2">
-            <div class="img">
-              <img src="../assets/image/searchlist.png" />
-            </div>
-            <div class="txt">
-              <h2>악마를 보았다</h2>
-              <p>영화 • 김지훈 • 2010</p>
-            </div>
-          </div>
-          <div class="col">
-            <div class="img">
-              <img src="../assets/image/searchlist.png" />
-            </div>
-            <div class="txt">
-              <h2>악마를 보았다</h2>
-              <p>영화 • 김지훈 • 2010</p>
-            </div>
+          <div class="txt">
+            <h2>악마를 보았다</h2>
+            <p>영화 • 김지훈 • 2010</p>
           </div>
         </div>
-      
+        <div class="col c2">
+          <div class="img">
+            <img src="../assets/image/searchlist.png" />
+          </div>
+          <div class="txt">
+            <h2>악마를 보았다</h2>
+            <p>영화 • 김지훈 • 2010</p>
+          </div>
+        </div>
+        <div class="col c3">
+          <div class="img">
+            <img src="../assets/image/searchlist.png" />
+          </div>
+          <div class="txt">
+            <h2>악마를 보았다</h2>
+            <p>영화 • 김지훈 • 2010</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="categori">
       <h1>인기</h1>
       <swiper
         ref="{swiperRef}"
+        :slidesPerView="2"
+        :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
         :navigation="true"
@@ -46,15 +47,20 @@
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
-          '568': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            slidesPerGroup: 2,
-          },
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 35,
+            spaceBetween: 14,
             slidesPerGroup: 4,
+          },
+          '1200': {
+            slidesPerView: 5,
+            spaceBetween: 14,
+            slidesPerGroup: 5,
+          },
+          '1424': {
+            slidesPerView: 6,
+            spaceBetween: 14,
+            slidesPerGroup: 6,
           },
           '1680': {
             slidesPerView: 7,
@@ -64,7 +70,7 @@
         }"
         class="mySwiper"
       >
-        <swiper-slide>
+        <swiper-slide class="s1">
           <img src="../assets/image/categori1.png" />
         </swiper-slide>
         <swiper-slide>
@@ -113,6 +119,8 @@
       <h1>비디오 장르</h1>
       <swiper
         ref="{swiperRef}"
+        :slidesPerView="2"
+        :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
         :navigation="true"
@@ -120,19 +128,14 @@
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
-          '568': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            slidesPerGroup: 2,
-          },
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 14,
             slidesPerGroup: 4,
           },
-          '1680': {
+          '1200': {
             slidesPerView: 5,
-            spaceBetween: 12,
+            spaceBetween: 14,
             slidesPerGroup: 5,
           },
         }"
@@ -205,6 +208,8 @@
       <h1>비디오 태그</h1>
       <swiper
         ref="{swiperRef}"
+        :slidesPerView="2"
+        :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
         :navigation="true"
@@ -212,19 +217,14 @@
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
-          '568': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            slidesPerGroup: 2,
-          },
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 14,
             slidesPerGroup: 4,
           },
-          '1680': {
+          '1200': {
             slidesPerView: 5,
-            spaceBetween: 12,
+            spaceBetween: 14,
             slidesPerGroup: 5,
           },
         }"
@@ -297,6 +297,8 @@
       <h1>비디오 국가</h1>
       <swiper
         ref="{swiperRef}"
+        :slidesPerView="2"
+        :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
         :navigation="true"
@@ -304,19 +306,14 @@
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
-          '568': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            slidesPerGroup: 2,
-          },
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 14,
             slidesPerGroup: 4,
           },
-          '1680': {
+          '1200': {
             slidesPerView: 5,
-            spaceBetween: 12,
+            spaceBetween: 14,
             slidesPerGroup: 5,
           },
         }"
@@ -389,6 +386,8 @@
       <h1>오늘의 추천</h1>
       <swiper
         ref="{swiperRef}"
+        :slidesPerView="2"
+        :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
         :navigation="true"
@@ -396,19 +395,14 @@
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
-          '568': {
-            slidesPerView: 2,
-            spaceBetween: 24,
-            slidesPerGroup: 2,
-          },
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 32,
+            spaceBetween: 14,
             slidesPerGroup: 4,
           },
-          '1680': {
+          '1200': {
             slidesPerView: 5,
-            spaceBetween: 12,
+            spaceBetween: 14,
             slidesPerGroup: 5,
           },
         }"
@@ -490,8 +484,9 @@ import "swiper/css/navigation";
 
 import "../assets/css/root.css";
 
+
 // import required modules
-import { Navigation } from "swiper/modules";
+import { Navigation, } from "swiper/modules";
 
 export default {
   components: {
@@ -507,10 +502,6 @@ export default {
 </script>
 
 <style scoped>
-
-
-
-
 .swiper {
   width: 100%;
   height: 100%;
@@ -580,12 +571,24 @@ export default {
   margin-bottom: 62px;
 }
 
-.txt{
+.txt {
+  width: 100%;
   color: white;
-}
-.txt>h2{
-  font-size: 16px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 12px;
   font-family: Roboto;
-
 }
+.txt > h2 {
+  font-size: var(--size4);
+  margin-top: 12px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.txt > p {
+  font-size: var(--size5);
+}
+/* @media screen and (min-width: 0) and (max-width: 568px) {
+} */
 </style>
