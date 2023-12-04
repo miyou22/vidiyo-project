@@ -9,6 +9,9 @@
   opacity: 0;
   transition: all 0.15s;
 }
+
+
+
 .mySwiper:hover .swiper-button-next,.mySwiper:hover .swiper-button-prev{
   opacity: 0.8;
 }
