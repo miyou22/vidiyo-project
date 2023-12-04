@@ -4,6 +4,7 @@ import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
 import HeaderLogin from '../components/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
 
+
 const routes = [
   {
     path: '/',
@@ -26,6 +27,7 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+
 ]
 
 const router = createRouter({
