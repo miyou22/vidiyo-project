@@ -80,7 +80,7 @@
 </template>
 
 <script>
-import HeaderFooter from "./HeaderFooter.vue";
+import HeaderFooter from "../components/HeaderFooter.vue";
 export default {
   components: { HeaderFooter },
   // updated(){//변경이 되면 실행
@@ -117,7 +117,7 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
-
+  z-index: 9999;
 }
 .wrap img {
   margin: 20px 0 0 28px;

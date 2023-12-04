@@ -1,9 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import SearchMain from '../views/SearchMain.vue'
-import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
-import HeaderLogin from '../components/HeaderLogin.vue'
+import HeaderJoinMembership from '../views/HeaderJoinMembership.vue'
+import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
-import DetailPage from '../views/DetailPage.vue'
 
 const routes = [
   {
@@ -11,7 +10,7 @@ const routes = [
     name: 'search',
     component: SearchMain
   },
-  
+
   {
     path: '/joinmembership',
     name: 'joinmembership',
@@ -27,6 +26,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
+  {
+    path: '/searchmovie',
+    name: 'searchmovie',
+    component: SearchMovie
+  }
   {
     path: '/detail',
     name: 'detail',
