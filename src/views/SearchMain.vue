@@ -507,16 +507,10 @@ export default {
 </script>
 
 <style scoped>
-main {
-  width: 100%;
-  background-color: var(--main-color1);
-  height: 100%;
-  margin-top: 56px;
-  user-select: none;
-  padding: 56px 0px;
-  padding-left: 240px;
-  box-sizing: border-box;
-}
+
+
+
+
 .swiper {
   width: 100%;
   height: 100%;

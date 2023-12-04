@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="wrap">
     <div class="header-header">
       <router-link to="/"><img src="../assets/image/vidiyo logo 5.png" alt="" /></router-link>
       <div class="header-login"> 
@@ -51,18 +51,20 @@ export default {
   margin: auto;
   border-style: none;
 }
-.container-fluid {
+.wrap{
   outline: 1px solid green;
   width: 100%;
   height: 100vh;
   background: #444 url(../assets/image/image\ 25.png) center/cover;
   background-blend-mode: overlay;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
-.container-fluid img {
+.wrap img {
   margin: 20px 0 0 28px;
 }
-.container-fluid h1 {
+.wrap h1 {
   text-align: center;
   color: #fff;
   margin: 110px 0 36px 0;
