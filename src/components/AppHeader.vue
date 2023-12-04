@@ -54,6 +54,7 @@ header {
   top: 0;
   font-family: "Roboto";
   padding-left: 15rem;
+  z-index: 1000;
 }
 .login-header {
   display: flex;

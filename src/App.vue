@@ -3,7 +3,6 @@
       <app-header />
       <SideBar />
       <router-view />
-      <search-main />
   </div> 
 </template>
 
