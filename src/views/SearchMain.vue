@@ -1,56 +1,487 @@
 <template>
   <main>
-    <swiper
-      ref="{swiperRef}"
-      :slidesPerView="7"
-      :centeredSlides="true"
-      :spaceBetween="10"
-      :navigation="true"
-      :loop="true"
-      :modules="modules"
-      :slidesOffsetBefore="10"
-      :autoHeight="true"
-      class="mySwiper"
-    >
-      <swiper-slide>
-        <img src="../assets/image/mm1.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm2.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm3.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm4.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm5.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm6.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm7.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm8.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm9.jpg" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../assets/image/mm10.jpg" />
-      </swiper-slide>
-    </swiper>
-    <App-Footer />
+    <div class="search-list">
+      <h1>최근 검색한 항목</h1>
+
+        <div class="row">
+          <div class="col">
+            <div class="img">
+              <img src="../assets/image/searchlist.png" />
+            </div>
+            <div class="txt">
+              <h2>악마를 보았다</h2>
+              <p>영화 • 김지훈 • 2010</p>
+            </div>
+          </div>
+          <div class="col c2">
+            <div class="img">
+              <img src="../assets/image/searchlist.png" />
+            </div>
+            <div class="txt">
+              <h2>악마를 보았다</h2>
+              <p>영화 • 김지훈 • 2010</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="img">
+              <img src="../assets/image/searchlist.png" />
+            </div>
+            <div class="txt">
+              <h2>악마를 보았다</h2>
+              <p>영화 • 김지훈 • 2010</p>
+            </div>
+          </div>
+        </div>
+      
+    </div>
+
+    <div class="categori">
+      <h1>인기</h1>
+      <swiper
+        ref="{swiperRef}"
+        :centeredSlides="false"
+        :spaceBetween="14"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        :breakpoints="{
+          '568': {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            slidesPerGroup: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 35,
+            slidesPerGroup: 4,
+          },
+          '1680': {
+            slidesPerView: 7,
+            spaceBetween: 14,
+            slidesPerGroup: 7,
+          },
+        }"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img src="../assets/image/categori1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular4.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular7.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/popular1.jpg" />
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="categori tw">
+      <h1>비디오 장르</h1>
+      <swiper
+        ref="{swiperRef}"
+        :centeredSlides="false"
+        :spaceBetween="14"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        :breakpoints="{
+          '568': {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            slidesPerGroup: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 32,
+            slidesPerGroup: 4,
+          },
+          '1680': {
+            slidesPerView: 5,
+            spaceBetween: 12,
+            slidesPerGroup: 5,
+          },
+        }"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa.png" />
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="categori tw">
+      <h1>비디오 태그</h1>
+      <swiper
+        ref="{swiperRef}"
+        :centeredSlides="false"
+        :spaceBetween="14"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        :breakpoints="{
+          '568': {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            slidesPerGroup: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 32,
+            slidesPerGroup: 4,
+          },
+          '1680': {
+            slidesPerView: 5,
+            spaceBetween: 12,
+            slidesPerGroup: 5,
+          },
+        }"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa1.png" />
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="categori tw">
+      <h1>비디오 국가</h1>
+      <swiper
+        ref="{swiperRef}"
+        :centeredSlides="false"
+        :spaceBetween="14"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        :breakpoints="{
+          '568': {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            slidesPerGroup: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 32,
+            slidesPerGroup: 4,
+          },
+          '1680': {
+            slidesPerView: 5,
+            spaceBetween: 12,
+            slidesPerGroup: 5,
+          },
+        }"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="categori tw">
+      <h1>오늘의 추천</h1>
+      <swiper
+        ref="{swiperRef}"
+        :centeredSlides="false"
+        :spaceBetween="14"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        :breakpoints="{
+          '568': {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            slidesPerGroup: 2,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 32,
+            slidesPerGroup: 4,
+          },
+          '1680': {
+            slidesPerView: 5,
+            spaceBetween: 12,
+            slidesPerGroup: 5,
+          },
+        }"
+        class="mySwiper"
+      >
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="../assets/image/aa2.png" />
+        </swiper-slide>
+      </swiper>
+    </div>
   </main>
 </template>
 
 <script>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-import AppFooter from "../components/AppFooter.vue";
 
 // Import Swiper styles
 import "swiper/css";
@@ -66,7 +497,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    AppFooter,
   },
   setup() {
     return {
@@ -80,15 +510,7 @@ export default {
 
 
 
-main {
-  width: 100%;
-  background-color: var(--main-color1);
-  height: 100%;
-  margin-top: 56px;
-  user-select: none;
-  padding: 68px 0;
-  padding-left:240px;
-}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -103,35 +525,67 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 4px;
 }
 
 .swiper-slide img {
   display: block;
   width: 100%;
+  height: 100%;
+  border-radius: 4px;
 }
 
 .swiper {
   width: 100%;
-  margin: 20px auto;
-}
-.append-buttons {
-  text-align: center;
-  margin-top: 20px;
+  margin-top: 18px;
 }
 
-.append-buttons button {
-  display: inline-block;
-  cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin: 0 10px;
-  font-size: 13px;
+.categori > h1 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  font-family: Inter;
 }
-.swiper-button-prev::after {
-  width: 10px;
-  height: 10px;
+.categori {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+.tw {
+  margin-top: 40px;
+}
+
+.col {
+  background-color: #363636;
+  padding: 10px 8px;
+  box-sizing: border-box;
+  border-radius: 5px;
+  display: flex;
+  height: 86px;
+  overflow: hidden;
+  margin: 0 10px;
+}
+
+.c2 {
+  margin: 0 12px;
+}
+.search-list > h1 {
+  font-size: 28px;
+  color: white;
+  font-weight: bold;
+  font-family: Inter;
+  margin-bottom: 18px;
+}
+.search-list {
+  padding: 0 40px;
+  margin-bottom: 62px;
+}
+
+.txt{
+  color: white;
+}
+.txt>h2{
+  font-size: 16px;
+  font-family: Roboto;
+
 }
 </style>
