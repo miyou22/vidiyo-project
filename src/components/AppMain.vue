@@ -14,7 +14,7 @@ export default {
 #main{
   fiex: 1;
   background-color: var(--main-color1);
-  padding: 54px 40px 0;
+  padding: 54px 0 0;
 }
 /* .container-fluid{
   max-width: 1600px;
