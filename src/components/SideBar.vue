@@ -30,7 +30,7 @@ export default {
     left: 0;
     top: 0;
     box-sizing: border-box;
-    z-index: 501;
+    /* z-index: 501; */
   }
   .icon{
     height: 56px;
