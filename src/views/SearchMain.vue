@@ -77,6 +77,9 @@ export default {
 </script>
 
 <style scoped>
+
+
+
 main {
   width: 100%;
   background-color: var(--main-color1);
@@ -84,7 +87,7 @@ main {
   margin-top: 56px;
   user-select: none;
   padding: 68px 0;
-  padding-left: 240px;
+  padding-left:240px;
 }
 .swiper {
   width: 100%;

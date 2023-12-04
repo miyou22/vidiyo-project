@@ -5,10 +5,10 @@
     </div>
     <div class="menu">
       <ul class="gnb">
-        <li><router-link to=""><img src="../assets/image/home.png" alt="">홈</router-link></li>
-        <li><router-link to=""><img src="../assets/image/star_border.png" alt="">평가</router-link></li>
-        <li><router-link to=""><img src="../assets/image/search.png" alt="">검색</router-link></li>
-        <li><router-link to=""><img src="../assets/image/box.png" alt="">보관함</router-link></li>
+        <li><a href="#"><img src="../assets/image/home.png" alt="">홈</a></li>
+        <li><a href="#"><img src="../assets/image/star_border.png" alt="">평가</a></li>
+        <li><a href="#"><img src="../assets/image/search.png" alt="">검색</a></li>
+        <li><a href="#"><img src="../assets/image/box.png" alt="">보관함</a></li>
       </ul>
     </div>
   </div>
@@ -20,15 +20,17 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
   #warp{
     background-color: var(--sub-color2);
     color: var(--text-color3);
     width: 240px;
-    height: 1000px;
+    height: 100%;
     position: fixed;
     left: 0;
     top: 0;
+    box-sizing: border-box;
+    /* z-index: 501; */
   }
   .icon{
     height: 56px;

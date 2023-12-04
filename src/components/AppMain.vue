@@ -1,0 +1,25 @@
+<template>
+  <div id="main">
+    <router-view />
+  </div>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+#main{
+  fiex: 1;
+  background-color: var(--main-color1);
+  padding: 54px 40px 0;
+}
+/* .container-fluid{
+  max-width: 1600px;
+  margin: 54px 0 0 40px;
+} */
+
+
+</style>
