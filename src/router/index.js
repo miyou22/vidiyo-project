@@ -3,15 +3,14 @@ import SearchMain from '../views/SearchMain.vue'
 import HeaderJoinMembership from '../views/HeaderJoinMembership.vue'
 import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
-
-
+import SearchMovie from '../views/SearchMovie.vue'
 const routes = [
   {
     path: '/search',
     name: 'search',
     component: SearchMain
   },
-  
+
   {
     path: '/joinmembership',
     name: 'joinmembership',
@@ -27,7 +26,11 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-
+  {
+    path: '/searchmovie',
+    name: 'searchmovie',
+    component: SearchMovie
+  }
 ]
 
 const router = createRouter({
