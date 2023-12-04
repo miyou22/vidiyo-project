@@ -9,9 +9,7 @@
   <a href="#" class="imageLink">
     <div class="movieTitle">
       <div class="movieImage">
-        <div class="image">
-          <img src="../assets/image/image18.png" alt="">
-        </div>
+        <div class="image"></div>
         <!-- <div class="video">
           <video src="https://youtu.be/i50tT8n9fp8?si=WXtP5Tnn6felcpv4"></video>
         </div> -->
@@ -24,6 +22,7 @@
     </div>
   </a>
 
+  <hr type="regular">
 
   <section class="contants">
     <div class="gnb">
@@ -37,20 +36,22 @@
     :modules="modules"
     :slidesOffsetBefore ="0"
     :autoHeight="true"
+    
     class="mySwiper"
+    
   >
-        <swiper-slide v-for="item in items" :key="item">
-          <div class="allFor">
-            <div class="textGroup">
-              <span>{{ item.span }}</span>
-              <h2>{{ item.h2 }}</h2>
-              <p>{{ item.p }}</p> 
-            </div>
-            <figure>
-              <img :src="item.img" />
-            </figure>
+      <swiper-slide v-for="item in items" :key="item">
+        <div class="allFor">
+          <div class="textGroup">
+            <span>{{ item.span }}</span>
+            <h2>{{ item.h2 }}</h2>
+            <p>{{ item.p }}</p> 
           </div>
-        </swiper-slide>
+          <figure>
+            <img :src="item.img" />
+          </figure>
+        </div>
+      </swiper-slide>
     
         <!-- <swiper-slide>
           <div class="allFor">
@@ -121,7 +122,96 @@
     </swiper>
   </div>
   </section>
+  <hr type="regular">
 
+  
+  <section class="tagContents">
+    <div class="tagGnb">
+      <div class="onlyTxt">
+        <h2>직장인에게 방학따위 없엉 힝</h2>
+        <a href="#">더보기</a>
+      </div>
+      <swiper
+    ref="{swiperRef}"
+    :slidesPerView="8"
+    :centeredSlides="false"
+    :navigation="true"
+    :loop="true"
+    :modules="modules"
+    :autoHeight="true"
+    
+    
+    class="mySwiper"
+    
+  >
+      <swiper-slide v-for="image in category" :key="image" class="about">
+        <div class="onlyImage">
+            <img :src="image.img" />
+        </div>
+      </swiper-slide>
+      </swiper>
+    </div>
+  </section> 
+
+  <section class="tagContents">
+    <div class="tagGnb">
+      <div class="onlyTxt">
+        <h2>새로 올라온 콘텐츠</h2>
+        <a href="#">더보기</a>
+      </div>
+      <swiper
+    ref="{swiperRef}"
+    :slidesPerView="8"
+    :centeredSlides="false"
+    :navigation="true"
+    :loop="true"
+    :modules="modules"
+    :autoHeight="true"
+    
+    
+    class="mySwiper"
+    
+  >
+      <swiper-slide v-for="image in category" :key="image" class="about">
+        <div class="onlyImage">
+            <img :src="image.img" />
+        </div>
+      </swiper-slide>
+      </swiper>
+    </div>
+  </section> 
+
+  <section class="personContents">
+    <div class="perGnb">
+      <div class="onlyTxt">
+        <h2>아티스트</h2>
+      </div>
+      <swiper
+    ref="{swiperRef}"
+    :slidesPerView="8"
+    :centeredSlides="false"
+    :navigation="true"
+    :loop="true"
+    :modules="modules"
+    :spaceBetween="10"
+    class="mySwiper"
+  >
+      <swiper-slide v-for="personImg in person" :key="personImg" class="about">
+        <div class="personImage">
+            <div class="personImg">
+             <img :src="personImg.img" />
+            </div>
+            <h4>{{ personImg.name }}</h4>
+            <p>{{ personImg.movie }}</p>
+        </div>
+      </swiper-slide>
+      </swiper>
+    </div>
+  </section> 
+
+
+
+ 
 
 </div>
 </template>
@@ -180,7 +270,91 @@ export default {
           p : '영화 평론가들이 뽑은 21세기 가장 위대한 명작', 
           img : require('../assets/image/figure3.png')
         },
-      ]
+      ],
+      category: [
+        {
+          img: require('../assets/image/Rectangle49.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle90.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle511.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle512.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle513.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle514.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle515.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle516.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle517.png'),
+        },
+        {
+          img: require('../assets/image/Rectangle518.png'),
+        },
+      ],
+      person: [
+        {
+          img: require('../assets/image/person1.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+        {
+          img: require('../assets/image/person2.jpg'),
+          name: '이병현',
+          movie: '미스터 선샤인',
+        },
+        {
+          img: require('../assets/image/person3.jpg'),
+          name: '이와이 슌지',
+          movie: '러브레터',
+        },
+        {
+          img: require('../assets/image/person4.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+        {
+          img: require('../assets/image/person5.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+        {
+          img: require('../assets/image/person6.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+        {
+          img: require('../assets/image/person7.jpg'),
+          name: '신카이 마코토',
+          movie: '시간을 달리는 소녀',
+        },
+        {
+          img: require('../assets/image/person8.jpg'),
+          name: '한효주',
+          movie: '시간을 달리는 소녀',
+        },
+        {
+          img: require('../assets/image/person9.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+        {
+          img: require('../assets/image/person10.jpg'),
+          name: '한효주',
+          movie: '광해 왕이된 남자',
+        },
+      ],
     }
   }
 };
@@ -190,6 +364,7 @@ export default {
   #warp{
     width: 100%;
     height: 100%;
+    margin: 0 auto;
   }
   h2{
     color: var(--text-color3);
@@ -206,9 +381,22 @@ export default {
     position: relative;
     width: calc(100% + 80px);
     margin-left: -40px;
+    position: relative;
+    aspect-ratio: 3.6 / 1.15;
   }
-  .image img{
+  .movieImage{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    aspect-ratio: 16 / 5;
+    width: 100%;
   }
+  .image{
+    background: url(../assets/image/image18.png) center center/cover;
+    width: 100%;
+    height: 100%;
+  }
+
   .movieText{
     display: flex;
     position: absolute;
@@ -229,27 +417,21 @@ export default {
   .bgi{
     background: url(../assets/image/fontImage.png) left bottom / contain no-repeat;
     z-index: 1;
-    width: 100%;
+    width: 70%;
     height: 160px;
   }
   .contants{
     width: 100%;
-    margin-top: 40px;
-  }
-  .contants{}
-  
+    margin: 40px 0;
+  }  
 .swiper {
   width: 100%;
   height: 100%;
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* Center slide text vertically */
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .swiper-slide img {
@@ -259,7 +441,6 @@ export default {
 .swiper {
   width: 100%;
   margin: 20px auto;
-
 }
 .append-buttons {
   text-align: center;
@@ -289,6 +470,7 @@ export default {
   color: var(--text-color3);
   margin-bottom: 5px;
 }
+
 .textGroup span{
   font-size: var(--size5);
   font-weight: bold;
@@ -303,5 +485,63 @@ export default {
   font-size: var(--size4);
   font-weight:lighter;
 }
+
+.tagContents{
+  margin: 32px 0;
+}
+.swiper-button-prev::after{
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.tagGnb h2{
+  font-size: 18px;
+  font-weight: bold;
+}
+.onlyTxt{
+  display: flex;
+  justify-content: space-between;
+}
+
+.onlyImage{
+  border-radius: 2%;
+  overflow: hidden;
+}
+.tagGnb > .swiper{
+  margin: 5px auto;
+}
+.person{
+  /* border-radius: 50%; */
+
+}
+
+.personImage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+.personImage > .personImg{
+  border-radius: 50%;
+  overflow: hidden;
+}
+.personImg > img{
+  width: 100%;
+}
+.personImage h4{
+  font-size: 18px;
+  padding: 4px 0;
+}
+.personImage p{
+  font-size: 14px;
+}
+.perGnb > .onlyTxt > h2{
+  font-size: 18px;
+  font-weight: bold;
+}
+@media (max-width: 1024px){}
+@media (max-width: 568px){}
 
 </style>
