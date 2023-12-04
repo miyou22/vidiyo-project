@@ -3,6 +3,7 @@ import SearchMain from '../views/SearchMain.vue'
 import HeaderJoinMembership from '../components/HeaderJoinMembership.vue'
 import HeaderLogin from '../components/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
+import DetailPage from '../views/DetailPage.vue'
 
 const routes = [
   {
@@ -25,6 +26,11 @@ const routes = [
     path: '/home',
     name: 'home',
     component: HomeView
+  },
+  {
+    path: '/detail',
+    name: 'detail',
+    component: DetailPage
   },
 ]
 
