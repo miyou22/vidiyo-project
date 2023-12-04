@@ -6,7 +6,7 @@
         <router-link to="/login"><p>로그인</p></router-link>
       </div>
     </div>
-    <h1>회원가입</h1>
+    <h1>회원가입</h1> 
     <form>
       <input
         v-model="idValue"
