@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import HeaderFooter from "./HeaderFooter.vue";
+import HeaderFooter from "../components/HeaderFooter.vue";
 export default {
   components: { HeaderFooter },
   data() {
@@ -60,6 +60,8 @@ export default {
   position: fixed;
   left: 0;
   top: 0;
+  z-index: 9999;
+
 }
 .wrap img {
   margin: 20px 0 0 28px;
