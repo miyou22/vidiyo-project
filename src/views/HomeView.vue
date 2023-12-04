@@ -174,6 +174,12 @@ export default {
           p : '영화 평론가들이 뽑은 21세기 가장 위대한 명작', 
           img : require('../assets/image/figure3.png')
         },
+        {
+          span : '추천리스트',
+          h2 : '죽기전에 봐야 할 명작',
+          p : '영화 평론가들이 뽑은 21세기 가장 위대한 명작', 
+          img : require('../assets/image/figure3.png')
+        },
       ]
     }
   }
@@ -252,6 +258,8 @@ export default {
 
 .swiper {
   width: 100%;
+  margin: 20px auto;
+
 }
 .append-buttons {
   text-align: center;
