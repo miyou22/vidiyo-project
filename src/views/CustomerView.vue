@@ -1,5 +1,6 @@
 <template>
   <div class="container-fluid">
+    <customer-header />
     <div class="box_a">
       <div class="gnb">
         <h1>어떤 도움이 필요하세요?</h1>
@@ -47,8 +48,12 @@
 </template>
 
 <script>
+import CustomerHeader from "../components/CustomerHeader.vue"
 export default {
   name: "HelloWorld",
+  components:{
+    CustomerHeader
+  },
   props: {
     msg: String,
   },
