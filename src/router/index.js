@@ -7,6 +7,9 @@ import SearchMovie from '../views/SearchMovie.vue'
 import DetailPage from '../views/DetailPage.vue'
 import EvalView from '../views/EvalView.vue'
 import StorageView from '../views/StorageView.vue'
+import AppProfile from '../views/AppProfile.vue'
+import ActorDetail from '../views/ActorDetail.vue'
+import CustomerView from '../views/CustomerView.vue'
 
 const routes = [
   {
@@ -49,6 +52,21 @@ const routes = [
     path: '/storage',
     name: 'storage',
     component: StorageView
+  },
+  {
+    path: '/profile',
+    name: 'profile',
+    component: AppProfile
+  },
+  {
+    path: '/actor',
+    name: 'actor',
+    component: ActorDetail
+  },
+  {
+    path: '/customer',
+    name: 'customer',
+    component: CustomerView
   },
 ]
 
