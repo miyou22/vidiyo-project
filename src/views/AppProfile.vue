@@ -7,10 +7,11 @@
     <button type="button" class="profilebtn">프로필 편집</button>
     <h2>설정</h2>
     <div class="profile-one">
-      <p>이용권</p>
-      <span>상세정보</span>
-      <span> 이용권없음</span>
-      <span>이용권 구매하러 가기</span>
+      <p>계정</p>
+      <span>이메일</span>
+      <span> example@gmail.com</span>
+      <span>이메일 변경</span>
+      <p>비밀번호 변경</p>
     </div>
   </div>
 </template>
@@ -20,13 +21,17 @@ export default {};
 </script>
 
 <style scoped>
+*{
+  color:#fff;
+}
 .profile {
   margin-left: 30%;
+  
 }
 .profile h1 {
-  color: #fff;
   font-size: var(--size1);
   margin-bottom: 20px;
+  font-weight: bold;
 }
 .profileImage {
   margin-bottom: 20px;
@@ -36,14 +41,28 @@ export default {};
   height: 40px;
   margin-bottom: 20px;
   background-color: #565656;
-  color: #fff;
   border: 0px;
   font-weight: bold;
   font-size: var(--size6);
+  border-radius: 5px;
 }
 .profile-one{
 border: 1px solid var(--button-color5);
 width: 780px;
 height: 130px;
+border-radius: 5px;
+
+}
+h2{
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.profile-one{
+  padding: 12px 20px 26px 12px;
+}
+.profile-one p{
+  font-size: var(--size6);
+  margin-bottom: 8px;
+
 }
 </style>
