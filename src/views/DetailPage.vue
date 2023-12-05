@@ -1,22 +1,26 @@
 <template>
-  <main>
     <div class="wrap">
-    <div class="row">
-      <div class="col-lg-8">
+    <div class="row r1 g-0">
+      <div class="film col-lg-7">
         <h1>이프온리</h1>
-        <p>2004년 • 1시간 35분 • 코미디 • 죽음</p>
-        <p>눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
-        <button type="button">▶ 무료로 감상하기</button>
+        <p class="inform">
+          <b>15</b> • 2004년 • 1시간 35분 • 코미디 • 죽음
+        </p>
+        <p class="inform">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
+        <div class="movie">
+          <button type="button">▶ 무료로 감상하기</button>
+        </div>
+        <hr>
         <h5>
           <img src="../assets/image/ticket.png" alt="" width="20px" height="20px">왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상 가능합니다.
         </h5>
       </div>
-      <div class="col-lg-4">
-        <img src="../assets/image/ifonly.jpg" alt="">
+      <div class="pic col-lg-5">
+        <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%">
       </div>
     </div>
-    <div class="row">
-      <h3>콘텐츠 정보</h3>
+    <div class="row r2">
+      <h3>&nbsp;&nbsp;콘텐츠 정보&nbsp;&nbsp;</h3>
       <div class="col-lg-6">
         <h2>감독/출연</h2>
         <div class="row row-cols-2">
@@ -78,35 +82,82 @@
         </div>
         </div>
       </div>
-      <div class="col-lg-3"><a href="">더보기</a></div>
-      <div class="col-lg">
-        <h2>평균평점</h2>
+      <router-link to="/actor"><div class="col-lg-2"><a href="">더보기</a></div></router-link>
+      <div class="col-lg-4 col-sm-mt-4">
+        <div class="avg float-lg-end">
+        <h2>평균 평점</h2>
+        <form>
+          <div class="rating mb-3">
+            <div id="starContainer" @click="handleStarClick">
+              <span v-for="star in stars" :key="star" :class="{'star':true, 'filled':star <=rating}" :data-value="star">&#9733;</span>
+              <span id="ratingText">{{rating}}/5</span>
+            </div>
+            <input type="hidden" name="rating" id="rating" v-model="rating">
+          </div>
+        </form>
+      </div>
       </div>
     </div>
     </div>
-  </main>
 </template>
 
 <script>
 export default {
-
+  data(){
+    return{
+      rating:0,
+      stars:[1,2,3,4,5],
+    };
+  },
+  methods:{
+    handleStarClick(event){
+      if(event.target.dataset.value){
+        this.rating = parseInt(event.target.dataset.value);
+      }
+    }
+  } 
 }
+
+ 
+
+
 </script>
 
 <style scoped>
-  main{
+  
+  .wrap{
     color: #fff;
+    margin: -56px -40px 0;
+    user-select: none;
+  }
+  .r1{
+    background: linear-gradient(to right, #444444, #000000);
+  }
+  .film{
+    padding-top: 78px; 
+    padding-left: 52px;
+    box-sizing: border-box;
   }
 
   h1{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-weight: bold;
   }
-  p{
-    font-size: 16px;
+  .pic{
+    margin-top: 0;
+    padding: 0;
+  }
+  .inform{
+    font-size: 1rem;
     color: #b3b3b3;
-    margin: 20px 0;
+    margin: 1.25rem 0;
     max-width: 500px;
+  }
+  .inform>b{
+    color: #fff;
+    font-size: 1rem;
+    background-color: #b3b3b3;
+    padding: 0 0.25rem;
   }
   button{
     background-color: #DA0037;
@@ -114,33 +165,42 @@ export default {
     width: 154px;
     height: 40px;
     font-size: 16px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    border-radius: 7px;
   }
   button:hover{
     background-color: #d10035;
   }
   h5{
-    font-size: 16px;
+    margin: 1.25rem 0 1.25rem 0;
+    font-size: 1rem;
     font-weight: lighter;
   }
   h5>img{
-    margin-right: 4px;
+    margin-right: 0.25rem;
   }
   h3{
     text-align: center;
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
-    margin: 40px 0 52px 0; 
+    margin: 2.5rem 0 52px 0;
+    text-decoration: underline;
+    text-underline-offset: 0.8rem; 
   }
   h2{
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 24px;
   }
+  .r2{
+    padding-top: 0.25rem;
+    margin-left: 52px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+  }
   .col{
     display: flex;
-    margin: 8px 0;
+    padding-top: 0.5rem;
+    box-sizing: border-box;
   }
   .col>img{
     width: 60px;
@@ -151,9 +211,10 @@ export default {
   b{
     font-weight: 500;
     font-size: 20px;
+    font-weight: bold;
   }
   h4{
-    font-size: 16px;
+    font-size: 1rem;
     color: #b3b3b3;
   }
   a{
@@ -161,5 +222,35 @@ export default {
   }
   a:hover{
     color: #fff
+  }
+  .avg{
+    margin-right: 52px;
+  }
+ 
+  #starContainer{
+    background-color: #363636;
+    width: 320px;
+    height: 80px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .star{
+    font-size: 1.75rem;
+    color: #ededed;
+    transition: color 0.2s;
+    margin: 1rem 0.25rem;
+  }
+  .star:hover{
+    color: #faf2ac;
+  }
+  .star.filled{
+    color: #FFE70F;
+  }
+  #ratingText{
+    letter-spacing: 0.3rem;
+    margin: 1.4rem 0 0 2rem;
+    font-size: 1.5rem;
   }
 </style>
