@@ -4,7 +4,7 @@
       <div class="film col-lg-7">
         <h1>이프온리</h1>
         <p class="inform">
-          <b>15</b> • 2004년 • 1시간 35분 • 코미디 • 죽음
+          <b>15</b> • 2004년 • 1시간 35분 • <a href="#" class="theme">코미디</a> • <a href="#" class="theme">죽음</a>
         </p>
         <p class="inform">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
         <div class="movie">
@@ -82,7 +82,7 @@
         </div>
         </div>
       </div>
-      <router-link to="/actor"><div class="col-lg-2"><a href="">더보기</a></div></router-link>
+      <div class="col-lg-2"><a href=""><router-link to="/actor">더보기</router-link></a></div>
       <div class="col-lg-4 col-sm-mt-4">
         <div class="avg float-lg-end">
         <h2>평균 평점</h2>
@@ -166,6 +166,9 @@ export default {
     height: 40px;
     font-size: 16px;
     border-radius: 7px;
+    border: 0;
+    outline: 0;
+    appearance: none;
   }
   button:hover{
     background-color: #d10035;
@@ -178,6 +181,13 @@ export default {
   h5>img{
     margin-right: 0.25rem;
   }
+  .theme{
+    color: #b3b3b3;
+  }
+  .theme:hover{
+    color: #b3b3b3;
+    text-decoration: underline;
+  }
   h3{
     text-align: center;
     font-size: 1.2rem;
@@ -187,19 +197,19 @@ export default {
     text-underline-offset: 0.8rem; 
   }
   h2{
+    margin-top: 1rem;
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
   }
   .r2{
-    padding-top: 0.25rem;
     margin-left: 52px;
     margin-bottom: 20px;
     box-sizing: border-box;
   }
   .col{
     display: flex;
-    padding-top: 0.5rem;
+    padding-top: 1.25rem;
     box-sizing: border-box;
   }
   .col>img{
@@ -211,7 +221,7 @@ export default {
   b{
     font-weight: 500;
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 500;
   }
   h4{
     font-size: 1rem;

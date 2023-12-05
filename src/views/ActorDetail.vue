@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="wrap">
     <h1>감독/출연</h1>
     <div class="act">
-      <div class="row row-cols-2">
+      <div>
         <div class="col">
           <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
           <div class="name">
@@ -59,6 +59,34 @@
             <h4>단역</h4>
           </div>
         </div>
+        <div class="col">
+          <img src="https://img.freepik.com/free-photo/portrait-of-white-man-isolated_53876-40306.jpg?w=996&t=st=1701760933~exp=1701761533~hmac=e90da3efaef55edbd3b5366cba4948bb4ee387c05305ff7ad2bbabfd49053263" alt="">
+          <div class="name">
+            <b>네빌 필립스</b>
+            <h4>단역</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img src="https://img.freepik.com/free-photo/portrait-man-laughing_23-2148859448.jpg?w=826&t=st=1701760953~exp=1701761553~hmac=c749174d30b1261cc13d1718824ceb1196ff75e98bcaa30684d797dff6e0f864" alt="">
+          <div class="name">
+            <b>알 와일드</b>
+            <h4>단역</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img src="https://img.freepik.com/free-photo/close-up-portrait-of-curly-handsome-european-male_176532-8133.jpg?w=1380&t=st=1701760994~exp=1701761594~hmac=8c310e59acd379172ce71486f26bd1c9665ef93c684970eb7d419b4ab2567d89" alt="">
+          <div class="name">
+            <b>대니 바빙턴</b>
+            <h4>단역</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img src="https://img.freepik.com/free-photo/handsome-young-man-with-new-stylish-haircut_176420-19636.jpg?w=1380&t=st=1701761023~exp=1701761623~hmac=cf9157af42e491c1b076275f3761e1a3ca2dba7754bd90f299af16132da1661f" alt="">
+          <div class="name">
+            <b>스튜어트 라이트</b>
+            <h4>단역</h4>
+          </div>
+        </div>
       </div>  
     </div>
   </div>
@@ -70,6 +98,38 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+.wrap{
+  color: #fff;
+}
+h1{
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.act{
+  margin-top: 2.25rem;
+}
+ .act img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+ }
+ .col{
+  display: flex;
+  justify-content: left;
+  align-content: center;
+  margin-bottom: 1.5rem;
+ }
+ .name{
+  margin-left: 1rem;
+ }
+ h4{
+  font-size: 1rem;
+  color: #b3b3b3;
+ }
+ b{
+    font-weight: 500;
+    font-size: 20px;
+    font-weight: 500;
+  }
 </style>
