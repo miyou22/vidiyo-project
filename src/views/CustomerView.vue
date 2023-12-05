@@ -93,7 +93,6 @@ input {
   float: Left;
 }
 
-
 .gnb h1 {
   text-align: start;
   width: 526px;
