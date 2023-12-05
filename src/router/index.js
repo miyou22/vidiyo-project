@@ -11,6 +11,7 @@ import AppProfile from '../views/AppProfile.vue'
 import ActorDetail from '../views/ActorDetail.vue'
 import CustomerView from '../views/CustomerView.vue'
 
+
 const routes = [
   {
     path: '/search',
