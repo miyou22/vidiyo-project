@@ -10,7 +10,7 @@ import StorageView from '../views/StorageView.vue'
 import AppProfile from '../views/AppProfile.vue'
 import ActorDetail from '../views/ActorDetail.vue'
 import CustomerView from '../views/CustomerView.vue'
-
+import MovieDetail from '../views/MovieDetail.vue'
 
 const routes = [
   {
@@ -68,6 +68,11 @@ const routes = [
     path: '/customer',
     name: 'customer',
     component: CustomerView
+  },
+  {
+    path: '/movie',
+    name: 'movie',
+    component: MovieDetail
   },
 ]
 
