@@ -5,6 +5,8 @@ import HeaderLogin from '../views/HeaderLogin.vue'
 import HomeView from '../views/HomeView.vue'
 import SearchMovie from '../views/SearchMovie.vue'
 import DetailPage from '../views/DetailPage.vue'
+import EvalView from '../views/EvalView.vue'
+import StorageView from '../views/StorageView.vue'
 
 const routes = [
   {
@@ -37,6 +39,16 @@ const routes = [
     path: '/detail',
     name: 'detail',
     component: DetailPage
+  },
+  {
+    path: '/Eval',
+    name: 'Eval',
+    component: EvalView
+  },
+  {
+    path: '/storage',
+    name: 'storage',
+    component: StorageView
   },
 ]
 
