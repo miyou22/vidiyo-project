@@ -1,19 +1,7 @@
 <template>
   <footer>
-    <div class="top-menu">
-      <b><a href="#">개인정보 처리방침 | </a></b>
-      <b><a href="#">VIDIYO서비스 이용약관 | </a></b>
-      <button
-        type="button"
-        class="btn"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        <b class="text-white">VIDIO서비스 이용약관 | </b>
-      </button>
-
-      <!-- 모달시작 -->
-      <div class="modal-terms">
+    <!-- 모달시작 -->
+    <div class="modal-terms">
         <!-- Button trigger modal -->
         <!-- Modal -->
         <div
@@ -92,8 +80,18 @@
         </div>
       </div>
       <!-- 모달끝 -->
-
-      <b><a href="#">채용정보 </a></b>
+    <div class="top-menu">
+      <a href="#">개인정보 처리방침 | </a>
+      <a href="#">VIDIYO서비스 이용약관 | </a>
+      <button
+        type="button"
+        class="btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        <b>VIDIO서비스 이용약관 |</b>
+      </button>
+      <a href="#">채용정보 </a>      
     </div>
     <div class="center-menu">
       <span>고객센터(이용 및 결제 문의)</span> |
@@ -130,12 +128,13 @@ export default {};
 </script>
 
 <style scoped>
+*{
+  color: #b3b3b3;
+}
 footer {
   background: var(--main-color1);
   font-size: var(--size5);
-  color: #fff;
   padding: 40px 40px 100px 40px;
-  /* outline: 1px solid red; */
   position: relative;
   min-width: 1020px;
 }
@@ -143,7 +142,8 @@ footer {
   margin-left: 20px;
   margin-bottom: 30px;
   display: flex;
-  align-items: center;
+  line-height:1.5;
+  font-weight: bold;
 }
 .center-menu {
   margin-bottom: 50px;
@@ -173,4 +173,5 @@ footer {
 .btn-close {
   transform: translateX(400%);
 }
+
 </style>
