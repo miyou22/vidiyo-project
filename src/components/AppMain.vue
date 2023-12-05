@@ -12,7 +12,7 @@ export default {
 
 <style>
 #main{
-  fiex: 1;
+  flex: 1;
   background-color: var(--main-color1);
   padding: 54px 40px 0;
 }

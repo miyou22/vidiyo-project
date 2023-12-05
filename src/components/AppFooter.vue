@@ -135,7 +135,7 @@ footer {
   font-size: var(--size5);
   color: #fff;
   padding: 40px 40px 100px 40px;
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   position: relative;
   min-width: 1020px;
 }
