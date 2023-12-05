@@ -10,6 +10,8 @@ import StorageView from '../views/StorageView.vue'
 import AppProfile from '../views/AppProfile.vue'
 import ActorDetail from '../views/ActorDetail.vue'
 import CustomerView from '../views/CustomerView.vue'
+import QustList from '../views/QustList.vue'
+import QusttList from '../views/QusttList.vue'
 
 const routes = [
   {
@@ -67,6 +69,16 @@ const routes = [
     path: '/customer',
     name: 'customer',
     component: CustomerView
+  },
+  {
+    path: '/customorlist',
+    name: 'customorlist',
+    component: QustList
+  },
+  {
+    path: '/customerand',
+    name: 'customerand',
+    component: QusttList
   },
 ]
 
