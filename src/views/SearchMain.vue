@@ -484,9 +484,8 @@ import "swiper/css/navigation";
 
 import "../assets/css/root.css";
 
-
 // import required modules
-import { Navigation, } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 
 export default {
   components: {
@@ -537,10 +536,7 @@ export default {
   font-weight: bold;
   font-family: Inter;
 }
-.categori {
-  padding: 0 40px;
-  box-sizing: border-box;
-}
+
 .tw {
   margin-top: 40px;
 }
@@ -567,7 +563,6 @@ export default {
   margin-bottom: 18px;
 }
 .search-list {
-  padding: 0 40px;
   margin-bottom: 62px;
 }
 
