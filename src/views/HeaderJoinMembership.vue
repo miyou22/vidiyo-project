@@ -189,6 +189,6 @@ input::placeholder {
   /* outline: 1px solid blue; */
   /* text-align: center; */
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
 }
 </style>

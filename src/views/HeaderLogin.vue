@@ -127,7 +127,7 @@ input::placeholder {
 }
 .header-footer {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
 }
 
 </style>
