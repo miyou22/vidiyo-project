@@ -1,7 +1,7 @@
 <template>
   <div class="boxa">
     <div class="number1">
-      <a href="#"><h1>문의사항</h1></a>
+      <a href="#"><h1>계정/비밀번호 변경</h1></a>
       <p><a href="#">가입한 이메일 주소와 비밀번호를 변경하고 싶어요.</a></p>
       <p><a href="#">@privaterelay.appleid.com 주소로 가입되어 있어요. 어떻게 변경하나요?</a></p>
       <p><a href="#">@privaterelay.appleid.com 주소로 가입된 계정은 가족 혹은 친구에게 어떻게 공유할 수 있나요?</a></p>
@@ -51,6 +51,7 @@ export default {
   padding: 0;
   margin: auto;
   border-style: none;
+  background-color: #f5f5f5;
 }
 
 .boxa{
