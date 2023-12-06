@@ -19,7 +19,7 @@
         <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%">
       </div>
     </div>
-    <div class="row r2">
+    <div class="row ">
       <h3>&nbsp;&nbsp;콘텐츠 정보&nbsp;&nbsp;</h3>
       <div class="col-lg-6">
         <h2>감독/출연</h2>

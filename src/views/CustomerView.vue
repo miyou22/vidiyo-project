@@ -44,15 +44,18 @@
         </div>
       </div>
     </div>
+    <customer-footer />
   </div>
 </template>
 
 <script>
 import CustomerHeader from "../components/CustomerHeader.vue"
+import CustomerFooter from "../components/CustomerFooter.vue"
+
 export default {
   name: "HelloWorld",
   components:{
-    CustomerHeader
+    CustomerHeader, CustomerFooter
   },
   props: {
     msg: String,
@@ -203,4 +206,5 @@ a:hover {
 .three:hover {
   text-decoration: underline;
 }
+
 </style>
