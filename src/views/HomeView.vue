@@ -381,6 +381,7 @@ export default {
     color: #eee;
   }
   .movieTitle{
+    margin-top: -10px;
     position: relative;
     width: calc(100% + 80px);
     margin-left: -40px;
@@ -416,6 +417,7 @@ export default {
     font-size: 18px;
     white-space: pre-wrap;
     letter-spacing: 0;
+    line-height: 1;
   }
   .bgi{
     background: url(../assets/image/fontImage.png) left bottom / contain no-repeat;
