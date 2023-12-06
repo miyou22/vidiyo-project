@@ -2,7 +2,7 @@
   <header>
     <div class="sub">
       <div class="logo">
-        <a href="/customer" art="고객센터페이지"><img src="../assets/image/vidiyo logo 5.png" alt="vidiyo" /></a>
+        <a href="/" art="고객센터페이지"><img src="../assets/image/vidiyo logo 5.png" alt="vidiyo" /></a>
       </div>
       <div class="dropdown">
         <button @click="menuToggle"><span>홍길동</span><i class="fa-solid fa-play"></i></button>
