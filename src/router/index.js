@@ -13,6 +13,7 @@ import CustomerView from '../views/CustomerView.vue'
 import MovieDetail from '../views/MovieDetail.vue'
 import QustList from '../views/QustList.vue'
 import QusttList from '../views/QusttList.vue'
+import RegisterInquiry from '../views/RegisterInquiry.vue'
 
 const routes = [
   {
@@ -85,6 +86,11 @@ const routes = [
     path: '/customerand',
     name: 'customerand',
     component: QusttList
+  },
+  {
+    path: '/registeri',
+    name: 'registeri',
+    component: RegisterInquiry
   },
 ]
 
