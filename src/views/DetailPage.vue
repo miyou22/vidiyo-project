@@ -85,7 +85,7 @@
       <div class="col-lg-2"><a href=""><router-link to="/actor">더보기</router-link></a></div>
       <div class="col-lg-4 col-sm-mt-4">
         <div class="avg float-lg-end">
-        <h2>평균 평점</h2>
+        <h2>나의 평점</h2>
         <form>
           <div class="rating mb-3">
             <div id="starContainer" @click="handleStarClick">
@@ -133,14 +133,15 @@ export default {
     background: linear-gradient(to right, #444444, #000000);
   }
   .film{
-    padding-top: 78px; 
-    padding-left: 52px;
+    padding-top: 56px; 
+    padding-left: 40px;
     box-sizing: border-box;
   }
 
   h1{
     font-size: 2.25rem;
     font-weight: bold;
+    margin-bottom: 12px;
   }
   .pic{
     margin-top: 0;
@@ -149,7 +150,7 @@ export default {
   .inform{
     font-size: 1rem;
     color: #b3b3b3;
-    margin: 1.25rem 0;
+    padding: 8px 0;
     max-width: 500px;
   }
   .inform>b{
@@ -168,12 +169,14 @@ export default {
     border: 0;
     outline: 0;
     appearance: none;
+    margin-top: 12px;
+    margin-bottom: 20px;
   }
   button:hover{
     background-color: #d10035;
   }
   h5{
-    margin: 1.25rem 0 1.25rem 0;
+    margin: 1.5rem 0 1.25rem 0;
     font-size: 1rem;
     font-weight: lighter;
   }
@@ -202,7 +205,7 @@ export default {
     margin-bottom: 16px;
   }
   .r2{
-    margin-left: 52px;
+    margin-left: 40px;
     margin-bottom: 20px;
     box-sizing: border-box;
   }

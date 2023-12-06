@@ -100,7 +100,9 @@ export default {
 
 <style scoped>
 .wrap{
+  padding: 56px 0 0 40px;
   color: #fff;
+  box-sizing: border-box;
 }
 h1{
   font-size: 1.75rem;
