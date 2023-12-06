@@ -6,7 +6,7 @@
         <h1>어떤 도움이 필요하세요?</h1>
         <div class="search">
           <div class="icon">
-            <img src="../assets/image/search2.jpg" alt="">
+            <img src="../assets/image/search2.jpg" @click="$router.push('/customerand')">
           </div>
           <input class="search-bar__input" type="text" placeholder="검색">
         </div>
@@ -84,7 +84,7 @@ export default {
 
 .box_a {
   max-width: 780px;
-  height: 764px;
+  height: 910px;
   margin: auto;
 }
 
