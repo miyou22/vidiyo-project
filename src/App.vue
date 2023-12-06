@@ -28,5 +28,6 @@ export default {
   display: flex;
   flex-direction: column;
   padding: 56px 0 0 240px;
+  overflow:hidden;
 }
 </style>
