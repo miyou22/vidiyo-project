@@ -106,9 +106,7 @@ input::placeholder {
   color: #b5b5b5;
   display: block;
 }
-.terms input[type="checkbox"] {
-  accent-color: color rgba;
-}
+
 .checkbox {
   margin-right: 20px;
 }
@@ -117,7 +115,6 @@ input::placeholder {
   color: #898989;
 }
 .join {
-  outline: 1px solid reds;
   margin-top: 36px;
   width: 400px;
   height: 40px;
