@@ -1,8 +1,8 @@
 <template>
   <div id='warp'>
-    <div class="icon">
-      <img src="" alt="">
-    </div>
+    <a class="icon">
+      <img src="../assets/image/vidiyo logo 5.png" alt="">
+    </a>
     <div class="menu">
       <ul class="gnb">
         <li><a href="#"><img src="../assets/image/home.png" alt="">홈</a></li>
@@ -33,7 +33,11 @@ export default {
     /* z-index: 501; */
   }
   .icon{
-    height: 56px;
+    display: block;
+    margin: 24px 0 0 26px;
+  }
+  .icon img{
+
   }
   .gnb{
     display: flex;

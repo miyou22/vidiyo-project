@@ -3,80 +3,219 @@
     <div class="evalTitle">
       <h2>평가</h2>
     </div>
-
-    <section id="contents">
-      <h1>나의 별점 영화</h1>
-      <div class="imgWrap">
-        <!-- this.items에 담겨 있는 데이터를 v-for를 이용하여 순차적으로 요소를 추가하여 넣어준다. 이때 이미지의 src값을 데이터의 path값으로 할당하여 이미지를 표시 -->
-        <!-- box를 클릭하면 modalView라는 메서드가 호출됨 -->
-        <!--  -->
-        <article class="box" v-for="item in category" :key="item">
-          <div class="imgCover">
-            <img :src="item.img" />
-            <div class="eye"></div>
+    <div class="trueView" v-if="login">
+      <section class="content">
+        <div class="subTitle">
+          <h2>나의 별점 영화</h2>
+        </div>
+        <div class="container-fulid">
+          <ul class="gnb">
+            <li class="imgGroup" v-for="item in category" :key="item">
+              <a href="#">
+                <img :src="item.img" class="imgStall"/>
+              </a>
+              <div class="movieName">
+                <p>{{ item.title }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <section class="comment">
+        <div class="commentTitle">
+          <h2>나의 코멘트 영화</h2>
+        </div>
+        <div class="container-fulid" v-if="comment.length!==0">
+          <ul class="gnb" >
+            <li class="imgGroup" v-for="item in comment" :key="item">
+              <a href="#">
+                <img :src="item.img" class="imgStall"/>
+              </a>
+              <div class="movieName">
+                <p>{{ item.title }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="container-fulid" v-else>
+         <div class="row">
+          <div class="col-md-6 offset-md-3 middle">
+            <img src="../assets/image/pending.png">
+            <p>보고 싶어요 한 컨텐츠는 여기 보여줘요</p>
           </div>
-        </article>
-      </div>
-    </section>
-    
+         </div>
+        </div>
+      </section>
+    </div>
+    <div class="falseView" v-else>
+      <h4>콘텐츠를 평가하고<br> 
+        예상별점을 확인해주세요</h4>
+      <p>평가하기를 위해서는 로그인이 필요해요</p>
+      <button type="button" @click="$router.push('/login')">로그인하기</button>
+    </div>
+
+
+
   </div>
 </template>
 
 <script>
 export default {
-  category: [
+  
+  data(){
+    return{
+      category: [
         {
           img: require('../assets/image/Rectangle49.png'),
+          title: '이터널 선샤인',
         },
         {
           img: require('../assets/image/Rectangle90.png'),
+          title: '장화홍련',
         },
         {
           img: require('../assets/image/Rectangle511.png'),
+          title: '유전',
         },
         {
           img: require('../assets/image/Rectangle512.png'),
+          title: '판의미로',
         },
         {
           img: require('../assets/image/Rectangle513.png'),
+          title: '살인의 추억',
         },
         {
           img: require('../assets/image/Rectangle514.png'),
+          title: '데어 윌 비 블러드',
         },
         {
           img: require('../assets/image/Rectangle515.png'),
+          title: '에이아이',
         },
         {
           img: require('../assets/image/Rectangle516.png'),
-        },
-        {
-          img: require('../assets/image/Rectangle517.png'),
-        },
-        {
-          img: require('../assets/image/Rectangle518.png'),
+          title: '알포인트',
         },
       ],
-}
+      comment: [
+        // {
+        //   img: require('../assets/image/Rectangle517.png'),
+        //   title: '겟아웃',
+        // },
+        // {
+        //   img: require('../assets/image/Rectangle518.png'),
+        //   title: '연애혁명',
+        // }
+      ],
+      login: false,
+    }
+  },
+  methods: {
+
+  },
+  created(){
+    console.log(this.comment)
+  }
+};
 </script>
 
-<style>
-.warp{
-  color: white
+<style scoped>
+.warp {
+  color: white;
 }
-.evalTitle{
+.evalTitle {
   margin-bottom: 70px;
 }
-.imgWrap{
-  display: grid;
-  width: 100%;
-  height: 1000px;
+.subTitle {
+  margin-bottom: 16px;
 }
-.box{
+.gnb {
+  max-width: 1600px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(11.5%, 1fr)); */
+  gap: 10px;
+  grid-row-gap: 45px;
+}
+.imgGroup{
+  height: 276px;
+}
+.imgGroup > a{
+  display: block;
+}
+.imgStall{
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center center;
 }
-.imgCover{
-  background-color: red;
-  grid-template-columns: repeat(8, 1fr);
+
+.movieName{
+  color: white;
+  padding-top: 8px;
+  box-sizing: border-box;
+  font-size: 0.75rem;
 }
+.container-fulid{
+  margin-bottom: 60px;
+}
+.commentTitle{
+  margin-bottom: 16px;
+}
+.row{
+  text-align: center;
+  height: 40vh;
+  position: relative;
+}
+.middle > img{
+  margin-bottom: 20px;
+}
+.middle{
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.falseView{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-wrap;
+  text-align: center;
+  margin: 120px 0px;
+}
+.falseView h4{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 26px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+  white-space: pre-wrap;
+}
+.falseView p{
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-decoration: none;
+  line-height: 20px;
+  color: rgb(186, 186, 193);
+  margin-bottom: 32px;
+}
+.falseView button{
+  color: rgb(255, 255, 255);
+  background: rgb(248, 47, 98);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 22px;
+  width: 240px;
+  padding: 8px 0px 10px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  border: 0;
+  outline: 0;
+}
+
 </style>
