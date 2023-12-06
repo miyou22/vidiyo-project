@@ -33,7 +33,19 @@
 </template>
 
 <script>
-export default {};
+import CustomerHeader from "../components/CustomerHeader.vue";
+import CustomerFooter from "../components/CustomerFooter.vue";
+
+export default {
+  name: "HelloWorld",
+  components: {
+    CustomerHeader,
+    CustomerFooter,
+  },
+  props: {
+    msg: String,
+  },
+};
 </script>
 
 <style scoped>
@@ -44,7 +56,7 @@ export default {};
   font-family: "Roboto";
 }
 
-.box_a {
+.boxaa {
   position: fixed;
   left: 0;
   top: 0;
@@ -57,6 +69,7 @@ export default {};
 .box_b {
   margin-left: 656px;
   margin-top: 60px;
+  height: 910px;
 }
 
 h1 {

@@ -60,8 +60,8 @@
           <p><a href="#">문서 10개 더보기</a></p>
         </div>
       </div>
-      <customer-footer />
     </div>
+    <customer-footer />
   </div>
 </template>
 
@@ -90,12 +90,12 @@ export default {
 }
 
 .boxaa {
-  position: fixed;
+  position:absolute;
   left: 0;
   top: 0;
   z-index: 9999;
   width: 100%;
-  height: 100%;
+  height: 150%;
   background-color: #f5f5f5;
 }
 
@@ -109,8 +109,9 @@ h1 {
   font-family: "Noto Sans KR";
   font-weight: bold;
   margin-left: 4px;
-  padding-top: 40px;
+  padding-top: 70px;
   font-size: 36px;
+  margin-bottom: 10px;
 }
 
 p {
@@ -119,6 +120,10 @@ p {
   padding: 12px;
   line-height: 30px;
   font-size: 16px;
+}
+
+.step{
+  padding-bottom: 100px;
 }
 
 a {
@@ -132,6 +137,6 @@ a:hover {
 
 .box > .number4 > p {
   text-decoration: none;
-  color: red;
+  color: #da0037;
 }
 </style>
