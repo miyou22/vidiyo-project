@@ -2,8 +2,8 @@
   <div class="wrap">
     <h1>길 정거</h1>
     <div class="content">
-      <div class="row g-0">
-        <div class="col" v-for="image in images" :key="image">
+      <div class="image-container">
+        <div class="poster" v-for="image in images" :key="image">
           <img :src="image.img" alt="">
         </div>
       </div>
@@ -43,9 +43,16 @@ export default {
     font-weight: bold;
     margin-bottom: 2.25rem;
   }
-  .col >img{
+  .image-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .poster>img{
     width: 190px;
     height: 280px;
     border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
   }
 </style>

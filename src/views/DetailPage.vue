@@ -127,7 +127,6 @@ export default {
   
   .wrap{
     color: #fff;
-    margin: -56px -40px 0;
     user-select: none;
   }
   .r1{
