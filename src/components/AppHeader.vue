@@ -7,7 +7,7 @@
         placeholder="콘텐츠, 태그, 인물, 리스트 검색 "
         @input="searchGroup"
         v-if="this.$store.state.searchShow"
-        @click="$router.push('/searchmovie')"
+        @keydown="$router.push('/searchmovie')"
       />
  
     </div>
