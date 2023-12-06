@@ -89,6 +89,7 @@
       >
         <b>VIDIO서비스 이용약관 |</b>
       </button>
+      <a href="../customer">고객센터 | </a>
       <a href="#">채용정보 </a>
     </div>
     <div class="center-menu">
@@ -104,6 +105,7 @@
       <span>B2B 이용권 구매 문의</span> |
       <a href="#">쿠프마케팅 (yyyo1004@coopnc .com)</a> <br />
     </div>
+    <customer-view />
   </footer>
 </template>
 
