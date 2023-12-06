@@ -136,7 +136,7 @@ footer {
   font-size: var(--size5);
   padding: 40px 40px 100px 40px;
   position: relative;
-  min-width: 1020px;
+  /* min-width: 1020px; */
 }
 .top-menu {
   margin-left: 20px;
