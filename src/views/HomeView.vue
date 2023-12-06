@@ -43,9 +43,11 @@
       <swiper-slide v-for="item in items" :key="item">
         <div class="allFor">
           <div class="textGroup">
-            <span>{{ item.span }}</span>
-            <h2>{{ item.h2 }}</h2>
-            <p>{{ item.p }}</p> 
+            <a href="#">
+              <span>{{ item.span }}</span>
+              <h2>{{ item.h2 }}</h2>
+              <p>{{ item.p }}</p> 
+            </a>
           </div>
           <figure>
             <img :src="item.img" />
@@ -146,7 +148,7 @@
   >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
-            <img :src="image.img" />
+            <img :src="image.img" @click="$router.push('/detail')"/>
         </div>
       </swiper-slide>
       </swiper>
@@ -197,7 +199,7 @@
     class="mySwiper"
   >
       <swiper-slide v-for="personImg in person" :key="personImg" class="about">
-        <div class="personImage">
+        <div class="personImage" @click="$router.push('/movie')">
             <div class="personImg">
              <img :src="personImg.img" />
             </div>
@@ -365,6 +367,7 @@ export default {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    padding: 56px 40px 0;
   }
   h2{
     color: var(--text-color3);
@@ -507,6 +510,7 @@ export default {
 .onlyImage{
   border-radius: 2%;
   overflow: hidden;
+  cursor: pointer;
 }
 .tagGnb > .swiper{
   margin: 5px auto;
@@ -522,6 +526,7 @@ export default {
   align-items: center;
   justify-content: space-between;
   color: white;
+  cursor: pointer;
 }
 .personImage > .personImg{
   border-radius: 50%;

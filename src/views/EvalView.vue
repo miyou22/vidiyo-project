@@ -12,7 +12,7 @@
           <ul class="gnb">
             <li class="imgGroup" v-for="item in category" :key="item">
               <a href="#">
-                <img :src="item.img" class="imgStall"/>
+                <img :src="item.img" class="imgStall" @click="$router.push('/detail')" />
               </a>
               <div class="movieName">
                 <p>{{ item.title }}</p>
@@ -30,7 +30,7 @@
           <ul class="gnb" >
             <li class="imgGroup" v-for="item in comment" :key="item">
               <a href="#">
-                <img :src="item.img" class="imgStall"/>
+                <img :src="item.img" class="imgStall"  @click="$router.push('/detail')"/>
               </a>
               <div class="movieName">
                 <p>{{ item.title }}</p>
@@ -67,8 +67,8 @@ export default {
     return{
       category: [
         {
-          img: require('../assets/image/Rectangle49.png'),
-          title: '이터널 선샤인',
+          img: require('../assets/image/Rectangle98.png'),
+          title: '이프온리',
         },
         {
           img: require('../assets/image/Rectangle90.png'),
@@ -124,6 +124,8 @@ export default {
 <style scoped>
 .warp {
   color: white;
+  padding: 56px 40px 0;
+
 }
 .evalTitle {
   margin-bottom: 70px;
@@ -141,6 +143,9 @@ export default {
 }
 .imgGroup{
   height: 276px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .imgGroup > a{
   display: block;
@@ -206,7 +211,7 @@ export default {
 }
 .falseView button{
   color: rgb(255, 255, 255);
-  background: rgb(248, 47, 98);
+  background: var(--button-color1);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
