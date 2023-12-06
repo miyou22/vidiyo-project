@@ -4,13 +4,13 @@
       <h1>최근 검색한 항목</h1>
 
       <div class="row">
-        <div class="col c1">
+        <div class="col c1" @click="$router.push('/detail')">
           <div class="img">
-            <img src="../assets/image/searchlist.png" />
+            <img src="../assets/image/Group5.png" />
           </div>
           <div class="txt">
-            <h2>악마를 보았다</h2>
-            <p>영화 • 김지훈 • 2010</p>
+            <h2>이프온리</h2>
+            <p>영화 • 길정거 • 2004</p>
           </div>
         </div>
         <div class="col c2">
@@ -501,6 +501,9 @@ export default {
 </script>
 
 <style scoped>
+main{
+  padding: 56px 40px 0;
+}
 .swiper {
   width: 100%;
   height: 100%;
@@ -550,6 +553,7 @@ export default {
   height: 86px;
   overflow: hidden;
   margin: 0 10px;
+  cursor: pointer;
 }
 
 .c2 {
