@@ -14,7 +14,6 @@ export default {
 #main{
   flex: 1;
   background-color: var(--main-color1);
-  padding: 54px 40px 0;
 }
 /* .container-fluid{
   max-width: 1600px;
