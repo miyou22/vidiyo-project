@@ -87,8 +87,8 @@ export default {
 
 input {
   font-size: 16px;
-  width: 526px;
-  padding: 10px;
+  width: 520px;
+  padding: 12px 50px;
   border: 0px;
   outline: none;
   float: Left;
@@ -121,15 +121,16 @@ h2 {
   margin: 0 auto 28px auto;
   outline: 1px solid black;
   border-radius: 20px;
+
 }
 
 .icon {
   position: absolute; 
   display: flex;
-  justify-content: space-between;
-  top: 5px;
-  right: 10px;
+  bottom: 14px;
   left: 10px;
+  margin: 0;
+  padding: 0 8px;
 }
 
 
