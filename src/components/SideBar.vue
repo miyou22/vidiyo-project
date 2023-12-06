@@ -15,7 +15,7 @@
             >평가</span
           >
         </li>
-        <li class="svg3" @click="$router.push('/search')">
+        <li class="svg3" @click="$router.push('/search'), searchView()">
           <img src="../assets/image/search.png" alt="" /><span class="menu"
             >검색</span
           >
@@ -35,12 +35,15 @@ export default {
   data() {
     return {};
   },
-  methods:{
+  methods: {
     urlFunc() {
-    var url = window.location.href;
-    console.log(url);
+      var url = window.location.href;
+      console.log(url);
+    },
+    searchView() {
+      this.$store.commit("searchView");
+    },
   },
-  }
 };
 </script>
 

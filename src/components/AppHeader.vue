@@ -6,10 +6,10 @@
         class="search-all"
         placeholder="콘텐츠, 태그, 인물, 리스트 검색 "
         @input="searchGroup"
-        v-if="searchShow"
+        v-if="this.$store.state.searchShow"
+        @click="$router.push('/searchmovie')"
       />
-      <!--items데이터 전달-->
-      <!-- <product-list :items="items" /> -->
+ 
     </div>
     <div class="login-header">
       <div class="alam">
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="logout-header">
-      <router-link to="/login"><button type="button" class="login" @click="logIn">로그인</button></router-link>
+      <router-link to="/login"><button type="button" class="login" >로그인</button></router-link>
       <router-link to="/joinmembership"><button type="button" class="join">회원가입</button></router-link>
     </div>
   </header>
@@ -28,15 +28,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      searchShow: false,
-    };
-  },
   methods: {
-    logIn() {
-      this.searchShow = true;
-    },
+  
   },
 };
 </script>
