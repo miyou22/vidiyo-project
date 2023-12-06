@@ -192,6 +192,9 @@ a {
   justify-content: center; 
 }
 
+li > .button:hover {
+  color: #da0037;
+}
 a:hover {
   color: #da0037;
 }
