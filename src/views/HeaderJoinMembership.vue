@@ -177,7 +177,7 @@ input::placeholder {
   color: #898989;
 }
 .join {
-  outline: 1px solid reds;
+  outline: 1px solid red;
   margin-top: 36px;
   width: 400px;
   height: 40px;
