@@ -13,7 +13,12 @@
         <ul class="gnb">
           <li class="imgGroup" v-for="item in category" :key="item">
             <a href="#">
-              <img :src="item.img" class="imgStall"/>
+              <img :src="item.img" class="imgStall" @click="$router.push('/detail')"/>
+              <div class="texDec">
+                <h1>{{ item.title }}</h1>
+                <p>{{ item.time }}</p>
+                <span>{{ item.tag }}</span>
+              </div>
             </a>
             <div class="movieName">
               <p>{{ item.title }}</p>
@@ -31,7 +36,7 @@
         <ul class="gnb">
           <li class="imgGroup" v-for="item in comment" :key="item">
             <a href="#">
-              <img :src="item.img" class="imgStall"/>
+              <img :src="item.img" class="imgStall"  @click="$router.push('/detail')"/>
             </a>
             <div class="movieName">
               <p>{{ item.title }}</p>
@@ -48,9 +53,7 @@
       <div class="container-fulid" v-if="heart.length!==0">
         <ul class="gnb" >
           <li class="imgGroup" v-for="item in heart" :key="item">
-            <a href="#">
-              <img :src="item.img" class="imgStall"/>
-            </a>
+              <img :src="item.img" class="imgStall"  @click="$router.push('/detail')"/>
             <div class="movieName">
               <p>{{ item.title }}</p>
             </div>
@@ -90,44 +93,64 @@ export default {
         {
           img: require('../assets/image/Rectangle98.png'),
           title: '이프온리',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle90.png'),
           title: '장화홍련',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle511.png'),
           title: '유전',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle512.png'),
           title: '판의미로',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle513.png'),
           title: '살인의 추억',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle514.png'),
           title: '데어 윌 비 블러드',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle515.png'),
           title: '에이아이',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle516.png'),
           title: '알포인트',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
       ],
       comment: [
         {
           img: require('../assets/image/Rectangle517.png'),
           title: '겟아웃',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
         {
           img: require('../assets/image/Rectangle49.png'),
           title: '광해',
+          time: '1시간 30분',
+          tag: '드라마, 로맨스'
         },
       
       ],
@@ -136,7 +159,9 @@ export default {
         //   img: require('../assets/image/Rectangle518.png'),
         //   title: '연애혁명',
         // }
-      ]
+      ],
+       login: true,
+
     }
   },
   methods: {
@@ -151,6 +176,8 @@ export default {
 <style scoped>
 .warp {
   color: white;
+  padding: 56px 40px 0;
+
 }
 .evalTitle {
   margin-bottom: 70px;
@@ -164,14 +191,38 @@ export default {
 .gnb {
   max-width: 1600px;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(11.5%, 1fr)); */
+  /* grid-template-columns: repeat(8, 1fr); */
+  grid-template-columns: repeat(auto-fill, 10.625rem);
   gap: 10px;
-  grid-row-gap: 45px;
+  justify-content: space-between;
+  /* grid-row-gap: 10px; */
+}
+.texDec{
+  display: none;
 }
 .imgGroup{
   height: 276px;
+  position: relative;
 }
+.imgGroup:hover {
+  transform: scale(1.2);
+  opacity: 0.5;
+}
+
+.imgGroup:hover > a > .texDec{
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.texDec h1{
+  
+  font-size: 18px;
+}
+.imgGroup:hover > .movieName{
+  display: none;
+}
+
 .imgGroup > a{
   display: block;
 }
@@ -180,6 +231,8 @@ export default {
   height: 100%;
   object-fit: cover;
   object-position: center center;
+  border-radius: 5px;
+
 }
 
 .movieName{
@@ -243,7 +296,7 @@ export default {
 }
 .falseView button{
   color: rgb(255, 255, 255);
-  background: rgb(248, 47, 98);
+  background: var(--button-color1);
   font-size: 16px;
   font-weight: 500;
   line-height: 22px;
@@ -254,6 +307,15 @@ export default {
   border: 0;
   outline: 0;
 }
-
+/* @media (max-width: 1024px){
+  .gnb{
+  grid-template-columns: repeat(4, 1fr);
+  }
+}
+@media (max-width: 576px){
+  .gnb{
+  grid-template-columns: repeat(2, 1fr);
+  }
+} */
 
 </style>
