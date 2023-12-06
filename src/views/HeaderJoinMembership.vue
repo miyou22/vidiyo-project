@@ -125,7 +125,7 @@ export default {
 .wrap h1 {
   text-align: center;
   color: #fff;
-  margin: 110px 0 36px 0;
+  margin: 250px 0 36px 0;
 }
 .header-header {
 }
