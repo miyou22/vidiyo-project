@@ -15,9 +15,9 @@
             <a href="#">
               <img :src="item.img" class="imgStall" @click="$router.push('/detail')"/>
               <div class="texDec">
-                <h1>{{ item.title }}</h1>
+                <!-- <h1>{{ item.title }}</h1>
                 <p>{{ item.time }}</p>
-                <span>{{ item.tag }}</span>
+                <span>{{ item.tag }}</span> -->
               </div>
             </a>
             <div class="movieName">
@@ -204,7 +204,7 @@ export default {
   height: 276px;
   position: relative;
 }
-.imgGroup:hover {
+/* .imgGroup:hover {
   transform: scale(1.2);
   opacity: 0.5;
 }
@@ -214,14 +214,14 @@ export default {
   position: absolute;
   left: 0;
   bottom: 0;
-}
+} */
 .texDec h1{
   
   font-size: 18px;
 }
-.imgGroup:hover > .movieName{
+/* .imgGroup:hover > .movieName{
   display: none;
-}
+} */
 
 .imgGroup > a{
   display: block;

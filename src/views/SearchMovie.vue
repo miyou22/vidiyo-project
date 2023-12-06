@@ -9,7 +9,7 @@
     </div>
     <div class="popular-list c1" >
       <div class="list" v-for="item in items" :key="item">
-        <img :src="item.img" />
+        <a href="#"><img :src="item.img"  @click="$router.push('/detail')" /></a>
       </div>
     </div>
     <div class="movie-list c1" >
@@ -35,109 +35,109 @@ export default {
     return {
       items: [
         {
-          img: require("../assets/image/Rectangle49.png"),
+          img: require("../assets/image/Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
         {
-          img: require("../assets/image//Rectangle49.png"),
+          img: require("../assets/image//Rectangle98.png"),
         },
       ],
       movies: [
@@ -280,6 +280,9 @@ export default {
 </script>
 
 <style scoped>
+main{
+  padding: 56px 40px 0;
+}
 .btnGroup {
   display: flex;
 }
