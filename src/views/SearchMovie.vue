@@ -280,6 +280,9 @@ export default {
 </script>
 
 <style scoped>
+main{
+  padding: 56px 40px 0;
+}
 .btnGroup {
   display: flex;
 }
