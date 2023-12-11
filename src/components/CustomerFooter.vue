@@ -105,7 +105,6 @@
       <span>B2B 이용권 구매 문의</span> |
       <a href="#">쿠프마케팅 (yyyo1004@coopnc .com)</a> <br />
     </div>
-    <customer-view />
   </footer>
 </template>
 

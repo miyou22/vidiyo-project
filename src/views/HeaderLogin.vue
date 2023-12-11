@@ -92,12 +92,9 @@ form {
   margin-bottom: 20px;
   border-radius: 10px;
   border: 2px solid #da0037;
+  padding: 20px;
+  font-size: 12px;
 }
-input::placeholder {
-  /* outline: 1px solid red; */
-  padding-left: 12px;
-}
-
 .terms {
   width: 400px;
   text-align: left;

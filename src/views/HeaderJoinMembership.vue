@@ -31,7 +31,7 @@
       <br />
       <div class="terms">
         <label>
-          <input v-model="cValue1" class="checkbox" type="checkbox" />전체약관에
+          <input @click="jihun" v-model="cValue1" id="check_all" class="checkbox" type="checkbox" />전체약관에
           동의합니다.
           <br />
         </label>
@@ -65,7 +65,7 @@
             idValue == '' ||
             pwValue == '' ||
             eValue == '' ||
-            !cValue1 ||
+            // !cValue1 ||
             !cValue2 ||
             !cValue3 ||
             !cValue4"
@@ -98,6 +98,20 @@ export default {
       cValue5: false,
     };
   },
+  methods:{ 
+      jihun(){
+        this.cValue2=true;
+        this.cValue3=true;
+        this.cValue4=true;
+        this.cValue5=true;
+        if(this.cValue1==true){
+          this.cValue2=false;
+          this.cValue3=false;
+          this.cValue4=false;
+         this.cValue5=false;
+        }
+      }
+  }
 };
 </script>
 
@@ -148,11 +162,11 @@ form {
   margin-bottom: 20px;
   border-radius: 10px;
   border: 2px solid #da0037;
+  font-size: 12px;
+  padding: 20px;
+
 }
-input::placeholder {
-  /* outline: 1px solid red; */
-  padding-left: 12px;
-}
+
 
 .terms {
   width: 400px;
@@ -168,6 +182,7 @@ input::placeholder {
 }
 .checkbox {
   margin-right: 20px;
+  cursor: pointer;
 }
 .button {
   text-align: center;
