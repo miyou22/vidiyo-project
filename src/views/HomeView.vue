@@ -4,7 +4,6 @@
     <h2>홈</h2>
   </div>
 
-  <hr type="regular">
 
   <a href="#" class="imageLink">
     <div class="movieTitle">
@@ -372,6 +371,8 @@ export default {
   h2{
     color: var(--text-color3);
     display: block;
+    margin-bottom: 20px;
+
   }
   hr{
     width: 100%;

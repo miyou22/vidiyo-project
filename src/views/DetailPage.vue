@@ -3,10 +3,10 @@
     <div class="row r1 g-0">
       <div class="film col-lg-7">
         <h1>이프온리</h1>
-        <p class="inform">
-          <b>15</b> • 2004년 • 1시간 35분 • <a href="#" class="theme">코미디</a> • <a href="#" class="theme">죽음</a>
+        <p class="inform i1">
+          <b>15</b> · 2004년 · 1시간 35분 · <a href="#" class="theme">코미디</a> · <a href="#" class="theme">죽음</a>
         </p>
-        <p class="inform">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
+        <p class="inform i2">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
         <div class="movie">
           <button type="button">▶ 무료로 감상하기</button>
         </div>
@@ -82,7 +82,7 @@
         </div>
         </div>
       </div>
-      <div class="col-lg-2"><a href=""><router-link to="/actor">더보기</router-link></a></div>
+      <div class="col-lg-2"><a class="more" href=""><router-link to="/actor">더보기</router-link></a></div>
       <div class="col-lg-4 col-sm-mt-4">
         <div class="avg float-lg-end">
         <h2>나의 평점</h2>
@@ -126,6 +126,7 @@ export default {
 <style scoped>
   
   .wrap{
+    font-family: 'NanumSquare';
     color: #fff;
     user-select: none;
   }
@@ -140,7 +141,7 @@ export default {
 
   h1{
     font-size: 2.25rem;
-    font-weight: bold;
+    font-weight: 800;
     margin-bottom: 12px;
   }
   .pic{
@@ -159,7 +160,9 @@ export default {
     background-color: #b3b3b3;
     padding: 0 0.25rem;
   }
+  
   button{
+    font-family: 'Noto Sans KR', sans-serif;
     background-color: #DA0037;
     color: #fff;
     width: 154px;
@@ -197,12 +200,17 @@ export default {
     margin: 2.5rem 0 52px 0;
     text-decoration: underline;
     text-underline-offset: 0.8rem; 
+    letter-spacing: 0.8px;
   }
   h2{
     margin-top: 1rem;
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 16px;
+  }
+  .name{
+    padding-left: 4px;
+    box-sizing: border-box;
   }
   .r2{
     margin-left: 40px;
@@ -226,14 +234,15 @@ export default {
     font-weight: 500;
   }
   h4{
+    color: #fff;
     font-size: 1rem;
     color: #b3b3b3;
   }
-  a{
-    color: #ededed;
+  .more{
+    color: #b3b3b3;
   }
-  a:hover{
-    color: #fff
+  .more:hover{
+    color: #ededed
   }
   .avg{
     margin-right: 52px;
@@ -252,7 +261,7 @@ export default {
     font-size: 1.75rem;
     color: #ededed;
     transition: color 0.2s;
-    margin: 1rem 0.25rem;
+    margin: 1.25rem 0.25rem;
   }
   .star:hover{
     color: #faf2ac;
@@ -262,7 +271,7 @@ export default {
   }
   #ratingText{
     letter-spacing: 0.3rem;
-    margin: 1.4rem 0 0 2rem;
+    margin: 1.5rem 0 0 2rem;
     font-size: 1.5rem;
   }
 </style>
