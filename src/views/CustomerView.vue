@@ -84,7 +84,7 @@ export default {
 
 .box_a {
   max-width: 780px;
-  height: 910px;
+  /* height: 910px; */
   margin: auto;
 }
 

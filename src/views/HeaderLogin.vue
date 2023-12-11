@@ -69,7 +69,7 @@ export default {
 .wrap h1 {
   text-align: center;
   color: #fff;
-  margin: 110px 0 36px 0;
+  margin: 300px 0 36px 0;
 }
 .header-header {
 }
@@ -92,12 +92,9 @@ form {
   margin-bottom: 20px;
   border-radius: 10px;
   border: 2px solid #da0037;
+  padding: 20px;
+  font-size: 12px;
 }
-input::placeholder {
-  /* outline: 1px solid red; */
-  padding-left: 12px;
-}
-
 .terms {
   width: 400px;
   text-align: left;
@@ -106,9 +103,7 @@ input::placeholder {
   color: #b5b5b5;
   display: block;
 }
-.terms input[type="checkbox"] {
-  accent-color: color rgba;
-}
+
 .checkbox {
   margin-right: 20px;
 }
@@ -117,7 +112,6 @@ input::placeholder {
   color: #898989;
 }
 .join {
-  outline: 1px solid reds;
   margin-top: 36px;
   width: 400px;
   height: 40px;
@@ -127,7 +121,7 @@ input::placeholder {
 }
 .header-footer {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
 }
 
 </style>
