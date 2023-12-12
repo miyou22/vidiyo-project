@@ -89,6 +89,7 @@
       >
         <b>VIDIO서비스 이용약관 |</b>
       </button>
+      <a href="../customer">고객센터 | </a>
       <a href="#">채용정보 </a>
     </div>
     <div class="center-menu">
