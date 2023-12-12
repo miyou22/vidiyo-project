@@ -164,6 +164,9 @@ footer {
   right: 40px;
   transform: translateY(-100px);
 }
+.logo-group img {
+margin-left: 20px;
+}
 .btn {
   padding: 0;
   font-size: 12px;
