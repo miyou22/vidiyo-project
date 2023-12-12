@@ -57,6 +57,7 @@ export default {
 }
 
 .boxaa {
+  justify-content: center;
   position: fixed;
   left: 0;
   top: 0;
@@ -69,7 +70,7 @@ export default {
 .box_b {
   margin-left: 656px;
   margin-top: 60px;
-  height: 910px;
+  height: 400px;
 }
 
 h1 {

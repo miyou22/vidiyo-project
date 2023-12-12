@@ -90,10 +90,9 @@ export default {
 
 input {
   font-size: 16px;
-  width: 520px;
+  width: 525px;
+  border-radius: 20px;
   padding: 12px 50px;
-  border: 0px;
-  outline: none;
   float: Left;
 }
 
@@ -117,14 +116,12 @@ h2 {
 }
 
 .search {
-  background-color: #fff;
   position: relative;
   width: 526px;
   height: 46px;
   margin: 0 auto 28px auto;
   outline: 1px solid black;
   border-radius: 20px;
-
 }
 
 .icon {
@@ -179,7 +176,6 @@ button {
 a {
   text-decoration: none;
   color: black;
-
   padding: 0;
   margin: 0;
   display: block;
