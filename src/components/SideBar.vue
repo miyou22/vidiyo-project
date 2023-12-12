@@ -6,23 +6,20 @@
     <div class="menu">
       <ul class="gnb" @click="urlFunc">
         <li class="svg1" @click="$router.push('/')">
-          <img src="../assets/image/home.png" alt="" /><span class="menu"
-            >홈</span
-          >
+          <span class="material-icons">home</span>
+          <span class="menu">홈</span>
         </li>
         <li class="svg2" @click="$router.push('/Eval')">
-          <img src="../assets/image/star_border.png" alt="" /><span class="menu"
-            >평가</span
-          >
+          <span class="material-icons">star_border</span>
+          <span class="menu">평가</span>
         </li>
         <li class="svg3" @click="$router.push('/search'), searchView()">
-          <img src="../assets/image/search.png" alt="" /><span class="menu"
-            >검색</span
-          >
+          <span class="material-icons">search</span>
+          <span class="menu">검색</span>
         </li>
         <li class="svg4" @click="$router.push('/storage')">
-          <img src="../assets/image/box.png" alt="" /><span class="menu"
-            >보관함</span
+          <span class="material-icons">inbox</span>
+          <span class="menu">보관함</span
           >
         </li>
       </ul>
@@ -87,25 +84,11 @@ export default {
 li img {
   margin-right: 1rem;
 }
-.svg1 {
-  margin-left: -2px;
+.material-icons{
+  color: white;
 }
-.svg2 {
-  margin-left: -4px;
+li .menu{
+  margin-left: 1rem;
 }
-.svg3 {
-  margin-left: -2px;
-}
-.svg1 .menu {
-  margin-left: -7px;
-}
-.svg2 .menu {
-  margin-left: -9px;
-}
-.svg3 .menu {
-  margin-left: -9px;
-}
-.svg4 .menu {
-  margin-left: -4px;
-}
+
 </style>

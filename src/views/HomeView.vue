@@ -9,9 +9,9 @@
     <div class="movieTitle">
       <div class="movieImage">
         <div class="image"></div>
-        <!-- <div class="video">
-          <video src="https://youtu.be/i50tT8n9fp8?si=WXtP5Tnn6felcpv4"></video>
-        </div> -->
+        <div class="video">
+            <video src="../assets/image/leave.mp4" autoplay loop muted height="520" id="video10"></video>
+        </div>
       </div>
       <div class="movieText">
         <div class="bgi"></div>
@@ -368,6 +368,7 @@ export default {
     margin: 0 auto;
     padding: 56px 40px 0;
   }
+
   h2{
     color: var(--text-color3);
     display: block;
@@ -389,6 +390,23 @@ export default {
     position: relative;
     aspect-ratio: 3.6 / 1.15;
   }
+  .movieTitle:hover .video{
+    display: block;
+  }
+  .movieTitle:hover .movieText{
+    display: none;
+  }
+  .video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    display: none;
+  }
+  video{
+    width: 100%;
+    object-fit: cover;
+  }
   .movieImage{
     position: absolute;
     bottom: 0;
@@ -400,7 +418,9 @@ export default {
     background: url(../assets/image/image18.png) center center/cover;
     width: 100%;
     height: 100%;
+    position: relative;
   }
+
 
   .movieText{
     display: flex;
@@ -426,6 +446,8 @@ export default {
     width: 70%;
     height: 160px;
   }
+
+
   .contants{
     width: 100%;
     margin: 40px 0;
