@@ -6,9 +6,15 @@
         <p class="inform i1">
           <b>15</b> · 2004년 · 1시간 35분 · <a href="#" class="theme">코미디</a> · <a href="#" class="theme">죽음</a>
         </p>
-        <p class="inform i2">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다</p>
+        <div class="expl">
+          <p class="inform i2">
+            눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다.&nbsp; 
+            <button type="button" class="moresee">더보기</button>  
+          </p>
+          
+        </div>
         <div class="movie">
-          <button type="button">▶ 무료로 감상하기</button>
+          <button type="button" class="watch">▶ 무료로 감상하기</button>
         </div>
         <hr>
         <h5>
@@ -126,7 +132,7 @@ export default {
 <style scoped>
   
   .wrap{
-    font-family: 'NanumSquare';
+    font-family: 'Noto Sans KR', sans-serif;
     color: #fff;
     user-select: none;
   }
@@ -141,7 +147,7 @@ export default {
 
   h1{
     font-size: 2.25rem;
-    font-weight: 800;
+    font-weight: bold;
     margin-bottom: 12px;
   }
   .pic{
@@ -149,6 +155,7 @@ export default {
     padding: 0;
   }
   .inform{
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 1rem;
     color: #b3b3b3;
     padding: 8px 0;
@@ -160,8 +167,16 @@ export default {
     background-color: #b3b3b3;
     padding: 0 0.25rem;
   }
+  .moresee{
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #fff;
+    background-color: transparent;
+    appearance: none;
+    outline: 0;
+    border: 0;
+  }
   
-  button{
+  .watch{
     font-family: 'Noto Sans KR', sans-serif;
     background-color: #DA0037;
     color: #fff;
@@ -175,7 +190,7 @@ export default {
     margin-top: 12px;
     margin-bottom: 20px;
   }
-  button:hover{
+  .watch:hover{
     background-color: #d10035;
   }
   h5{
