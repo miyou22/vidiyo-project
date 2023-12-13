@@ -141,7 +141,6 @@ footer {
   /* min-width: 1020px; */
 }
 .top-menu {
-  margin-left: 20px;
   margin-bottom: 30px;
   display: flex;
   line-height:1.5;
