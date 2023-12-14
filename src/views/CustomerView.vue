@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="web">
     <customer-header />
     <div class="box_a">
       <div class="gnb">
@@ -8,7 +8,7 @@
           <div class="icon">
             <img src="../assets/image/search2.jpg" @click="$router.push('/customerand')">
           </div>
-          <input class="search-bar__input" type="text" placeholder="검색">
+          <input class="search-bar__input" type="search" placeholder="검색">
         </div>
       </div>
       <div class="info">
@@ -71,7 +71,7 @@ export default {
   border-style: none;
   
 }
-.container-fluid {
+.web {
   text-align: center;
   position: fixed;
   left: 0;
@@ -89,7 +89,7 @@ export default {
 }
 
 input {
-  font-size: 16px;
+  font-size: 1rem;
   width: 525px;
   border-radius: 20px;
   padding: 12px 50px;

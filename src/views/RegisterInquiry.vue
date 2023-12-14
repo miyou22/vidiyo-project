@@ -1,5 +1,5 @@
 <template>
-  <div class="boxaa">
+  <div class="web">
     <customer-header />
     <div clas="box_a">
       <div class="box_b">
@@ -13,18 +13,20 @@
         </div>
         <div class="id_management">
           <p>아래에서 문의 유형을 선택해 주세요.</p>
-          <select class="form-select" aria-label="Default selexample">
-            <option selected>-</option>
-            <option value="1">로그인/계정관리</option>
-            <option value="2">쿠폰</option>
-            <option value="3">콘텐츠</option>
-            <option value="3">환불</option>
-            <option value="3">해지</option>
-            <option value="3">결제</option>
-            <option value="3">재생 및 사용오류</option>
-            <option value="3">VIDIYO에 제안하기</option>
-            <option value="3">사용문의</option>
-          </select>
+          <sapn>
+            <select class="form-select" aria-label="Default selexample">
+                <option selected>-</option>
+                <option value="1">로그인/계정관리</option>
+                <option value="2">쿠폰</option>
+                <option value="3">콘텐츠</option>
+                <option value="3">환불</option>
+                <option value="3">해지</option>
+                <option value="3">결제</option>
+                <option value="3">재생 및 사용오류</option>
+                <option value="3">VIDIYO에 제안하기</option>
+                <option value="3">사용문의</option>
+            </select>
+          </sapn>
         </div>
       </div>
     </div>
@@ -56,7 +58,7 @@ export default {
   font-family: "Roboto";
 }
 
-.boxaa {
+.web {
   justify-content: center;
   position: fixed;
   left: 0;
@@ -68,9 +70,10 @@ export default {
 }
 
 .box_b {
-  margin-left: 656px;
-  margin-top: 60px;
-  height: 400px;
+  margin: auto;
+  justify-content: center;
+  margin-top: 4rem;
+  text-align: center;
 }
 
 h1 {
@@ -85,11 +88,18 @@ h1 {
 }
 
 .form-select {
-  margin: 10px 0;
-  width: 780px;
-  height: 50px;
+  max-width: 48.75rem;
+  height: 3.125rem;
   font-size: 16px;
   border-radius: 5px;
+  margin: auto;
 }
+
+option { padding : 0 0 0 10px; 
+}
+.id_management span{
+  
+}
+
 </style>
 
