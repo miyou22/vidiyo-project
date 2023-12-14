@@ -14,6 +14,8 @@ import MovieDetail from '../views/MovieDetail.vue'
 import QustList from '../views/QustList.vue'
 import QusttList from '../views/QusttList.vue'
 import RegisterInquiry from '../views/RegisterInquiry.vue'
+import CustomerAnswer from '../views/CustomerAnswer.vue'
+import InquiryList from '../views/InquiryList.vue'
 
 const routes = [
   {
@@ -91,6 +93,16 @@ const routes = [
     path: '/registeri',
     name: 'registeri',
     component: RegisterInquiry
+  },
+  {
+    path: '/answer',
+    name: 'answer',
+    component: CustomerAnswer
+  },
+  {
+    path: '/inlist',
+    name: 'inlist',
+    component: InquiryList
   },
 ]
 
