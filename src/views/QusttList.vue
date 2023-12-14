@@ -1,7 +1,7 @@
 <template>
-  <div class="box">
+  <div class="web">
     <customer-header />
-    <div class="box_aa">
+    <div class="box">
       <div class="box_a">
         <ul class="category">
           <li><p>카테고리별</p></li>
@@ -95,7 +95,7 @@ export default {
   list-style: none;
 }
 
-.box {
+.web {
   position: fixed;
   left: 0;
   top: 0;
@@ -105,7 +105,7 @@ export default {
   background-color: #f5f5f5;
 }
 
-.box_aa {
+.box {
   margin: auto;
   margin-top: 70px;
   justify-content: center;
