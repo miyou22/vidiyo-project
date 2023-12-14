@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <div class="wrap">
     <div class="search-list">
       <h1>최근 검색한 항목</h1>
 
@@ -470,7 +470,7 @@
         </swiper-slide>
       </swiper>
     </div>
-  </main>
+  </div>
 </template>
 
 <script>
@@ -501,7 +501,7 @@ export default {
 </script>
 
 <style scoped>
-main{
+.wrap{
   padding: 56px 40px 0;
 }
 .swiper {
@@ -537,7 +537,7 @@ main{
   font-size: 28px;
   color: white;
   font-weight: bold;
-  font-family: Inter;
+  font-family: 'Noto sans KR';
 }
 
 .tw {
@@ -563,7 +563,7 @@ main{
   font-size: 28px;
   color: white;
   font-weight: bold;
-  font-family: Inter;
+  font-family: 'Noto sans KR';
   margin-bottom: 18px;
 }
 .search-list {
@@ -577,7 +577,7 @@ main{
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 12px;
-  font-family: Roboto;
+  font-family: 'Noto sans KR';
 }
 .txt > h2 {
   font-size: var(--size4);
