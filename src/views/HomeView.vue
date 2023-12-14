@@ -40,7 +40,7 @@
         class="mySwiper textSwiper"
       >
       <swiper-slide v-for="item in items" :key="item">
-        <div class="allFor">
+        <div class="allFor textSwiper hidden-overflow">
           <div class="textGroup">
             <a href="#">
               <span>{{ item.span }}</span>
@@ -355,6 +355,19 @@ export default {
 };
 </script>
 
+<style>
+.textSwiper .swiper-button-prev{
+  color: red;
+  position: absolute;
+  left: -20px;
+}
+.textSwiper .swiper-button-next{
+  color: red;
+}
+
+</style>
+
+
 <style scoped>
   .wrap{
     width: 100%;
@@ -362,9 +375,14 @@ export default {
     margin: 0 auto;
     padding: 56px 40px 0;
   }
-  .textSwiper{
+  /* .textSwiper{
     --swiper-navigation-top-offset: 60%;
+  } */
+  .textSwiper{
+    overflow: hidden;
   }
+
+ 
 
   h2{
     color: var(--text-color3);
