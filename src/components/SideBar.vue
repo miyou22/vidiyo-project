@@ -1,15 +1,15 @@
 <template>
   <div id="warp">
-    <a class="icon" @click="$router.push('/')">
+    <a class="icon" @click="$router.push('/'), closeSearch()">
       <img src="../assets/image/vidiyo logo 5.png" alt="" />
     </a>
     <div class="menu">
       <ul class="gnb" @click="urlFunc">
-        <li class="svg1" @click="$router.push('/')">
+        <li class="svg1" @click="$router.push('/'), closeSearch()">
           <span class="material-icons">home</span>
           <span class="menu">홈</span>
         </li>
-        <li class="svg2" @click="$router.push('/Eval')">
+        <li class="svg2" @click="$router.push('/Eval'), closeSearch()">
           <span class="material-icons">star_border</span>
           <span class="menu">평가</span>
         </li>
@@ -17,7 +17,7 @@
           <span class="material-icons">search</span>
           <span class="menu">검색</span>
         </li>
-        <li class="svg4" @click="$router.push('/storage')">
+        <li class="svg4" @click="$router.push('/storage'),closeSearch()">
           <span class="material-icons">inbox</span>
           <span class="menu">보관함</span
           >
@@ -39,6 +39,9 @@ export default {
     },
     searchView() {
       this.$store.commit("searchView");
+    },
+    closeSearch() {
+      this.$store.commit("closeSearch");
     },
   },
 };
