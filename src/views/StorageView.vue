@@ -1,5 +1,5 @@
 <template>
-  <div class="warp">
+  <div class="wrap">
     <div class="evalTitle">
       <h2>보관함</h2>
     </div>
@@ -174,7 +174,7 @@ export default {
 </script>
 
 <style scoped>
-.warp {
+.wrap {
   color: white;
   padding: 56px 40px 0;
 

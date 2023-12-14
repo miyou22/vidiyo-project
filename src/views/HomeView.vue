@@ -1,11 +1,11 @@
 <template>
- <div id="warp">
+ <div class="wrap">
   <div class="homeTitle">
     <h2>홈</h2>
   </div>
 
-
-  <a href="#" class="imageLink">
+  <section id="section1">
+    <a href="#" class="imageLink">
     <div class="movieTitle">
       <div class="movieImage">
         <div class="image"></div>
@@ -20,25 +20,25 @@
       </div>
     </div>
   </a>
+  </section>
+  
 
   <hr type="regular">
 
   <section class="contants">
     <div class="gnb">
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="3"
-    :centeredSlides="true"
-    :spaceBetween="10"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :slidesOffsetBefore ="0"
-    :autoHeight="true"
-    
-    class="mySwiper"
-    
-  >
+        ref="{swiperRef}"
+        :slidesPerView="3"
+        :centeredSlides="true"
+        :spaceBetween="10"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :slidesOffsetBefore ="0"
+        :autoHeight="true"
+        class="mySwiper textSwiper"
+      >
       <swiper-slide v-for="item in items" :key="item">
         <div class="allFor">
           <div class="textGroup">
@@ -133,18 +133,15 @@
         <a href="#">더보기</a>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :autoHeight="true"
-    
-    
-    class="mySwiper"
-    
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        class="mySwiper"
+      >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
             <img :src="image.img" @click="$router.push('/detail')"/>
@@ -161,18 +158,15 @@
         <a href="#">더보기</a>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :autoHeight="true"
-    
-    
-    class="mySwiper"
-    
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        class="mySwiper"
+      >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
             <img :src="image.img" />
@@ -188,15 +182,15 @@
         <h2>아티스트</h2>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :spaceBetween="10"
-    class="mySwiper"
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :spaceBetween="10"
+        class="mySwiper"
+      >
       <swiper-slide v-for="personImg in person" :key="personImg" class="about">
         <div class="personImage" @click="$router.push('/movie')">
             <div class="personImg">
@@ -362,11 +356,14 @@ export default {
 </script>
 
 <style scoped>
-  #warp{
+  .wrap{
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 56px 40px 0;
+  }
+  .textSwiper{
+    --swiper-navigation-top-offset: 60%;
   }
 
   h2{
@@ -432,8 +429,7 @@ export default {
     flex-direction: column;
     width: 500px;
   }
-  .movieText h1{
-  }
+
   .movieText p{
     font-size: 18px;
     white-space: pre-wrap;
