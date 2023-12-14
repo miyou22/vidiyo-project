@@ -141,7 +141,6 @@ footer {
   /* min-width: 1020px; */
 }
 .top-menu {
-  margin-left: 20px;
   margin-bottom: 30px;
   display: flex;
   line-height:1.5;
@@ -163,6 +162,9 @@ footer {
   position: absolute;
   right: 40px;
   transform: translateY(-100px);
+}
+.logo-group img {
+margin-left: 20px;
 }
 .btn {
   padding: 0;
