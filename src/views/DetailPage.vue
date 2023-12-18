@@ -163,8 +163,9 @@ export default {
   .inform>b{
     color: #fff;
     font-size: 1rem;
-    background-color: #b3b3b3;
+    background-color: #565656;
     padding: 0 0.25rem;
+    border-radius: 4px;
   }
   .moresee{
     font-family: 'Noto Sans KR', sans-serif;
