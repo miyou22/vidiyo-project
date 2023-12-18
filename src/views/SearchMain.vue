@@ -1,8 +1,10 @@
 <template>
   <div class="wrap">
     <div class="search-list">
-      <h1>최근 검색한 항목</h1>
-
+      <div class="first">
+        <h1>최근 검색한 항목</h1>
+        <a href="#" class="btnClear">모두 삭제</a>
+      </div>
       <div class="row">
         <div class="col c1" @click="$router.push('/detail')">
           <div class="img">
@@ -35,7 +37,10 @@
     </div>
 
     <div class="categori">
+      <div class="first">
       <h1>인기</h1>
+      <a href="#" class="btnClear">모두 보기</a>
+    </div>
       <swiper
         ref="{swiperRef}"
         :slidesPerView="2"
@@ -116,7 +121,10 @@
     </div>
 
     <div class="categori tw">
+      <div class="first">
       <h1>비디오 장르</h1>
+      <a href="#" class="btnClear">모두 보기</a>
+    </div>
       <swiper
         ref="{swiperRef}"
         :slidesPerView="2"
@@ -205,7 +213,10 @@
     </div>
 
     <div class="categori tw">
+      <div class="first">
       <h1>비디오 태그</h1>
+      <a href="#" class="btnClear">모두 보기</a>
+    </div>
       <swiper
         ref="{swiperRef}"
         :slidesPerView="2"
@@ -294,7 +305,10 @@
     </div>
 
     <div class="categori tw">
+      <div class="first">
       <h1>비디오 국가</h1>
+      <a href="#" class="btnClear">모두 보기</a>
+    </div>
       <swiper
         ref="{swiperRef}"
         :slidesPerView="2"
@@ -383,7 +397,10 @@
     </div>
 
     <div class="categori tw">
+      <div class="first">
       <h1>오늘의 추천</h1>
+      <a href="#" class="btnClear">모두 보기</a>
+    </div>
       <swiper
         ref="{swiperRef}"
         :slidesPerView="2"
@@ -501,7 +518,7 @@ export default {
 </script>
 
 <style scoped>
-.wrap{
+.wrap {
   padding: 56px 40px 0;
 }
 .swiper {
@@ -533,11 +550,11 @@ export default {
   margin-top: 18px;
 }
 
-.categori > h1 {
+.categori  h1 {
   font-size: 28px;
   color: white;
   font-weight: bold;
-  font-family: 'Noto sans KR';
+  font-family: "Noto sans KR";
 }
 
 .tw {
@@ -559,12 +576,12 @@ export default {
 .c2 {
   margin: 0 12px;
 }
-.search-list > h1 {
+.search-list  h1 {
   font-size: 28px;
   color: white;
   font-weight: bold;
-  font-family: 'Noto sans KR';
-  margin-bottom: 18px;
+  font-family: "Noto sans KR";
+
 }
 .search-list {
   margin-bottom: 62px;
@@ -577,7 +594,7 @@ export default {
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: 12px;
-  font-family: 'Noto sans KR';
+  font-family: "Noto sans KR";
 }
 .txt > h2 {
   font-size: var(--size4);
@@ -587,6 +604,17 @@ export default {
 }
 .txt > p {
   font-size: var(--size5);
+}
+.first{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.first a {
+  font-size: var(--size4);
+  font-family: "Noto sans KR";
+  color: #202020;
 }
 /* @media screen and (min-width: 0) and (max-width: 568px) {
 } */

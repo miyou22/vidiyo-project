@@ -9,7 +9,7 @@
         v-if="this.$store.state.searchShow"
         @keydown="$router.push('/searchmovie')"
       />
-      <button class="btnClear"><i class="fa-solid fa-circle-xmark"></i></button>
+      <button class="btnClear" @click="clearInput"><i class="fa-solid fa-circle-xmark"></i></button>
     </div>
     <div class="login-header">
       <div class="alam">
@@ -32,7 +32,11 @@
 
 <script>
 export default {
-  methods: {},
+  methods: {
+    clearInput(){
+      document.querySelector('input').value = ""
+    }
+  },
 };
 </script>
 
