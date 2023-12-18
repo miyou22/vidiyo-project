@@ -83,23 +83,23 @@ export default {
 }
 
 .box_a {
-  max-width: 780px;
+  max-width: 48.75rem;
   /* height: 910px; */
   margin: auto;
 }
 
 input {
   font-size: 1rem;
-  width: 525px;
-  border-radius: 20px;
-  padding: 12px 50px;
+  width: 32.8125rem;
+  border-radius: 1.25rem;
+  padding: 0.75rem 3.125rem;
   float: Left;
 }
 
 .gnb h1 {
   text-align: start;
-  width: 526px;
-  margin-left: 126px;
+  width: 32.875rem;
+  margin-left: 7.875rem;
   padding: 60px 0 12px 0;
   font-family: "Noto Sans KR";
   font-weight: bold;
@@ -111,15 +111,15 @@ h2 {
   font-weight: bold;
   font-size: 36px;
   text-align: left;
-  margin-top: 40px;
-  margin-bottom: 20px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .search {
   position: relative;
   width: 526px;
   height: 46px;
-  margin: 0 auto 28px auto;
+  margin: 0 auto 1.75rem auto;
   outline: 1px solid black;
   border-radius: 20px;
 }
