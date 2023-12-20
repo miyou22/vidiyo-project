@@ -95,12 +95,14 @@ export default {
   top: 0;
   z-index: 9999;
   width: 100%;
+  height: 118.125rem;
   background-color: #f5f5f5;
 }
 
 .boxa {
   max-width: 780px;
   margin: auto;
+  text-align: start;
 }
 
 h1 {

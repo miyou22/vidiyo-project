@@ -9,7 +9,7 @@
         v-if="this.$store.state.searchShow"
         @keydown="$router.push('/searchmovie')"
       />
- 
+      <button class="btnClear" @click="clearInput"><i class="fa-solid fa-circle-xmark"></i></button>
     </div>
     <div class="login-header">
       <div class="alam">
@@ -20,8 +20,12 @@
       </div>
     </div>
     <div class="logout-header">
-      <router-link to="/login"><button type="button" class="login" >로그인</button></router-link>
-      <router-link to="/joinmembership"><button type="button" class="join">회원가입</button></router-link>
+      <router-link to="/login"
+        ><button type="button" class="login">로그인</button></router-link
+      >
+      <router-link to="/joinmembership"
+        ><button type="button" class="join">회원가입</button></router-link
+      >
     </div>
   </header>
 </template>
@@ -29,7 +33,9 @@
 <script>
 export default {
   methods: {
-  
+    clearInput(){
+      document.querySelector('input').value = ""
+    }
   },
 };
 </script>
@@ -98,5 +104,22 @@ input[type="text"] {
   border-radius: 7px;
   border: none;
   color: white;
+}
+.search {
+  position: relative;
+  display: inline-block;
+}
+.search .btnClear {
+  position: absolute;
+  top: 7px;
+  right: 0;
+  width: 30px;
+  height: 16px;
+  background-color: inherit;
+  background-size: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--button-color4);
 }
 </style>
