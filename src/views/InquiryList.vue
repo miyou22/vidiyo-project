@@ -31,7 +31,7 @@ export default {
 </script>
 
 
-<style>
+<style scoped>
 .web {
   position: fixed;
   left: 0;
