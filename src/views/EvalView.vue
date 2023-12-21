@@ -1,5 +1,5 @@
 <template>
-  <div class="warp">
+  <div class="wrap">
     <div class="evalTitle">
       <h2>평가</h2>
     </div>
@@ -109,7 +109,7 @@ export default {
         //   title: '연애혁명',
         // }
       ],
-      login: false,
+      login: true,
     }
   },
   methods: {
@@ -122,7 +122,7 @@ export default {
 </script>
 
 <style scoped>
-.warp {
+.wrap {
   color: white;
   padding: 56px 40px 0;
 

@@ -1,17 +1,17 @@
 <template>
- <div id="warp">
+ <div class="wrap">
   <div class="homeTitle">
     <h2>홈</h2>
   </div>
 
-
-  <a href="#" class="imageLink">
+  <section id="section1">
+    <a href="#" class="imageLink"> 
     <div class="movieTitle">
       <div class="movieImage">
         <div class="image"></div>
-        <div class="video">
+        <!-- <div class="video">
             <video src="../assets/image/leave.mp4" autoplay loop muted height="520" id="video10"></video>
-        </div>
+        </div> -->
       </div>
       <div class="movieText">
         <div class="bgi"></div>
@@ -20,131 +20,64 @@
       </div>
     </div>
   </a>
+  </section>
+  
 
   <hr type="regular">
 
-  <section class="contants">
+  <section id="section2">
     <div class="gnb">
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="3"
-    :centeredSlides="true"
-    :spaceBetween="10"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :slidesOffsetBefore ="0"
-    :autoHeight="true"
-    
-    class="mySwiper"
-    
-  >
-      <swiper-slide v-for="item in items" :key="item">
-        <div class="allFor">
-          <div class="textGroup">
-            <a href="#">
-              <span>{{ item.span }}</span>
-              <h2>{{ item.h2 }}</h2>
-              <p>{{ item.p }}</p> 
-            </a>
-          </div>
-          <figure>
-            <img :src="item.img" />
-          </figure>
-        </div>
-      </swiper-slide>
-    
-        <!-- <swiper-slide>
-          <div class="allFor">
-            <div class="textGroup">
-              <span>NEW</span>
-              <h2>새로 올라온 컨텐츠</h2>
-              <p>라방, 본아페티, 그놈들 등</p> 
-            </div>
-            <figure>
-              <img src="../assets/image/figure2.png" alt="">
-            </figure>
-          </div>
-        </swiper-slide>
-    
-        <swiper-slide>
-          <div class="allFor">
-            <div class="textGroup">
-              <span>NEW</span>
-              <h2>새로 올라온 컨텐츠</h2>
-              <p>라방, 본아페티, 그놈들 등</p> 
-            </div>
-            <figure>
-              <img src="../assets/image/figure3.png" alt="">
-            </figure>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="allFor">
-            <div class="textGroup">
-              <span>NEW</span>
-              <h2>새로 올라온 컨텐츠</h2>
-              <p>라방, 본아페티, 그놈들 등</p> 
-            </div>
-            <figure>
-              <img src="../assets/image/figure1.png" alt="">
-            </figure>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="allFor">
-            <div class="textGroup">
-              <span>NEW</span>
-              <h2>새로 올라온 컨텐츠</h2>
-              <p>라방, 본아페티, 그놈들 등</p> 
-            </div>
-            <figure>
-              <img src="../assets/image/figure1.png" alt="">
-            </figure>
-          </div>
-        </swiper-slide>
-
-        <swiper-slide>
-          <div class="allFor">
-            <div class="textGroup">
-              <span>NEW</span>
-              <h2>새로 올라온 컨텐츠</h2>
-              <p>라방, 본아페티, 그놈들 등</p> 
-            </div>
-            <figure>
-              <img src="../assets/image/figure1.png" alt="">
-            </figure>
-          </div>
-        </swiper-slide>
-     -->
+      ref="{swiperRef}"
+      :slidesPerView="3"
+      :centeredSlides="true"
+      :spaceBetween="10"
+      :navigation="true"
+      :loop="true"
+      :modules="modules"
+      :autoHeight="true"
       
-    </swiper>
-  </div>
+      class="mySwiper textSwiper"
+      >
+      
+        <swiper-slide v-for="item in items" :key="item">
+          <div class="allFor textSwiper">
+            <div class="textGroup">
+              <a href="#">
+                <span>{{ item.span }}</span>
+                <h2>{{ item.h2 }}</h2>
+                <p>{{ item.p }}</p> 
+              </a>
+            </div>
+            <figure>
+              <img :src="item.img" />
+            </figure>
+          </div>
+        </swiper-slide>
+        
+      </swiper>
+
+    </div>
   </section>
+
   <hr type="regular">
 
-  
-  <section class="tagContents">
+  <section id="section3 tag">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>직장인에게 방학따위 없엉 힝</h2>
         <a href="#">더보기</a>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :autoHeight="true"
-    
-    
-    class="mySwiper"
-    
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        class="mySwiper"
+      >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
             <img :src="image.img" @click="$router.push('/detail')"/>
@@ -154,25 +87,22 @@
     </div>
   </section> 
 
-  <section class="tagContents">
+  <section id="section4 tag">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>새로 올라온 콘텐츠</h2>
         <a href="#">더보기</a>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :autoHeight="true"
-    
-    
-    class="mySwiper"
-    
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        class="mySwiper"
+      >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
             <img :src="image.img" />
@@ -182,21 +112,21 @@
     </div>
   </section> 
 
-  <section class="personContents">
+  <section id="section5">
     <div class="perGnb">
       <div class="onlyTxt">
         <h2>아티스트</h2>
       </div>
       <swiper
-    ref="{swiperRef}"
-    :slidesPerView="8"
-    :centeredSlides="false"
-    :navigation="true"
-    :loop="true"
-    :modules="modules"
-    :spaceBetween="10"
-    class="mySwiper"
-  >
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :centeredSlides="false"
+        :navigation="true"
+        :loop="true"
+        :modules="modules"
+        :spaceBetween="10"
+        class="mySwiper"
+      >
       <swiper-slide v-for="personImg in person" :key="personImg" class="about">
         <div class="personImage" @click="$router.push('/movie')">
             <div class="personImg">
@@ -246,6 +176,7 @@ export default {
   },
   data(){
     return{
+    
       items: [
         {
           span : 'NEW',
@@ -361,19 +292,37 @@ export default {
 };
 </script>
 
+  <style>
+  /* .textSwiper .swiper-button-prev{
+      color: red;
+      position: absolute;
+      left: -20px;
+      z-index: 12 !important;
+  }
+  .textSwiper .swiper-button-next{
+      color: red;
+      position: absolute;
+      right: -20px;
+      z-index: 12 !important;
+  } */
+
+  </style>
+
 <style scoped>
-  #warp{
+  .wrap{
     width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 56px 40px 0;
   }
-
+  .textSwiper{
+    position: relative;
+    overflow: hidden;
+  }
   h2{
     color: var(--text-color3);
     display: block;
     margin-bottom: 20px;
-
   }
   hr{
     width: 100%;
@@ -432,8 +381,7 @@ export default {
     flex-direction: column;
     width: 500px;
   }
-  .movieText h1{
-  }
+
   .movieText p{
     font-size: 18px;
     white-space: pre-wrap;
@@ -448,28 +396,57 @@ export default {
   }
 
 
-  .contants{
+  #section2{
     width: 100%;
     margin: 40px 0;
   }  
 .swiper {
   width: 100%;
-  height: 100%;
+  width: 100%;
+  margin: 20px auto;
 }
+
 
 .swiper-slide {
   display: flex;
   justify-content: space-between;
+  z-index: 1;
 }
 
 .swiper-slide img {
   width: 100%;
 }
 
-.swiper {
-  width: 100%;
-  margin: 20px auto;
+
+.gnb{
+  position: relative;
 }
+.gnb::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -40px;
+  z-index: -2;
+  background-color: var(--main-color1);
+}
+.gnb::after{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -40px;
+  z-index: -14;
+  background-color: var(--main-color1);
+}
+
+
 .append-buttons {
   text-align: center;
   margin-top: 20px;
@@ -485,10 +462,6 @@ export default {
   border-radius: 4px;
   margin: 0 10px;
   font-size: 13px;
-}
-.swiper-button-prev::after{
-  width: 10px;
-  height: 10px;
 }
 
 .textGroup{
@@ -514,7 +487,9 @@ export default {
   font-weight:lighter;
 }
 
-.tagContents{
+
+
+#tag{
   margin: 32px 0;
 }
 .swiper-button-prev::after{
@@ -573,5 +548,6 @@ export default {
 }
 @media (max-width: 1024px){}
 @media (max-width: 568px){}
+
 
 </style>
