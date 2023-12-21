@@ -21,7 +21,7 @@
               <li><button class="button"><a href="#">이용권 구독 해지</a></button></li>
             </ul>
             <ul class="form_b">
-              <li><button class="button"><a href="#">결제 및 이용권</a></button></li>
+              <li><button class="button"><a href="#">결제1 및 이용권</a></button></li>
               <li><button class="button"><a href="#">쿠폰</a></button></li>
               <li><button class="button"><a href="#">환불</a></button></li>
               <li><button class="button"><a href="#">재생 및 사용 오류</a></button></li>
