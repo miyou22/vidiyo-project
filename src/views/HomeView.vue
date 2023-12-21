@@ -54,7 +54,6 @@
             </figure>
           </div>
         </swiper-slide>
-        
       </swiper>
 
     </div>
@@ -62,7 +61,7 @@
 
   <hr type="regular">
 
-  <section id="section3 tag">
+  <section id="section3">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>직장인에게 방학따위 없엉 힝</h2>
@@ -70,13 +69,41 @@
       </div>
       <swiper
         ref="{swiperRef}"
-        :slidesPerView="8"
+        :slidesPerView="1"
         :centeredSlides="false"
         :navigation="true"
         :loop="true"
         :modules="modules"
         :autoHeight="true"
         class="mySwiper"
+         :breakpoints="{
+           '568': {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            slidesPerGroup: 4,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            slidesPerGroup: 4,
+          },
+          '1200': {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerGroup: 5,
+          },
+          '1424': {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            slidesPerGroup: 6,
+          },
+          '1680': {
+            slidesPerView: 8,
+            spaceBetween: 10,
+            slidesPerGroup: 10,
+
+          },
+        }"
       >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
@@ -87,30 +114,59 @@
     </div>
   </section> 
 
-  <section id="section4 tag">
+ <section id="section4">
     <div class="tagGnb">
       <div class="onlyTxt">
-        <h2>새로 올라온 콘텐츠</h2>
+        <h2>직장인에게 방학따위 없엉 힝</h2>
         <a href="#">더보기</a>
       </div>
       <swiper
         ref="{swiperRef}"
-        :slidesPerView="8"
+        :slidesPerView="1"
         :centeredSlides="false"
         :navigation="true"
         :loop="true"
         :modules="modules"
         :autoHeight="true"
         class="mySwiper"
+         :breakpoints="{
+           '568': {
+            slidesPerView: 3,
+            spaceBetween: 10,
+            slidesPerGroup: 4,
+          },
+          '1024': {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            slidesPerGroup: 4,
+          },
+          '1200': {
+            slidesPerView: 5,
+            spaceBetween: 10,
+            slidesPerGroup: 5,
+          },
+          '1424': {
+            slidesPerView: 6,
+            spaceBetween: 10,
+            slidesPerGroup: 6,
+          },
+          '1680': {
+            slidesPerView: 8,
+            spaceBetween: 10,
+            slidesPerGroup: 10,
+
+          },
+        }"
       >
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
-            <img :src="image.img" />
+            <img :src="image.img" @click="$router.push('/detail')"/>
         </div>
       </swiper-slide>
       </swiper>
     </div>
   </section> 
+
 
   <section id="section5">
     <div class="perGnb">
@@ -309,6 +365,8 @@ export default {
   </style>
 
 <style scoped>
+
+
   .wrap{
     width: 100%;
     height: 100%;
@@ -407,11 +465,6 @@ export default {
 }
 
 
-.swiper-slide {
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
-}
 
 .swiper-slide img {
   width: 100%;
@@ -471,6 +524,9 @@ export default {
   color: var(--text-color3);
   margin-bottom: 5px;
 }
+#section3{margin-bottom: 50px;}
+#section4{margin-bottom: 50px;}
+#section5{}
 
 .textGroup span{
   font-size: var(--size5);
@@ -487,17 +543,6 @@ export default {
   font-weight:lighter;
 }
 
-
-
-#tag{
-  margin: 32px 0;
-}
-.swiper-button-prev::after{
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-
 .tagGnb h2{
   font-size: 18px;
   font-weight: bold;
@@ -511,10 +556,13 @@ export default {
   border-radius: 2%;
   overflow: hidden;
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 .tagGnb > .swiper{
   margin: 5px auto;
 }
+
 .person{
   /* border-radius: 50%; */
 
@@ -547,6 +595,12 @@ export default {
   font-weight: bold;
 }
 @media (max-width: 1024px){}
+@media (max-width: 798px){
+  #wrap{
+   margin-left: -240px;
+
+  }
+}
 @media (max-width: 568px){}
 
 
