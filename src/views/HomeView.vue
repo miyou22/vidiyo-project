@@ -5,13 +5,13 @@
   </div>
 
   <section id="section1">
-    <a href="#" class="imageLink">
+    <a href="#" class="imageLink"> 
     <div class="movieTitle">
       <div class="movieImage">
         <div class="image"></div>
-        <div class="video">
+        <!-- <div class="video">
             <video src="../assets/image/leave.mp4" autoplay loop muted height="520" id="video10"></video>
-        </div>
+        </div> -->
       </div>
       <div class="movieText">
         <div class="bgi"></div>
@@ -25,7 +25,7 @@
 
   <hr type="regular">
 
-  <section class="contants">
+  <section id="section2">
     <div class="gnb">
       <swiper
       ref="{swiperRef}"
@@ -60,16 +60,9 @@
     </div>
   </section>
 
-
-  
-
-
-
-
   <hr type="regular">
 
-  
-  <section class="tagContents">
+  <section id="section3 tag">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>직장인에게 방학따위 없엉 힝</h2>
@@ -94,7 +87,7 @@
     </div>
   </section> 
 
-  <section class="tagContents">
+  <section id="section4 tag">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>새로 올라온 콘텐츠</h2>
@@ -119,7 +112,7 @@
     </div>
   </section> 
 
-  <section class="personContents">
+  <section id="section5">
     <div class="perGnb">
       <div class="onlyTxt">
         <h2>아티스트</h2>
@@ -300,7 +293,7 @@ export default {
 </script>
 
   <style>
-  .textSwiper .swiper-button-prev{
+  /* .textSwiper .swiper-button-prev{
       color: red;
       position: absolute;
       left: -20px;
@@ -311,7 +304,7 @@ export default {
       position: absolute;
       right: -20px;
       z-index: 12 !important;
-  }
+  } */
 
   </style>
 
@@ -324,7 +317,7 @@ export default {
   }
   .textSwiper{
     position: relative;
-    overflow: visible;
+    overflow: hidden;
   }
   h2{
     color: var(--text-color3);
@@ -403,7 +396,7 @@ export default {
   }
 
 
-  .contants{
+  #section2{
     width: 100%;
     margin: 40px 0;
   }  
@@ -494,7 +487,9 @@ export default {
   font-weight:lighter;
 }
 
-.tagContents{
+
+
+#tag{
   margin: 32px 0;
 }
 .swiper-button-prev::after{
