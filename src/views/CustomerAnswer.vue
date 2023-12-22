@@ -19,8 +19,8 @@
       <div class="information">
         <p>원하는 정보를 얻으셨나요?</p>
         <div class="yes_btn">
-          <button type="button" class="btn btn-outline-dark">예</button>
-          <button type="button" class="btn btn-outline-dark">아니요</button>
+           <button type="button" class="btn btn-outline-dark" :class="{ 'active': yesIsActive }" @click="toggleYesActive"> 예 </button>
+            <button type="button" class="btn btn-outline-dark" :class="{ 'active': noIsActive }" @click="toggleNoActive"> 아니오 </button>
         </div>
         <div class="last">
           <p>궁금하신 점은 무엇이든 문의해 주세요</p>
@@ -46,7 +46,39 @@ export default {
   props: {
     msg: String,
   },
+
+  data() {
+    return {
+      yesIsActive: false,
+      noIsActive: false,
+    };
+  },
+  methods: {
+    toggleYesActive() {
+      if (!this.yesIsActive) {
+        this.yesIsActive = true;
+        this.noIsActive = false; // '예' 버튼이 눌리면 '아니오' 버튼 상태를 해제
+        // '예' 버튼 클릭 이벤트 핸들링 로직 추가
+      } else {
+        // '예' 버튼이 이미 눌린 상태이면, 다시 클릭하면 해제
+        this.yesIsActive = false;
+        // '예' 버튼 클릭 해제 이벤트 핸들링 로직 추가
+      }
+    },
+    toggleNoActive() {
+      if (!this.noIsActive) {
+        this.noIsActive = true;
+        this.yesIsActive = false; // '아니오' 버튼이 눌리면 '예' 버튼 상태를 해제
+        // '아니오' 버튼 클릭 이벤트 핸들링 로직 추가
+      } else {
+        // '아니오' 버튼이 이미 눌린 상태이면, 다시 클릭하면 해제
+        this.noIsActive = false;
+        // '아니오' 버튼 클릭 해제 이벤트 핸들링 로직 추가
+      }
+    },
+  },
 };
+
 </script>
 
 <style scoped>
@@ -67,6 +99,7 @@ export default {
   max-width: 600px;
   text-align: start;
   margin: auto; 
+  margin-top: 60px;
   font-size: 1rem;
   font-style: 'Roboto';
 }
@@ -104,7 +137,6 @@ b {
   border-radius: 5px;
   margin-left: 10px;
   margin-top: 12px;
-  
 }
 
 .last > p:nth-child(2){

@@ -21,7 +21,7 @@
               <li><button class="button"><a href="#">이용권 구독 해지</a></button></li>
             </ul>
             <ul class="form_b">
-              <li><button class="button"><a href="#">결제1 및 이용권</a></button></li>
+              <li><button class="button"><a href="#">결제 및 이용권</a></button></li>
               <li><button class="button"><a href="#">쿠폰</a></button></li>
               <li><button class="button"><a href="#">환불</a></button></li>
               <li><button class="button"><a href="#">재생 및 사용 오류</a></button></li>
@@ -60,7 +60,9 @@ export default {
   props: {
     msg: String,
   },
+  
 };
+
 </script>
 
 <style scoped>
@@ -95,6 +97,9 @@ input {
   padding: 0.75rem 3.125rem;
   float: Left;
 }
+
+input:focus {outline: 2px solid #d50000;} /* outline 테두리 속성 수정 */
+input:focus {outline: none;} /* outline 테두리 없애기 */
 
 .gnb h1 {
   text-align: start;
@@ -167,7 +172,7 @@ button {
   background-color: #fff;
   width: 380px;
   height: 68px;
-  box-shadow: 5px 5px 15px rgb(143, 143, 143);
+  box-shadow: 5px 5px 15px rgb(209, 209, 209);
   border-radius: 5px;
   margin: 10px 0;
   font-size: 24px;

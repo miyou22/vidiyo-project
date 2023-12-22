@@ -27,6 +27,7 @@
                 <option value="3">사용문의</option>
             </select>
           </sapn>
+          <section class="form__container"></section>
         </div>
       </div>
     </div>
@@ -93,6 +94,28 @@ h1 {
   font-size: 16px;
   border-radius: 5px;
   margin: auto;
+}
+
+.form__container {
+	display: none;
+	opacity: 0;
+}
+
+.form__container.show {
+	display: block;	
+	opacity: 1;
+	animation: formopen;
+	animation-duration: 0.5s;
+}
+
+@keyframes formopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 option { padding : 0 0 0 10px; 
