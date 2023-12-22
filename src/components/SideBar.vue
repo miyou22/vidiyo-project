@@ -1,5 +1,5 @@
 <template>
-  <div id="warp">
+  <div id="wrap">
     <a class="icon" @click="$router.push('/'), closeSearch()">
       <img src="../assets/image/vidiyo logo 5.png" alt="" />
     </a>
@@ -48,7 +48,7 @@ export default {
 </script>
 
 <style scoped>
-#warp {
+#wrap {
   background-color: var(--sub-color2);
   color: var(--text-color3);
   width: 240px;
@@ -93,5 +93,11 @@ li img {
 li .menu{
   margin-left: 1rem;
 }
+
+/* @media (max-width: 798px){
+  #wrap{
+    display: none;
+  }
+} */
 
 </style>
