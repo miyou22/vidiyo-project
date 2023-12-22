@@ -176,7 +176,7 @@ footer {
 .btn-close {
   transform: translateX(400%);
 }
-.modal-dialog {
-  background: red;
-}
+
+
 </style>
+
