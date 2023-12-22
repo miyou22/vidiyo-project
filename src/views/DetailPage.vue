@@ -14,63 +14,65 @@
             자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸
             깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다.&nbsp;
           </p>
+          <!-- //모달시작 -->
+          <!--button요소를 클릭하면 popup함수가 호출-->
+          <button @click="popup()">더보기</button>
+          <!--modal-->
+          <div id="id01" class="modal" >
 
-          <!-- Button trigger modal -->
-          <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal-detail">
-            더보기
-          </button>
 
-          <!-- Modal -->
-          <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content modal-background">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="exampleModalLabel">
-                    <p class="title-modal fs-2">이프온리</p>
-                    <br />
-                    <p class="modal-imformation fs-4">기본 정보</p>
-                    <br />
-                    <div class="modal-txt">
-                      <p>개봉연도</p>
-                      <p class="right">2004</p>
-                    </div>
-                    <div class="modal-txt">
-                      <p>장르</p>
-                      <p class="right">코미디</p>
-                    </div>
-                    <div class="modal-txt">
-                      <p>국가</p>
-                      <p class="right">미국</p>
-                    </div>
-                    <div class="modal-txt">
-                      <p>상영시간</p>
-                      <p class="right">1시간 35분</p>
-                    </div>
-                    <div class="modal-txt">
-                      <p>평점</p>
-                      <p class="right">평균4.0</p>
-                    </div>
-                    <div class="modal-txt">
-                      <p>연령등급</p>
-                      <p class="right"><img src="../assets/image/15.png" alt="15" class="age"></p>
-                    </div>
-                  </h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <p>줄거리</p>
-                  <p class="bottom">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더
-                    늦기 전에 자신의 진심을 전하려 한다.</p>
-                </div>
-                <div class="modal-body">
 
-                  asdasd
+            <!--modal content-->
+            <form class="modal-content">
+
+
+              <!--입력창-->
+              <div class="container">
+                <!--x버튼을 클릭하면 pClose()함수 호출-->
+                <span @click="pClose()" class="close">&times;</span>
+                <!--required = 필수 입력창 설정-->
+
+                <p class="modal-name">이프온리</p>
+                <p class="modal-top">기본 정보</p>
+
+                <div class="modal-flex">
+                  <p class="top-left">개봉연도</p>
+                  <p class="top-right">2004</p>
                 </div>
+                <div class="modal-flex">
+                  <p class="top-left">장르</p>
+                  <p class="top-right">코미디</p>
+                </div>
+                <div class="modal-flex">
+                  <p class="top-left">국가</p>
+                  <p class="top-right">미국</p>
+                </div>
+                <div class="modal-flex">
+                  <p class="top-left">상영시간</p>
+                  <p class="top-right">1시간35분</p>
+                </div>
+                <div class="modal-flex">
+                  <p class="top-left">평점</p>
+                  <p class="top-right">4.0</p>
+                </div>
+                <div class="modal-flex">
+                  <p class="top-left">연령등급</p>
+                  <p class="top-right">15</p>
+                </div>
+
               </div>
-            </div>
+
+
+
+
+            </form>
           </div>
+
+
+
+
+          <!-- 모달끝 -->
         </div>
-        <!-- 모달끝 -->
 
         <div class="movie">
           <button type="button" class="watch">▶ 무료로 감상하기</button>
@@ -199,9 +201,32 @@ export default {
       if (event.target.dataset.value) {
         this.rating = parseInt(event.target.dataset.value);
       }
+
     },
+    popup() {
+      document.getElementById("id01").style.display = "block";
+
+    },
+    pClose() {
+      document.getElementById("id01").style.display = "none";
+    },
+    // window(e) {
+    //   if (e.target == document.getElementById("id01")) {
+    //     document.getElementById("id01").style.display = "none";
+    //   }
+    // },
   },
 };
+
+
+
+//브라우저 내에서 클릭이벤트가 발생하면 구문실행
+// window.onclick = function (e) {
+//console.log(e.target) 클릭한 요소
+//   if (e.target == modal) {//클릭한 요소가 modal일때
+//     modal.style.display = "none";
+//   }
+// }
 </script>
 
 <style scoped>
@@ -390,58 +415,87 @@ h4 {
   font-size: 1.5rem;
 }
 
-/* 모달 css */
-.modal-header {}
 
-.modal-dialog {
+/* 모달시작 */
+.modal {
+  /*위치고정하고 브라우저의 크기만큼 크기를 설정*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-top: 60px;
+  display: none;
+
+}
+
+/*실제 모달의 콘텐츠가 표시되는 부분*/
+.modal-content {
+  background-color: rgb(34, 35, 38);
+  width: 600px;
+  margin: auto;
+  border: 1px solid #888;
+  animation: zoom 0.6s;
+  border-radius: 10px;
+  position: relative;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  color: #b5b5b5;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover {
+  cursor: pointer;
+}
+
+.container {
+  padding: 20px;
+
+}
+
+.modal-name {
+  font-size: 32px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.modal-top {
+  font-size: 20px;
   color: #fff;
 }
 
-.modal-background {
-  background-color: rgb(34, 35, 38);
-}
-
-.modal-txt {
-  width: 200px;
+.modal-flex {
   display: flex;
-  justify-content: space-between;
-  text-align: left;
-  font-size: 14px;
-  line-height: 28px;
 }
 
-.modal-txt .right {
+.top-left {
+  width: 80px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #fff;
+}
+
+.top-right {
   color: #babac1;
-  font-size: 14px;
-  width: 100px;
-}
-
-.age {
-  width: 32px;
-  height: 32px;
-
-}
-
-.modal-body .bottom {
-  color: #babac1;
-  font-size: 14px;
-  margin-top: 16px;
-}
-
-.top-txt {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.bottom-txt {
-  display: flex;
-  justify-content: flex-start;
-}
-
-.actor {
-  margin-left: 20px;
-  width: 400px;
-  color: #babac1;
-  ;
+  font-size: 16px;
+  margin-left: 30px;
 }
 </style>
