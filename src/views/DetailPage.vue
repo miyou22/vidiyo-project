@@ -43,26 +43,27 @@
                     <br />
                     <div class="modal-txt">
                       <p>개봉연도</p>
-                      <b>2004</b>
+                      <p class="right">2004</p>
                     </div>
                   <div class="modal-txt">
                       <p>장르</p>
-                      <b>코미디</b>
+                      <p class="right">코미디</p>
                     </div >
                     <div class="modal-txt">
                       <p>국가</p>
-                      <b>미국</b>
+                      <p class="right">미국</p>
                     </div>
                     <div class="modal-txt">
                       <p>상영시간</p>
-                      <b>1시간 35분</b>
+                      <p class="right">1시간 35분</p>
                     </div>
                     <div class="modal-txt">
                       <p>평점</p>
-                      <b>평균4.0</b>
+                      <p class="right">평균4.0</p>
                     </div>
                     <div class="modal-txt">
                       <p>연령등급</p>
+                      <p class="right"><img src="../assets/image/15.png" alt="15" class="age"></p>
                     </div>
                   </h1>
                   <button
@@ -72,8 +73,14 @@
                     aria-label="Close"
                   ></button>
                 </div>
-                <div class="modal-body">...</div>
-                <div class="modal-footer"></div>
+                <div class="modal-body">
+                  <p>줄거리</p>
+                  <p class="bottom">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은 이안은 더 늦기 전에 자신의 진심을 전하려 한다.</p>
+                </div>
+                <div class="modal-body">
+
+                  asdasd
+                </div>
               </div>
             </div>
           </div>
@@ -400,9 +407,7 @@ h4 {
 .modal-dialog {
   color: #fff;
 }
-.modal-dialog b {
-  color: #babac1;
-}
+
 .modal-background {
   background-color: rgb(34, 35, 38);
 }
@@ -411,10 +416,23 @@ h4 {
   display: flex;
   justify-content: space-between;
   text-align: left;
+  font-size: 14px;
+  line-height: 28px;
 }
-.modal-txt b{
+.modal-txt .right{
+  color: #babac1;
+  font-size: 14px;
   width: 100px;
 }
 
+.age{ 
+  width: 32px;
+  height: 32px;
 
+}
+.modal-body .bottom{
+  color: #babac1;
+  font-size: 14px;
+margin-top: 16px;
+}
 </style>

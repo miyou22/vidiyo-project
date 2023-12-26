@@ -7,7 +7,7 @@
       <div class="dropdown">
         <button @click="menuToggle"><span>홍길동</span><i class="fa-solid fa-play"></i></button>
         <ul class="dropdown-contents" v-show="MenuToggle" @click="menuHide">
-          <a href="#">문의 내역</a>
+          <a href="#" @click="$router.push('/inlist')">문의 내역</a>
           <a href="#" @click="$router.push('/registeri')">문의 등록</a>
         </ul>
       </div>
