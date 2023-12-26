@@ -83,7 +83,7 @@ export default {
     isActive(e) {
       const btns = document.querySelectorAll(".btnGroup>button");
       const list = document.querySelectorAll(".c1");
-
+    
       const targetEl = e.target;
       for (let i = 0; i < btns.length; i++) {
         if (btns[i] == targetEl) {
