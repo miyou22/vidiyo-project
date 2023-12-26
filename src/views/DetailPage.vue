@@ -59,12 +59,31 @@
                     <p class="top-left">연령등급</p>
                     <p class="top-right"><img src="../assets/image/15.png" alt="15"></p>
                   </div>
-                  <hr />
                 </div>
+                <hr />
                 <div class="mid">
                   <p class="modal-top">
                     줄거리
                   </p>
+                  <p class="mid-center">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은
+                    이안은 더 늦기 전에 자신의 진심을 전하려 한다.</p>
+                </div>
+                <hr />
+                <div class="bottom">
+                  <p class="modal-top">
+                    감독출현
+                  </p>
+                  <div class="modal-flex">
+                    <p class="bottom-left">감독</p>
+                    <p class="bottom-right">길 정거</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="bottom-left">출현</p>
+                    <p class="bottom-right">
+                      제니퍼 러브 휴이트, 폴 니콜스, 톰 윌킨슨, 루시 대번포트, 다이아나 하드캐슬, 로버트 지글러, 로이 샘슨, 케빈 무어, 네빌 필립스, 벤 리지웨이, 태-와 부옹</p>
+                  </div>
+
+
                 </div>
 
               </div>
@@ -217,12 +236,26 @@ export default {
     pClose() {
       document.getElementById("id01").style.display = "none";
     },
+    windowClose(event) {
+      const modal = document.getElementById("id01");
+
+      console.log(event.target);
+      console.log(modal)
+
+      if (event.target == modal) {
+        this.pClose();
+
+      }
+    }
     // window(e) {
     //   if (e.target == document.getElementById("id01")) {
     //     document.getElementById("id01").style.display = "none";
     //   }
     // },
   },
+  mounted() {
+    window.addEventListener('click', this.windowClose)
+  }
 };
 
 
@@ -485,6 +518,7 @@ h4 {
 }
 
 .modal-top {
+  font-weight: bold;
   font-size: 20px;
   color: #fff;
   margin-top: 20px;
@@ -494,19 +528,20 @@ h4 {
 
 .modal-flex {
   display: flex;
+  justify-content: flex-start;
 }
 
 .top-left {
   width: 80px;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
   color: #fff;
   line-height: 36px;
 }
 
 .top-right {
   color: #babac1;
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 30px;
   line-height: 36px;
 
@@ -516,7 +551,26 @@ h4 {
   width: 32px;
   height: 32px;
 }
-.top hr{
-margin: 16px 0 16px 0;
+
+hr {
+  margin: 16px 0 16px 0;
+}
+
+.mid-center {
+  color: #babac1;
+  font-size: 14px;
+
+}
+.bottom-left {
+  width: 60px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+}
+.bottom-right {
+  color: #babac1;
+  font-size: 14px;
+  width: 500px;
+
 }
 </style>
