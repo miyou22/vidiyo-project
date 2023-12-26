@@ -18,7 +18,7 @@
           <!--button요소를 클릭하면 popup함수가 호출-->
           <button @click="popup()">더보기</button>
           <!--modal-->
-          <div id="id01" class="modal" >
+          <div id="id01" class="modal">
 
 
 
@@ -31,33 +31,40 @@
                 <!--x버튼을 클릭하면 pClose()함수 호출-->
                 <span @click="pClose()" class="close">&times;</span>
                 <!--required = 필수 입력창 설정-->
+                <div class="top">
+                  <p class="modal-name">이프온리</p>
+                  <p class="modal-top">기본 정보</p>
 
-                <p class="modal-name">이프온리</p>
-                <p class="modal-top">기본 정보</p>
-
-                <div class="modal-flex">
-                  <p class="top-left">개봉연도</p>
-                  <p class="top-right">2004</p>
+                  <div class="modal-flex">
+                    <p class="top-left">개봉연도</p>
+                    <p class="top-right">2004</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">장르</p>
+                    <p class="top-right">코미디</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">국가</p>
+                    <p class="top-right">미국</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">상영시간</p>
+                    <p class="top-right">1시간35분</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">평점</p>
+                    <p class="top-right">4.0</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">연령등급</p>
+                    <p class="top-right"><img src="../assets/image/15.png" alt="15"></p>
+                  </div>
+                  <hr />
                 </div>
-                <div class="modal-flex">
-                  <p class="top-left">장르</p>
-                  <p class="top-right">코미디</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">국가</p>
-                  <p class="top-right">미국</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">상영시간</p>
-                  <p class="top-right">1시간35분</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">평점</p>
-                  <p class="top-right">4.0</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">연령등급</p>
-                  <p class="top-right">15</p>
+                <div class="mid">
+                  <p class="modal-top">
+                    줄거리
+                  </p>
                 </div>
 
               </div>
@@ -480,6 +487,9 @@ h4 {
 .modal-top {
   font-size: 20px;
   color: #fff;
+  margin-top: 20px;
+  margin-bottom: 16px;
+
 }
 
 .modal-flex {
@@ -491,11 +501,22 @@ h4 {
   font-weight: bold;
   font-size: 16px;
   color: #fff;
+  line-height: 36px;
 }
 
 .top-right {
   color: #babac1;
   font-size: 16px;
   margin-left: 30px;
+  line-height: 36px;
+
+}
+
+.top-right img {
+  width: 32px;
+  height: 32px;
+}
+.top hr{
+margin: 16px 0 16px 0;
 }
 </style>
