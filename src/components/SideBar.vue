@@ -5,19 +5,19 @@
     </a>
     <div class="menu">
       <ul class="gnb" @click="urlFunc">
-        <li class="svg1" @click="$router.push('/'), closeSearch()">
+        <li id="svg" class="on" @click="$router.push('/'), closeSearch(), isActive($event)">
           <span class="material-icons">home</span>
           <span class="menu">홈</span>
         </li>
-        <li class="svg2" @click="$router.push('/Eval'), closeSearch()">
+        <li id="svg" @click="$router.push('/Eval'), closeSearch(), isActive($event)">
           <span class="material-icons">star_border</span>
           <span class="menu">평가</span>
         </li>
-        <li class="svg3" @click="$router.push('/search'), searchView()">
+        <li id="svg" @click="$router.push('/search'), searchView(), isActive($event)">
           <span class="material-icons">search</span>
           <span class="menu">검색</span>
         </li>
-        <li class="svg4" @click="$router.push('/storage'),closeSearch()">
+        <li id="svg" @click="$router.push('/storage'),closeSearch(), isActive($event)">
           <span class="material-icons">inbox</span>
           <span class="menu">보관함</span
           >
@@ -33,9 +33,23 @@ export default {
     return {};
   },
   methods: {
-    urlFunc() {
-      var url = window.location.href;
-      console.log(url);
+      isActive(e) {
+      const btns = document.querySelectorAll("#svg");
+    
+      let target = e.currentTarget;
+      console.log(e)
+      for(let i = 0; i<btns.length; i++){
+        e.stopPropagation()
+        if(btns[i]==target){
+          btns[i].classList.add("on");
+        } else{
+          btns[i].classList.remove("on");
+        }
+      }
+
+      console.log(btns)
+      console.log(target)
+  
     },
     searchView() {
       this.$store.commit("searchView");
@@ -77,9 +91,10 @@ export default {
 .gnb > li {
   display: flex;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0.75rem;
   cursor: pointer;
   color: var(--text-color1);
+  width: 100%;
 }
 .gnb > li:hover {
   color: var(--text-color3);
@@ -92,6 +107,11 @@ li img {
 }
 li .menu{
   margin-left: 1rem;
+}
+
+.on{
+  border-radius: 15px;
+  background-color: #353535;
 }
 
 /* @media (max-width: 798px){
