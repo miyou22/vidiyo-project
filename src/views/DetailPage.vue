@@ -18,7 +18,7 @@
           <!--button요소를 클릭하면 popup함수가 호출-->
           <button @click="popup()">더보기</button>
           <!--modal-->
-          <div id="id01" class="modal" >
+          <div id="id01" class="modal">
 
 
 
@@ -31,158 +31,172 @@
                 <!--x버튼을 클릭하면 pClose()함수 호출-->
                 <span @click="pClose()" class="close">&times;</span>
                 <!--required = 필수 입력창 설정-->
+                <div class="top">
+                  <p class="modal-name">이프온리</p>
+                  <p class="modal-top">기본 정보</p>
 
-                <p class="modal-name">이프온리</p>
-                <p class="modal-top">기본 정보</p>
+                  <div class="modal-flex">
+                    <p class="top-left">개봉연도</p>
+                    <p class="top-right">2004</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">장르</p>
+                    <p class="top-right">코미디</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">국가</p>
+                    <p class="top-right">미국</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">상영시간</p>
+                    <p class="top-right">1시간35분</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">평점</p>
+                    <p class="top-right">4.0</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="top-left">연령등급</p>
+                    <p class="top-right"><img src="../assets/image/15.png" alt="15"></p>
+                  </div>
+                </div>
+                <hr />
+                <div class="mid">
+                  <p class="modal-top">
+                    줄거리
+                  </p>
+                  <p class="mid-center">눈앞에서 사랑하는 연인 사만다를 잃은 이안. 다음 날 자신의 옆에서 자고 있는 사만다를 발견하고, 이내 정해진 운명은 바꿀 수 없단 걸 깨달은
+                    이안은 더 늦기 전에 자신의 진심을 전하려 한다.</p>
+                </div>
+                <hr />
+                <div class="bottom">
+                  <p class="modal-top">
+                    감독출현
+                  </p>
+                  <div class="modal-flex">
+                    <p class="bottom-left">감독</p>
+                    <p class="bottom-right">길 정거</p>
+                  </div>
+                  <div class="modal-flex">
+                    <p class="bottom-left">출현</p>
+                    <p class="bottom-right">
+                      제니퍼 러브 휴이트, 폴 니콜스, 톰 윌킨슨, 루시 대번포트, 다이아나 하드캐슬, 로버트 지글러, 로이 샘슨, 케빈 무어, 네빌 필립스, 벤 리지웨이, 태-와 부옹</p>
+                  </div>
 
-                <div class="modal-flex">
-                  <p class="top-left">개봉연도</p>
-                  <p class="top-right">2004</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">장르</p>
-                  <p class="top-right">코미디</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">국가</p>
-                  <p class="top-right">미국</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">상영시간</p>
-                  <p class="top-right">1시간35분</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">평점</p>
-                  <p class="top-right">4.0</p>
-                </div>
-                <div class="modal-flex">
-                  <p class="top-left">연령등급</p>
-                  <p class="top-right">15</p>
-                </div>
 
+                </div>
               </div>
-
-
-
-
             </form>
           </div>
-
-
-
-
-          <!-- 모달끝 -->
         </div>
-
-        <div class="movie">
-          <button type="button" class="watch">▶ 무료로 감상하기</button>
-        </div>
-        <hr />
-        <h5>
-          <img src="../assets/image/ticket.png" alt="" width="20px" height="20px" />왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상
-          가능합니다.
-        </h5>
       </div>
-      <div class="pic col-lg-5">
-        <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%" />
+      <div class="movie">
+        <button type="button" class="watch">▶ 무료로 감상하기</button>
+      </div>
+      <hr />
+      <h5>
+        <img src="../assets/image/ticket.png" alt="" width="20px" height="20px" />왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상 가능합니다.
+      </h5>
+    </div>
+    <div class="pic col-lg-5">
+      <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%" />
+    </div>
+  </div>
+  <div class="row r2">
+    <h3>&nbsp;&nbsp;콘텐츠 정보&nbsp;&nbsp;</h3>
+    <div class="col-lg-6">
+      <h2>감독/출연</h2>
+      <div class="row row-cols-2">
+        <div class="col">
+          <img
+            src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" />
+          <div class="name">
+            <b><router-link to="/movie">길 정거</router-link></b>
+            <h4>감독</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/young-asian-girl-portrait-isolated_53876-70968.jpg?w=996&t=st=1701680168~exp=1701680768~hmac=867a07a3d286bfe2cabd0bfc1ed60bd15a4361d006b5a7fb0a7c24bf519efd60"
+            alt="" />
+          <div class="name">
+            <b>제니퍼 러브 휴이트</b>
+            <h4>주연 : 사만다</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="" />
+          <div class="name">
+            <b>폴 니콜스</b>
+            <h4>주연 : 이안</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/indoor-portrait-pleased-handsome-ordinary-european-man-with-moustache-beard-smiling-broadly-feeling-confident-happy-while-making-arrangement-wedding-gray-wall_176420-22384.jpg?w=1060&t=st=1701680088~exp=1701680688~hmac=d891d057e59f00bb6d3239f0d565a6e06d8f16e46b7727e09e40746920641ea0"
+            alt="" />
+          <div class="name">
+            <b>톰 윌킨스</b>
+            <h4>조연 : 택시기사</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/caucasian-woman-s-portrait-isolated-coral-pink-studio-background-with-copyspace_155003-46026.jpg?w=1060&t=st=1701680016~exp=1701680616~hmac=edebea10b1093e9ecece84e311170e12320baf97548bbf84a5ca4cbc7f4b3bae"
+            alt="" />
+          <div class="name">
+            <b>루시 데번포트</b>
+            <h4>조연 : 로티</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/close-up-stylish-attractive-girl-with-hairbun-smiling-looking-hopeful_176420-25550.jpg?w=1060&t=st=1701680068~exp=1701680668~hmac=703eb967170346c5b33933335774964bdacd9295d2a1fe21e0ccc7bc2035d7f0"
+            alt="" />
+          <div class="name">
+            <b>다이아나 하드캐슬</b>
+            <h4>조연 : 클레어</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/young-man-white-shirt-looking-camera-looking-happy_176474-83327.jpg?w=1060&t=st=1701680140~exp=1701680740~hmac=aeca0082261e8d6e8567d7017e2cd5d833785d8a90057d7173e51744a3e85a58"
+            alt="" />
+          <div class="name">
+            <b>로빈 샘슨</b>
+            <h4>단역</h4>
+          </div>
+        </div>
+        <div class="col">
+          <img
+            src="https://img.freepik.com/free-photo/front-view-man-with-nose-ring_23-2149441219.jpg?w=1060&t=st=1701680209~exp=1701680809~hmac=b5f24593b94f2d2f247bb79b462d315fadc572a90793a62d3c02f9ab6ecabe70"
+            alt="" />
+          <div class="name">
+            <b>캐빈 무어</b>
+            <h4>단역</h4>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row r2">
-      <h3>&nbsp;&nbsp;콘텐츠 정보&nbsp;&nbsp;</h3>
-      <div class="col-lg-6">
-        <h2>감독/출연</h2>
-        <div class="row row-cols-2">
-          <div class="col">
-            <img
-              src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="" />
-            <div class="name">
-              <b><router-link to="/movie">길 정거</router-link></b>
-              <h4>감독</h4>
+    <div class="col-lg-2">
+      <a class="more" href=""><router-link to="/actor">더보기</router-link></a>
+    </div>
+    <div class="col-lg-4 col-sm-mt-4">
+      <div class="avg float-lg-end">
+        <h2>나의 평점</h2>
+        <form>
+          <div class="rating mb-3">
+            <div id="starContainer" @click="handleStarClick">
+              <span v-for="star in stars" :key="star" :class="{ star: true, filled: star <= rating }"
+                :data-value="star">&#9733;</span>
+              <span id="ratingText">{{ rating }}/5</span>
             </div>
+            <input type="hidden" name="rating" id="rating" v-model="rating" />
           </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/young-asian-girl-portrait-isolated_53876-70968.jpg?w=996&t=st=1701680168~exp=1701680768~hmac=867a07a3d286bfe2cabd0bfc1ed60bd15a4361d006b5a7fb0a7c24bf519efd60"
-              alt="" />
-            <div class="name">
-              <b>제니퍼 러브 휴이트</b>
-              <h4>주연 : 사만다</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt="" />
-            <div class="name">
-              <b>폴 니콜스</b>
-              <h4>주연 : 이안</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/indoor-portrait-pleased-handsome-ordinary-european-man-with-moustache-beard-smiling-broadly-feeling-confident-happy-while-making-arrangement-wedding-gray-wall_176420-22384.jpg?w=1060&t=st=1701680088~exp=1701680688~hmac=d891d057e59f00bb6d3239f0d565a6e06d8f16e46b7727e09e40746920641ea0"
-              alt="" />
-            <div class="name">
-              <b>톰 윌킨스</b>
-              <h4>조연 : 택시기사</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/caucasian-woman-s-portrait-isolated-coral-pink-studio-background-with-copyspace_155003-46026.jpg?w=1060&t=st=1701680016~exp=1701680616~hmac=edebea10b1093e9ecece84e311170e12320baf97548bbf84a5ca4cbc7f4b3bae"
-              alt="" />
-            <div class="name">
-              <b>루시 데번포트</b>
-              <h4>조연 : 로티</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/close-up-stylish-attractive-girl-with-hairbun-smiling-looking-hopeful_176420-25550.jpg?w=1060&t=st=1701680068~exp=1701680668~hmac=703eb967170346c5b33933335774964bdacd9295d2a1fe21e0ccc7bc2035d7f0"
-              alt="" />
-            <div class="name">
-              <b>다이아나 하드캐슬</b>
-              <h4>조연 : 클레어</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/young-man-white-shirt-looking-camera-looking-happy_176474-83327.jpg?w=1060&t=st=1701680140~exp=1701680740~hmac=aeca0082261e8d6e8567d7017e2cd5d833785d8a90057d7173e51744a3e85a58"
-              alt="" />
-            <div class="name">
-              <b>로빈 샘슨</b>
-              <h4>단역</h4>
-            </div>
-          </div>
-          <div class="col">
-            <img
-              src="https://img.freepik.com/free-photo/front-view-man-with-nose-ring_23-2149441219.jpg?w=1060&t=st=1701680209~exp=1701680809~hmac=b5f24593b94f2d2f247bb79b462d315fadc572a90793a62d3c02f9ab6ecabe70"
-              alt="" />
-            <div class="name">
-              <b>캐빈 무어</b>
-              <h4>단역</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-2">
-        <a class="more" href=""><router-link to="/actor">더보기</router-link></a>
-      </div>
-      <div class="col-lg-4 col-sm-mt-4">
-        <div class="avg float-lg-end">
-          <h2>나의 평점</h2>
-          <form>
-            <div class="rating mb-3">
-              <div id="starContainer" @click="handleStarClick">
-                <span v-for="star in stars" :key="star" :class="{ star: true, filled: star <= rating }"
-                  :data-value="star">&#9733;</span>
-                <span id="ratingText">{{ rating }}/5</span>
-              </div>
-              <input type="hidden" name="rating" id="rating" v-model="rating" />
-            </div>
-          </form>
-        </div>
+        </form>
       </div>
     </div>
   </div>
@@ -480,9 +494,17 @@ h4 {
 .modal-top {
   font-size: 20px;
   color: #fff;
+  margin-top: 20px;
+  margin-bottom: 16px;
+
 }
 
-.modal-flex {
+.modal-background {
+  background-color: rgb(34, 35, 38);
+}
+
+.modal-txt {
+  width: 200px;
   display: flex;
 }
 
@@ -493,7 +515,13 @@ h4 {
   color: #fff;
 }
 
-.top-right {
+.age {
+  width: 32px;
+  height: 32px;
+
+}
+
+.modal-body .bottom {
   color: #babac1;
   font-size: 16px;
   margin-left: 30px;

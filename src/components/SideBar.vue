@@ -4,20 +4,20 @@
       <img src="../assets/image/vidiyo logo 5.png" alt="" />
     </a>
     <div class="menu">
-      <ul class="gnb" @click="urlFunc">
-        <li class="svg1" @click="$router.push('/'), closeSearch()">
-          <span class="material-icons">home</span>
+      <ul class="gnb">
+        <li id="svg"  @click="$router.push('/'), closeSearch()"  :class="{ 'on': currentRoute === '/'}">
+          <span class="material-icons">home</span> 
           <span class="menu">홈</span>
         </li>
-        <li class="svg2" @click="$router.push('/Eval'), closeSearch()">
+        <li id="svg" @click="$router.push('/eval'), closeSearch()" :class="{'on': currentRoute === '/eval'}">
           <span class="material-icons">star_border</span>
           <span class="menu">평가</span>
         </li>
-        <li class="svg3" @click="$router.push('/search'), searchView()">
+        <li id="svg" @click="$router.push('/search'), searchView()"  :class="{'on': currentRoute === '/search'}">
           <span class="material-icons">search</span>
           <span class="menu">검색</span>
         </li>
-        <li class="svg4" @click="$router.push('/storage'),closeSearch()">
+        <li id="svg" @click="$router.push('/storage'),closeSearch()"  :class="{'on': currentRoute === '/storage'}">
           <span class="material-icons">inbox</span>
           <span class="menu">보관함</span
           >
@@ -30,13 +30,31 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      currentRoute: this.$route.path,
+    };
+  },
+  watch: {
+    '$route'(to) {
+      this.currentRoute = to.path;
+      console.log(this.currentRoute)
+    },
   },
   methods: {
-    urlFunc() {
-      var url = window.location.href;
-      console.log(url);
-    },
+    //   isActive(e) {
+    //   const btns = document.querySelectorAll("#svg");
+    
+    //   let target = e.currentTarget;
+    //   console.log(e)
+    //   for(let i = 0; i<btns.length; i++){
+    //     e.stopPropagation()
+    //     if(btns[i]==target){
+    //       btns[i].classList.add("on");
+    //     } else{
+    //       btns[i].classList.remove("on");
+    //     }
+    //   }
+    // },
     searchView() {
       this.$store.commit("searchView");
     },
@@ -52,7 +70,7 @@ export default {
   background-color: var(--sub-color2);
   color: var(--text-color3);
   width: 240px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
@@ -77,9 +95,10 @@ export default {
 .gnb > li {
   display: flex;
   align-items: center;
-  padding: 0.75rem 0;
+  padding: 0.75rem 0.75rem;
   cursor: pointer;
   color: var(--text-color1);
+  width: 100%;
 }
 .gnb > li:hover {
   color: var(--text-color3);
@@ -92,6 +111,11 @@ li img {
 }
 li .menu{
   margin-left: 1rem;
+}
+
+.on{
+  border-radius: 15px;
+  background-color: #353535;
 }
 
 /* @media (max-width: 798px){
