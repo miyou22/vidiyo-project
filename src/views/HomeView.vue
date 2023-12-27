@@ -153,7 +153,7 @@
           '1680': {
             slidesPerView: 8,
             spaceBetween: 10,
-            slidesPerGroup: 10,
+            slidesPerGroup: 8,
 
           },
         }"
