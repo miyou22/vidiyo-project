@@ -4,20 +4,20 @@
       <img src="../assets/image/vidiyo logo 5.png" alt="" />
     </a>
     <div class="menu">
-      <ul class="gnb" @click="urlFunc">
-        <li id="svg" class="on" @click="$router.push('/'), closeSearch(), isActive($event)">
-          <span class="material-icons">home</span>
+      <ul class="gnb">
+        <li id="svg"  @click="$router.push('/'), closeSearch()"  :class="{ 'on': currentRoute === '/'}">
+          <span class="material-icons">home</span> 
           <span class="menu">홈</span>
         </li>
-        <li id="svg" @click="$router.push('/Eval'), closeSearch(), isActive($event)">
+        <li id="svg" @click="$router.push('/eval'), closeSearch()" :class="{'on': currentRoute === '/eval'}">
           <span class="material-icons">star_border</span>
           <span class="menu">평가</span>
         </li>
-        <li id="svg" @click="$router.push('/search'), searchView(), isActive($event)">
+        <li id="svg" @click="$router.push('/search'), searchView()"  :class="{'on': currentRoute === '/search'}">
           <span class="material-icons">search</span>
           <span class="menu">검색</span>
         </li>
-        <li id="svg" @click="$router.push('/storage'),closeSearch(), isActive($event)">
+        <li id="svg" @click="$router.push('/storage'),closeSearch()"  :class="{'on': currentRoute === '/storage'}">
           <span class="material-icons">inbox</span>
           <span class="menu">보관함</span
           >
@@ -30,27 +30,31 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      currentRoute: this.$route.path,
+    };
+  },
+  watch: {
+    '$route'(to) {
+      this.currentRoute = to.path;
+      console.log(this.currentRoute)
+    },
   },
   methods: {
-      isActive(e) {
-      const btns = document.querySelectorAll("#svg");
+    //   isActive(e) {
+    //   const btns = document.querySelectorAll("#svg");
     
-      let target = e.currentTarget;
-      console.log(e)
-      for(let i = 0; i<btns.length; i++){
-        e.stopPropagation()
-        if(btns[i]==target){
-          btns[i].classList.add("on");
-        } else{
-          btns[i].classList.remove("on");
-        }
-      }
-
-      console.log(btns)
-      console.log(target)
-  
-    },
+    //   let target = e.currentTarget;
+    //   console.log(e)
+    //   for(let i = 0; i<btns.length; i++){
+    //     e.stopPropagation()
+    //     if(btns[i]==target){
+    //       btns[i].classList.add("on");
+    //     } else{
+    //       btns[i].classList.remove("on");
+    //     }
+    //   }
+    // },
     searchView() {
       this.$store.commit("searchView");
     },
@@ -66,7 +70,7 @@ export default {
   background-color: var(--sub-color2);
   color: var(--text-color3);
   width: 240px;
-  height: 100%;
+  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
