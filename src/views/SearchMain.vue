@@ -150,7 +150,11 @@
         class="mySwiper"
       >
         <swiper-slide>
-          <img src="../assets/image/aa.png" />
+          <div class="bb" >
+            <p class="aa">코미디</p>
+          <img src="../assets/image/papa.png" class="cc" />
+          </div>
+        
         </swiper-slide>
         <swiper-slide>
           <img src="../assets/image/aa.png" />
@@ -543,6 +547,7 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 4px;
+
 }
 
 .swiper {
@@ -618,4 +623,23 @@ export default {
 }
 /* @media screen and (min-width: 0) and (max-width: 568px) {
 } */
+.bb{
+  width: 240px;
+height: 170px;
+background: red;
+}
+.aa{
+  position: absolute;
+z-index: 10;
+
+}
+.cc{
+  position: absolute;
+  background-color: inherit;
+object-fit: cover;
+width: 100%;
+height: 100%;
+bottom: 0;
+left: 0;
+}
 </style>
