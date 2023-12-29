@@ -1,7 +1,7 @@
 <template>
   <div class="web">
     <customer-header />
-    <div clas="box_a">
+    <div class="box_a">
       <div class="box_b">
         <div class="text">
           <h1>문의등록</h1>
@@ -14,27 +14,41 @@
         <div class="id_management">
           <p>아래에서 문의 유형을 선택해 주세요.</p>
           <sapn>
-            <select class="form-select" aria-label="Default selexample">
-                <option selected>-</option>
-                <option value="1">로그인/계정관리</option>
-                <option value="2">쿠폰</option>
-                <option value="3">콘텐츠</option>
-                <option value="3">환불</option>
-                <option value="3">해지</option>
-                <option value="3">결제</option>
-                <option value="3">재생 및 사용오류</option>
-                <option value="3">VIDIYO에 제안하기</option>
-                <option value="3">사용문의</option>
+            <select v-model="selectedType" class="form-select" aria-label="Default selexample">
+              <option value="-">-</option>
+              <option value="1">로그인/계정관리</option>
+              <option value="2">쿠폰</option>
+              <option value="3">콘텐츠</option>
+              <option value="4">환불</option>
+              <option value="5">해지</option>
+              <option value="6">결제</option>
+              <option value="7">재생 및 사용오류</option>
+              <option value="8">VIDIYO에 제안하기</option>
+              <option value="9">사용문의</option>
             </select>
           </sapn>
-          <section class="form__container"></section>
+          <section class="form__container" :class="{ 'show': selectedType !== '-' }">
+            <!-- 추가적인 폼 요소들을 여기에 추가할 수 있습니다. -->
+            <div v-if="selectedType === '1'">
+              <!-- 로그인/계정관리 폼 -->
+              <!-- 예시: -->
+              <label for="loginIssue">로그인/계정 문제 설명:</label>
+              <textarea v-model="loginIssue" class="form-control" id="loginIssue" rows="3" placeholder="로그인/계정 문제를 설명해주세요"></textarea>
+            </div>
+            <div v-else-if="selectedType === '2'">
+              <!-- 쿠폰 폼 -->
+              <!-- 예시: -->
+              <label for="couponIssue">쿠폰 관련 문의:</label>
+              <textarea v-model="couponIssue" class="form-control" id="couponIssue" rows="3" placeholder="쿠폰 관련 문의를 적어주세요"></textarea>
+            </div>
+            <!-- 다른 문의 유형에 대한 폼을 추가할 수 있습니다. -->
+          </section>
         </div>
       </div>
     </div>
     <customer-footer />
   </div>
 </template>
-
 <script>
 import CustomerHeader from "../components/CustomerHeader.vue";
 import CustomerFooter from "../components/CustomerFooter.vue";
@@ -45,8 +59,13 @@ export default {
     CustomerHeader,
     CustomerFooter,
   },
-  props: {
-    msg: String,
+  data() {
+    return {
+      selectedType: '-',
+      loginIssue: '',
+      couponIssue: '',
+      // 다른 유형에 대한 데이터도 추가할 수 있습니다.
+    };
   },
 };
 </script>

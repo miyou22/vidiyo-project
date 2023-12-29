@@ -93,6 +93,7 @@ export default {
   background-color: #f5f5f5;
   line-height: 24px;
   font-style: 'Noto Sans KR';
+  overflow: auto;
 }
 
 .boxa {

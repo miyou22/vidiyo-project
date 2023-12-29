@@ -82,6 +82,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #f5f5f5;
+  overflow: auto;
 }
 
 .box_a {
@@ -151,20 +152,47 @@ ul {
 .list {
   display: flex;
   height: 61px;
+  margin-bottom: 7.6875rem;
 }
 .list > .one {
   border-bottom: 1px solid #C1A2A2;
-  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
 }
 
 .list > .two,.three {
   margin-left: 36px;
   border-bottom: 1px solid #C1A2A2;
-  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
+}
+
+/* 800px 이하의 화면 크기에 대한 스타일 변경 */
+@media screen and (max-width: 800px) {
+  
+  .grid {
+    flex-direction: column;
+  }
+
+  .form_a,
+  .form_b {
+    width: 100%;
+  }
+
+  .form_a li,
+  .form_b li {
+    margin-bottom: 10px; /* 각 버튼 사이에 여백을 조절 */
+  }
+
+  .form_a button,
+  .form_b button {
+    width: 100%; /* 버튼을 꽉 채우도록 수정 */
+  }
+  .one, two, three {
+    width: 100%;
+  }
 }
 
 .form_a {
-  padding-right: 20px;
+  padding-right: 1.25rem;
 }
 
 button {
@@ -210,5 +238,7 @@ a:hover {
 .three:hover {
   text-decoration: underline;
 }
+
+
 
 </style>
