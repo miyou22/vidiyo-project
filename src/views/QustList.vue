@@ -4,7 +4,7 @@
     <div class="boxa">
       <div class="number1">
         <a href="#"><h1>계정/비밀번호 변경</h1></a>
-        <p><a href="#">가입한 이메일 주소와 비밀번호를 변경하고 싶어요.</a></p>
+        <p><a href="#" @click="$router.push('/answer')">가입한 이메일 주소와 비밀번호를 변경하고 싶어요.</a></p>
         <p>
           <a href="#"
             >@privaterelay.appleid.com 주소로 가입되어 있어요. 어떻게
