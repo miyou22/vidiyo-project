@@ -34,7 +34,7 @@
 export default {
   methods: {
     clearInput(){
-      document.querySelector('input').value = ""
+      document.querySelector('input').value = "" 
     }
   },
 };
