@@ -544,7 +544,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="img-list">
-            <img src="../assets/image/search_lovely.png" class="ct-image r3" />
+            <img src="../assets/image/search_japan.png" class="ct-image r3" />
             <div class="text-box">
               <p class="ct-text">일본</p>
             </div>
