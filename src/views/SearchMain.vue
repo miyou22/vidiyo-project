@@ -9,6 +9,7 @@
         <div class="col c1" @click="$router.push('/detail')">
           <div class="img">
             <img src="../assets/image/Group5.png" />
+            <img src="../assets/image/playbt.png" class="play" /> 
           </div>
           <div class="txt">
             <h2>이프온리</h2>
@@ -18,6 +19,7 @@
         <div class="col c2">
           <div class="img">
             <img src="../assets/image/searchlist.png" />
+            <img src="../assets/image/playbt.png" class="play" /> 
           </div>
           <div class="txt">
             <h2>악마를 보았다</h2>
@@ -27,6 +29,7 @@
         <div class="col c3">
           <div class="img">
             <img src="../assets/image/searchlist.png" />
+            <img src="../assets/image/playbt.png" class="play" /> 
           </div>
           <div class="txt">
             <h2>악마를 보았다</h2>
@@ -742,4 +745,26 @@ export default {
 .r8{ background:rgb(0, 108, 158);}
 .r9{ background:rgb(114, 7, 109);}
 .r10{ background:rgb(124, 111, 51);}
+
+.play{
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 20%;
+  top: 30%; 
+  display: none; 
+}
+
+.img{
+  position: relative;
+}
+.c1:hover .play{
+  display: block;
+}
+.c2:hover .play{
+  display: block;
+}
+.c3:hover .play{
+  display: block;
+}
 </style>
