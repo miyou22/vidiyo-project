@@ -96,24 +96,22 @@
         <!-- //모달시작 -->
 
         <!--modal-->
-        <div id="id02" class="modal">
-
-
-
+        <div id="id02" class="modal2">
           <!--modal content-->
-          <form class="modal-content">
+          <form class="modal-content2">
 
 
             <!--입력창-->
             <div class="container">
               <!--x버튼을 클릭하면 pClose()함수 호출-->
-              <span @click="pClose2()" class="close">&times;</span>
-              <p>asdasdadas</p>
-     
+              <span @click="pClose2()" class="close2">&times;</span>
+              <p class="modal2-top">로그인을 시작하고 전체 콘 <br> 텐츠를 감상해보세요!</p>
+              <p class="modal2-mid">지금은 미리보기만 감상할 수 있어요</p>
+
             </div>
           </form>
         </div>
-        <!-- 모달끝 -->
+        <!-- 모달2 끝 -->
 
 
 
@@ -292,7 +290,7 @@ export default {
 
       }
     }
-    
+
   },
   mounted() {
     window.addEventListener('click', this.windowClose)
@@ -617,5 +615,79 @@ hr {
   font-size: 14px;
   width: 500px;
 
+}
+
+.modal2 {
+  /*위치고정하고 브라우저의 크기만큼 크기를 설정*/
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: auto;
+
+  display: none;
+
+}
+
+/*실제 모달의 콘텐츠가 표시되는 부분*/
+.modal-content2 {
+  background-color: rgb(34, 35, 38);
+  width: 400px;
+  height: 200px;
+  margin: auto;
+  border: 1px solid #888;
+  animation: zoom 0.6s;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 360px;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1)
+  }
+}
+
+.close2 {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  color: #b5b5b5;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close2:hover {
+  cursor: pointer;
+}
+
+.container {
+  padding: 40px;
+
+}
+
+.modal2-top {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0px;
+  line-height: 24px;
+}
+
+.modal2-mid {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 20px;
+  color: rgb(186, 186, 193);
+  text-align: center;
 }
 </style>
