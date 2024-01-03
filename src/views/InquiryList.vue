@@ -34,6 +34,7 @@ export default {
 <style scoped>
 .web {
   position: fixed;
+  width: 100%;
   left: 0;
   top: 0;
   z-index: 9999;
