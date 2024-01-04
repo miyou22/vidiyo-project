@@ -15,21 +15,43 @@
         <li>모바일 앱: 오른쪽 상단 프로필 > 계정 > 비밀번호 변경</li>
         <li>PC 웹: 오른쪽 상단 프로필 > 나의 VIDIYO > 계정의 '이메일 변경'</li>
       </ul>
-      <hr />
+      <hr style="margin-top: 2rem;" />
       <div class="information">
         <p>원하는 정보를 얻으셨나요?</p>
         <div class="yes_btn">
-           <button type="button" class="btn btn-outline-dark" :class="{ 'active': yesIsActive }" @click="toggleYesActive"> 예 </button>
-            <button type="button" class="btn btn-outline-dark" :class="{ 'active': noIsActive }" @click="toggleNoActive"> 아니오 </button>
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            :class="{ 'active': yesIsActive }"
+            @click="toggleYesActive"
+          >
+            예
+          </button>
+          <button
+            type="button"
+            class="btn btn-outline-dark"
+            :class="{ 'active': noIsActive }"
+            @click="toggleNoActive"
+          >
+            아니오
+          </button>
         </div>
         <div class="last">
           <p>궁금하신 점은 무엇이든 문의해 주세요</p>
-          <p>문의 등록</p>
+          <div class="last_1">
+            <router-link to="/inlist" class="custom-link"
+              ><p>문의 등록</p></router-link
+            >
+            <p>|</p>
+            <router-link to="/registeri" class="custom-link"
+              ><p>문의 내역</p></router-link
+            >
+          </div>
+          <hr style="margin-top: 2rem;" />
         </div>
       </div>
-      <hr />
     </div>
-    <customer-footer />
+    <customer-footer class="customer-footer" />
   </div>
 </template>
 
@@ -57,28 +79,21 @@ export default {
     toggleYesActive() {
       if (!this.yesIsActive) {
         this.yesIsActive = true;
-        this.noIsActive = false; // '예' 버튼이 눌리면 '아니오' 버튼 상태를 해제
-        // '예' 버튼 클릭 이벤트 핸들링 로직 추가
+        this.noIsActive = false;
       } else {
-        // '예' 버튼이 이미 눌린 상태이면, 다시 클릭하면 해제
         this.yesIsActive = false;
-        // '예' 버튼 클릭 해제 이벤트 핸들링 로직 추가
       }
     },
     toggleNoActive() {
       if (!this.noIsActive) {
         this.noIsActive = true;
-        this.yesIsActive = false; // '아니오' 버튼이 눌리면 '예' 버튼 상태를 해제
-        // '아니오' 버튼 클릭 이벤트 핸들링 로직 추가
+        this.yesIsActive = false;
       } else {
-        // '아니오' 버튼이 이미 눌린 상태이면, 다시 클릭하면 해제
         this.noIsActive = false;
-        // '아니오' 버튼 클릭 해제 이벤트 핸들링 로직 추가
       }
     },
   },
 };
-
 </script>
 
 <style scoped>
@@ -91,26 +106,29 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #f5f5f5;
-  line-height: 24px;
-  font-style: 'Noto Sans KR';
+  line-height: 1.5;
+  font-family: 'Noto Sans KR', sans-serif;
   overflow: auto;
 }
 
 .boxa {
   max-width: 600px;
   text-align: start;
-  margin: auto; 
+  margin: auto;
   margin-top: 60px;
   font-size: 1rem;
   font-style: 'Roboto';
+  padding: 0 20px; /* 좌우 패딩 추가 */
+  box-sizing: border-box; /* 패딩을 포함한 크기 계산 */
 }
 
-.boxa > p:nth-child(2){
-  margin-bottom: 8px;
+
+.boxa > p:nth-child(2) {
+  margin-bottom: 0.5rem;
 }
 
-h1{
-  margin-bottom: 60px;
+h1 {
+  margin-bottom: 3.75rem;
 }
 
 b {
@@ -118,34 +136,88 @@ b {
 }
 
 .box1 {
-  margin: 40px 0 40px 0;
+  margin: 2.5rem 0 2.5rem 0;
 }
 
 .box2 {
-  margin-bottom: 60px;
+  margin-bottom: 3.75rem;
 }
 
 .information {
   text-align: center;
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin-top: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .btn {
-  margin-bottom: 60px;
-  font-size: 12px;
-  width: 88px;
-  border-radius: 5px;
-  margin-left: 10px;
-  margin-top: 12px;
+  margin-bottom: 3.75rem;
+  font-size: 0.75rem;
+  width: 5.5rem;
+  border-radius: 0.3125rem;
+  margin-left: 0.625rem;
+  margin-top: 0.75rem;
 }
 
-.last > p:nth-child(2){
-color: #da0037;
+.last_1 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
-.last > p:nth-child(2):hover {
-text-decoration: underline;
+.last_1> p:nth-child(1),
+.last_1> p:nth-child(3) {
+  color: #da0037;
+  margin-right: 1.25rem;
 }
 
+.last_1> p:nth-child(2) {
+  margin-right: 1.25rem;
+}
+
+.last_1 > p:nth-child(1):hover,
+.last_1 > p:nth-child(3):hover {
+  text-decoration: underline;
+}
+
+.custom-link {
+  color: #da0037;
+  text-decoration: underline;
+  margin-right: 1.25rem;
+}
+
+.custom-link:hover {
+  text-decoration: none;
+}
+
+.last hr:last-child {
+  margin-bottom: 13rem;
+}
+
+.customer-footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.box1 li,
+.box2 li {
+  list-style-type: disc;
+  margin-bottom: 0.5rem;
+  margin-left: 2.5rem;
+  margin-top: 0.625rem;
+}
+
+.yes_btn {
+  text-align: center;
+  margin-top: 0.75rem;
+}
+
+.yes_btn button {
+  margin-left: 0.625rem;
+}
+
+.yes_btn button:last-child {
+  margin-right: 0.625rem;
+}
 </style>
