@@ -31,10 +31,22 @@
             <!-- 추가적인 폼 요소들을 여기에 추가할 수 있습니다. -->
             <div v-if="selectedType === '1'">
               <!-- 로그인/계정관리 폼 -->
-              <!-- 예시: -->
-              <label for="loginIssue">로그인/계정 문제 설명:</label>
-              <textarea v-model="loginIssue" class="form-control" id="loginIssue" rows="3" placeholder="로그인/계정 문제를 설명해주세요"></textarea>
-            </div>
+              <div class="form1">
+                 <label for="paymentCheckbox"> 결제가 되었다면 결제 내역 캡처본(문자, 메일 등)을 꼭 첨부 파일로 보내주세요.
+                    <input type="checkbox" id="paymentCheckbox" v-model="attachPaymentCapture">
+                  </label>
+                  <div class="Explanation">
+                    <label for="loginIssue">설명</label>
+                    <textarea v-model="loginIssue" class="form-control" id="loginIssue" rows="3" placeholder=""></textarea>
+                  </div>
+                  <p>첨부파일(선택사항)</p>
+                  <div class="file-upload">
+                    <span class="highlight-text">파일추가</span><label for="fileInput" class="file-label"> 또는 파일을 여기에 드래그
+                      <input type="file" id="fileInput" @change="handleFileUpload" style="display: none;" />
+                    </label>
+                    </div>
+                </div>
+              </div>
             <div v-else-if="selectedType === '2'">
               <!-- 쿠폰 폼 -->
               <!-- 예시: -->
@@ -108,7 +120,7 @@ h1 {
 }
 
 .form-select {
-  max-width: 48.75rem;
+  max-width: 40.625rem;
   height: 3.125rem;
   font-size: 16px;
   border-radius: 5px;
@@ -127,6 +139,41 @@ h1 {
 	animation-duration: 0.5s;
 }
 
+option { padding : 0 0 0 10px; 
+}
+
+.Explanation {
+  text-align: center;
+  width: 40.625rem;
+  margin: auto; 
+}
+
+.Explanation label {
+  text-align: left; 
+  display: block; 
+  margin-bottom: 10px; 
+}
+
+.file-upload {
+  display: inline-block;
+  border: 2px solid #ddd; /* 네모칸 테두리 스타일 */
+  padding: 10px;
+  cursor: pointer;
+  width: 100px;
+}
+
+.file-label {
+  color: #7C7B84; /* 네모칸 내 글씨 색상 */
+  display: block;
+  text-align: center;
+}
+
+.highlight-text {
+  color: #DA0037; /* '파일추가' 글씨 색상 */
+}
+
+
+
 @keyframes formopen {
   from {
     opacity: 0;
@@ -137,11 +184,6 @@ h1 {
   }
 }
 
-option { padding : 0 0 0 10px; 
-}
-.id_management span{
-  
-}
 
 </style>
 
