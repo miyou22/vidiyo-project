@@ -31,7 +31,7 @@
       ref="{swiperRef}"
       :slidesPerView="3"
       :centeredSlides="true"
-      :spaceBetween="40"
+      :spaceBetween="10"
       :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}"
       :loop="true"
       :modules="modules"
@@ -57,7 +57,7 @@
           </div>
         </swiper-slide>
          <div class="swiper-button-prev prevArrow navi"></div>
-      <div class="swiper-button-next nextArrow navi"></div>
+         <div class="swiper-button-next nextArrow navi"></div>
       </swiper>
      
     </div>
@@ -73,52 +73,59 @@
       </div>
       <swiper
         ref="{swiperRef}"
-        :slidesPerView="1"
+        :slidesPerView="8"
+        :spaceBetween="10"
+        :slidesPerGroup="8"
         :centeredSlides="false"
-        :navigation="true"
+        :navigation="{nextEl: '.nextImgArrow', prevEl: '.prevImgArrow'}"
         :loop="true"
         :modules="modules"
         :autoHeight="true"
-        class="mySwiper"
-         :breakpoints="{
-           '568': {
-            slidesPerView: 3,
-            spaceBetween: 10,
-            slidesPerGroup: 4,
-          },
-          '1024': {
-            slidesPerView: 4,
-            spaceBetween: 10,
-            slidesPerGroup: 4,
-          },
-          '1200': {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            slidesPerGroup: 5,
-          },
-          '1424': {
-            slidesPerView: 6,
-            spaceBetween: 10,
-            slidesPerGroup: 6,
-          },
-          '1680': {
-            slidesPerView: 8,
-            spaceBetween: 10,
-            slidesPerGroup: 10,
-
-          },
-        }"
+        class="mySwiper imgSwiper"
       >
+
       <swiper-slide v-for="image in category" :key="image" class="about">
         <div class="onlyImage">
             <img :src="image.img" @click="$router.push('/detail')"/>
         </div>
       </swiper-slide>
+         <div class="swiper-button-prev prevImgArrow naviImg"></div>
+         <div class="swiper-button-next nextImgArrow naviImg"></div>
       </swiper>
     </div>
   </section> 
 
- <section id="section4">
+  <section id="section4">
+    <div class="tagGnb">
+      <div class="onlyTxt">
+        <h2>직장인에게 방학따위 없엉 힝</h2>
+        <a href="#">더보기</a>
+      </div>
+      <swiper
+        ref="{swiperRef}"
+        :slidesPerView="8"
+        :spaceBetween="10"
+        :slidesPerGroup="8"
+        :centeredSlides="false"
+        :navigation="{nextEl: '.nextImgArrow', prevEl: '.prevImgArrow'}"
+        :loop="true"
+        :modules="modules"
+        :autoHeight="true"
+        class="mySwiper imgSwiper"
+      >
+
+      <swiper-slide v-for="image in category" :key="image" class="about">
+        <div class="onlyImage">
+            <img :src="image.img" @click="$router.push('/detail')"/>
+        </div>
+      </swiper-slide>
+         <div class="swiper-button-prev prevImgArrow naviImg"></div>
+         <div class="swiper-button-next nextImgArrow naviImg"></div>
+      </swiper>
+    </div>
+  </section> 
+
+ <!-- <section id="section4">
     <div class="tagGnb">
       <div class="onlyTxt">
         <h2>직장인에게 방학따위 없엉 힝</h2>
@@ -169,7 +176,7 @@
       </swiper-slide>
       </swiper>
     </div>
-  </section> 
+  </section>  -->
 
 
   <section id="section5">
@@ -181,21 +188,23 @@
         ref="{swiperRef}"
         :slidesPerView="8"
         :centeredSlides="false"
-        :navigation="true"
+        :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}"
         :loop="true"
         :modules="modules"
         :spaceBetween="10"
-        class="mySwiper"
+        class="mySwiper textSwiper"
       >
       <swiper-slide v-for="personImg in person" :key="personImg" class="about">
         <div class="personImage" @click="$router.push('/movie')">
-            <div class="personImg">
+          <div class="personImg">
              <img :src="personImg.img" />
-            </div>
+          </div>
             <h4>{{ personImg.name }}</h4>
             <p>{{ personImg.movie }}</p>
         </div>
       </swiper-slide>
+               <div class="swiper-button-prev prevArrow naviArt"></div>
+         <div class="swiper-button-next nextArrow naviArt"></div>
       </swiper>
     </div>
   </section> 
@@ -352,222 +361,210 @@ export default {
 };
 </script>
 
-  <style>
-  /* .textSwiper .swiper-button-prev{
-      color: red;
-      position: absolute;
-      left: -20px;
-      z-index: 12 !important;
-  }
-  .textSwiper .swiper-button-next{
-      color: red;
-      position: absolute;
-      right: -20px;
-      z-index: 12 !important;
-      --swiper-navigation-sides-offset: -20px;
-  } */
-
-  </style>
 
 <style scoped>
-
-  .wrap{
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 56px 40px 0;
-  }
-  .homeTitle{
-    
-  }
-
-  h2{
-    color: var(--text-color3);
-    display: block;
-    margin-bottom: 20px;
-  }
-  hr{
-    width: 100%;
-    height: 1px;
-    padding: 0;
-    margin: 1rem 0;
-    color: #eee;
-  }
-  .movieTitle{
-    margin-top: -10px;
-    position: relative;
-    width: calc(100% + 80px);
-    margin-left: -40px;
-    position: relative;
-    aspect-ratio: 3.6 / 1.15;
-  }
-  .movieTitle:hover .video{
-    display: block;
-  }
-  .movieTitle:hover .movieText{
-    display: none;
-  }
-  .video{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    display: none;
-  }
-  video{
-    width: 100%;
-    object-fit: cover;
-  }
-  .movieImage{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    aspect-ratio: 16 / 5;
-    width: 100%;
-  }
-  .image{
-    background: url(../assets/image/image18.png) center center/cover;
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-
-
-  .movieText{
-    display: flex;
-    position: absolute;
-    bottom: 20px;
-    left: 40px;
-    color: white;
-    gap: 10px;
-    flex-direction: column;
-    width: 500px;
-  }
-
-  .movieText p{
-    font-size: 18px;
-    white-space: pre-wrap;
-    letter-spacing: 0;
-    line-height: 1;
-  }
-  .bgi{
-    background: url(../assets/image/fontImage.png) left bottom / contain no-repeat;
-    z-index: 1;
-    width: 70%;
-    height: 160px;
-  }
-
-
-  #section2{
-    width: 100%;
-    margin: 40px 0;
-    padding: 0 -40px 0 -40px;
-    box-sizing: border-box;
-
-  }  
-.textSwiper{
-    position: relative;
-    overflow: visible;
-  }
-.swiper {
-  width: 100%;
-  margin: 20px auto;
+*{
+    font-family: "Noto Sans KR", sans-serif;
 }
-.swiper-slide img {
+.wrap{
   width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 56px 40px 0;
 }
 
+h2{
+  color: var(--text-color3);
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 900;
+}
 
-/* .gnb{
+hr{
+  width: 100%;
+  height: 1px;
+  padding: 0;
+  margin: 1rem 0;
+  color: #eee;
+}
+
+.movieTitle{
+  margin-top: -10px;
   position: relative;
-} */
-/* .gnb::before{
-  content: '';
+  width: calc(100% + 80px);
+  margin-left: -40px;
+  position: relative;
+  aspect-ratio: 3.6 / 1.15;
+}
+
+.movieTitle:hover .video{
   display: block;
+}
+
+.movieTitle:hover .movieText{
+  display: none;
+}
+
+.video{
   position: absolute;
-  width: 40px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  display: none;
+}
+
+video{
+  width: 100%;
+  object-fit: cover;
+}
+.movieImage{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  aspect-ratio: 16 / 5;
+  width: 100%;
+}
+.image{
+  background: url(../assets/image/image18.png) center center/cover;
+  width: 100%;
   height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -40px;
-  z-index: -2;
-  background-color: var(--main-color1);
+  position: relative;
 }
-.gnb::after{
-  content: '';
-  display: block;
+
+.movieText{
+  display: flex;
   position: absolute;
-  width: 40px;
-  height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -40px;
-  z-index: -14;
-  background-color: var(--main-color1);
-} */
-
-  .prevArrow{
-    position: absolute;
-    left: -40px;
-    display: block;
-    color: red;
-  }
-.nextArrow{
-   position: absolute;
-    right: -40px;
-    display: block;
-    color: red;}
-.navi{
-  position: absolute;
-  color: red;
+  bottom: 20px;
+  left: 40px;
+  color: white;
+  gap: 10px;
+  flex-direction: column;
+  width: 500px;
 }
 
-
-.append-buttons {
-  text-align: center;
-  margin-top: 20px;
+.movieText p{
+  font-size: var(--size7);
+  white-space: pre-wrap;
+  letter-spacing: 0;
+  line-height: 1;
 }
+.bgi{
+  background: url(../assets/image/fontImage.png) left bottom / contain no-repeat;
+  z-index: 1;
+  width: 70%;
+  height: 160px;
+}
+  /* section1 종료 */
 
-.append-buttons button {
-  display: inline-block;
-  cursor: pointer;
-  border: 1px solid #007aff;
-  color: #007aff;
-  text-decoration: none;
-  padding: 4px 10px;
-  border-radius: 4px;
-  margin: 0 10px;
-  font-size: 13px;
+
+#section2{
+  width: 100%;
+  margin: 40px 0;
+  box-sizing: border-box;
+}
+.allFor:hover > figure{
+  opacity: 0.6;
 }
 
 .textGroup{
   display: flex;
   flex-direction: column;
   align-items: start;
-  color: var(--text-color3);
   margin-bottom: 5px;
 }
-#section3{margin-bottom: 50px;}
-#section4{margin-bottom: 50px;}
-#section5{}
 
 .textGroup span{
   font-size: var(--size5);
   font-weight: bold;
   margin-bottom: 1px;
+  color: var( --text-color1);
 }
 
 .textGroup h2{
-  font-size: var(--size3);
+  font-size: var(--size7);
   margin-bottom: 1px;
-}
-.textGroup p{
-  font-size: var(--size4);
-  font-weight:lighter;
+  font-weight: 900;
 }
 
-.tagGnb h2{
-  font-size: 18px;
+.textGroup p{
+  font-size: var(--size5);
+  font-weight:lighter;
+  color: var( --text-color1);
+
+}
+
+/* swiper css 수정 */
+.mySwiper{
+  position: relative;
+  overflow: visible;
+  width: 100%;
+  margin: 20px auto;
+}
+
+.mySwiper::before{
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--main-color1);
+  z-index: 300;
+}
+
+.mySwiper::after{
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--main-color1);
+  z-index: 300;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+/* swiper navigation 수정 */
+.prevArrow{
+  position: absolute;
+  left: -35px;
+  display: block;
+  color: red;
+}
+
+.nextArrow{
+  position: absolute;
+  right: -35px;
+  display: block;
+  color: red;
+}
+
+.navi{
+  position: absolute;
+  top: 60%;
+  color: red;
+  z-index: 400;
+
+}
+.naviArt{
+  position: absolute;
+  top: 40%;
+  color: red;
+  z-index: 400;
+}
+
+/* section2 종료 */
+
+#section3{margin-bottom: 50px;}
+#section4{margin-bottom: 50px;}
+
+.onlyTxt h2{
+  font-size: var(--size7);
+  color: var( --text-color4);
   font-weight: bold;
 }
 .onlyTxt{
@@ -582,14 +579,69 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+.onlyImage:hover{
+  opacity: 0.6;
+}
+
+/* swiper css  */
+
 .tagGnb > .swiper{
   margin: 5px auto;
 }
 
-.person{
-  /* border-radius: 50%; */
-
+.imgSwiper{
+  position: relative;
+  overflow: visible;
 }
+
+.imgSwiper::before{
+  content: '';
+  position: absolute;
+  left: -40px;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--main-color1);
+  z-index: 300;
+}
+
+.imgSwiper::after{
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  background-color: var(--main-color1);
+  z-index: 300;
+}
+
+/* swiper navigation 수정  */
+
+
+.prevImgArrow{
+  position: absolute;
+  left: -35px;
+  display: block;
+  color: red;
+}
+
+.nextImgArrow{
+  position: absolute;
+  right: -35px;
+  display: block;
+  color: red;
+}
+.naviImg{
+  position: absolute;
+  color: red;
+  z-index: 400;
+}
+
+/* section3,4 종료 */
+
+
+#section5{}
 
 .personImage{
   display: flex;
@@ -599,6 +651,9 @@ export default {
   color: white;
   cursor: pointer;
 }
+.personImage:hover > .personImg{
+  opacity: 0.6;
+}
 .personImage > .personImg{
   border-radius: 50%;
   overflow: hidden;
@@ -607,16 +662,24 @@ export default {
   width: 100%;
 }
 .personImage h4{
-  font-size: 18px;
+  font-size: var(--size4);
+  color: var(--text-color3);
+
   padding: 4px 0;
 }
 .personImage p{
-  font-size: 14px;
+  font-size: var(--size5);
+  color: var(--text-color4);
 }
 .perGnb > .onlyTxt > h2{
-  font-size: 18px;
+  font-size: var(--size7);
   font-weight: bold;
 }
+
+
+/* section5 종료 */
+
+
 @media (max-width: 1024px){}
 @media (max-width: 798px){
   #wrap{

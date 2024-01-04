@@ -1,11 +1,13 @@
 <template>
   <div class="wrap">
+
+
     <div class="evalTitle">
       <h2>보관함</h2>
     </div>
     
     <div class="trueView" v-if="login">
-    <section class="content">
+    <section id="section1" class="content">
       <div class="subTitle">
         <h2>감상중인 콘텐츠</h2>
       </div>
@@ -28,7 +30,7 @@
       </div>
     </section>
 
-    <section class="content">
+    <section id="section2" class="content">
       <div class="subTitle">
         <h2>나의 시청 콘텐츠</h2>
       </div>
@@ -46,7 +48,7 @@
       </div>
     </section>
 
-    <section class="comment">
+    <section id="section3" class="comment">
       <div class="commentTitle">
         <h2>보고싶어요 한 콘텐츠</h2>
       </div>
@@ -177,24 +179,25 @@ export default {
 .wrap {
   color: white;
   padding: 56px 40px 0;
-
+}
+h2{
+  font-size: 28px;
+  font-weight: 600;
 }
 .evalTitle {
   margin-bottom: 70px;
 }
-/* .content{
-  max-width: 1680px;
-} */
+
 .subTitle {
   margin-bottom: 16px;
 }
 .gnb {
   max-width: 1600px;
   display: grid;
-  /* grid-template-columns: repeat(8, 1fr); */
   grid-template-columns: repeat(auto-fill, 10.625rem);
   gap: 10px;
   justify-content: space-between;
+  /* grid-template-columns: repeat(8, 1fr); */
   /* grid-row-gap: 10px; */
 }
 .texDec{
@@ -216,7 +219,6 @@ export default {
   bottom: 0;
 } */
 .texDec h1{
-  
   font-size: 18px;
 }
 /* .imgGroup:hover > .movieName{
@@ -232,7 +234,6 @@ export default {
   object-fit: cover;
   object-position: center center;
   border-radius: 5px;
-
 }
 
 .movieName{
@@ -307,15 +308,6 @@ export default {
   border: 0;
   outline: 0;
 }
-/* @media (max-width: 1024px){
-  .gnb{
-  grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (max-width: 576px){
-  .gnb{
-  grid-template-columns: repeat(2, 1fr);
-  }
-} */
+
 
 </style>
