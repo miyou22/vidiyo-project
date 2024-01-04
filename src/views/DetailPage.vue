@@ -105,7 +105,8 @@
             <div class="container">
               <!--x버튼을 클릭하면 pClose()함수 호출-->
               <span @click="pClose2()" class="close2">&times;</span>
-              <p class="modal2-top">로그인을 시작하고 전체 콘 <br> 텐츠를 감상해보세요!</p>
+              <p class="modal2-top">로그인을 시작하고 <br> 전체 콘텐츠를 감상해보세요!</p>
+              <br>
               <p class="modal2-mid">지금은 미리보기만 감상할 수 있어요</p>
 
             </div>
@@ -133,7 +134,7 @@
         </h5>
       </div>
       <div class="pic col-lg-5">
-        <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%" />
+        <img src="../assets/image/ifonlyposter.png" class="img-fluid" alt=""/>
       </div>
     </div>
     <div class="row r2">
@@ -326,7 +327,11 @@ h1 {
   margin-bottom: 12px;
 }
 
-.pic {
+.pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to right, transparent, black);
   margin-top: 0;
   padding: 0;
 }
@@ -342,7 +347,8 @@ h1 {
 .inform>b {
   color: #fff;
   font-size: 1rem;
-  background-color: #b3b3b3;
+  background-color: #363636;
+  border-radius: 0.2rem;
   padding: 0 0.25rem;
 }
 
