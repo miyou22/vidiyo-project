@@ -31,15 +31,15 @@
       ref="{swiperRef}"
       :slidesPerView="3"
       :centeredSlides="true"
-      :spaceBetween="10"
-      :navigation="true"
+      :spaceBetween="40"
+      :navigation="{nextEl: '.nextArrow', prevEl: '.prevArrow'}"
       :loop="true"
       :modules="modules"
       :autoHeight="true"
-      
+      :loopAdditionalSlides= "1" 
+
       class="mySwiper textSwiper"
       >
-      
         <swiper-slide v-for="item in items" :key="item">
           <div class="allFor textSwiper">
             <div class="textGroup">
@@ -50,12 +50,16 @@
               </a>
             </div>
             <figure>
+             
               <img :src="item.img" />
+ 
             </figure>
           </div>
         </swiper-slide>
+         <div class="swiper-button-prev prevArrow navi"></div>
+      <div class="swiper-button-next nextArrow navi"></div>
       </swiper>
-
+     
     </div>
   </section>
 
@@ -153,7 +157,7 @@
           '1680': {
             slidesPerView: 8,
             spaceBetween: 10,
-            slidesPerGroup: 10,
+            slidesPerGroup: 8,
 
           },
         }"
@@ -360,12 +364,12 @@ export default {
       position: absolute;
       right: -20px;
       z-index: 12 !important;
+      --swiper-navigation-sides-offset: -20px;
   } */
 
   </style>
 
 <style scoped>
-
 
   .wrap{
     width: 100%;
@@ -373,10 +377,10 @@ export default {
     margin: 0 auto;
     padding: 56px 40px 0;
   }
-  .textSwiper{
-    position: relative;
-    overflow: hidden;
+  .homeTitle{
+    
   }
+
   h2{
     color: var(--text-color3);
     display: block;
@@ -457,24 +461,27 @@ export default {
   #section2{
     width: 100%;
     margin: 40px 0;
+    padding: 0 -40px 0 -40px;
+    box-sizing: border-box;
+
   }  
+.textSwiper{
+    position: relative;
+    overflow: visible;
+  }
 .swiper {
-  width: 100%;
   width: 100%;
   margin: 20px auto;
 }
-
-
-
 .swiper-slide img {
   width: 100%;
 }
 
 
-.gnb{
+/* .gnb{
   position: relative;
-}
-.gnb::before{
+} */
+/* .gnb::before{
   content: '';
   display: block;
   position: absolute;
@@ -497,6 +504,22 @@ export default {
   right: -40px;
   z-index: -14;
   background-color: var(--main-color1);
+} */
+
+  .prevArrow{
+    position: absolute;
+    left: -40px;
+    display: block;
+    color: red;
+  }
+.nextArrow{
+   position: absolute;
+    right: -40px;
+    display: block;
+    color: red;}
+.navi{
+  position: absolute;
+  color: red;
 }
 
 
