@@ -92,6 +92,8 @@
         <!-- 2번쨰 모달 시작 -->
         <div class="movie">
           <button type="button" class="watch" @click="popup2()">▶ 무료로 감상하기</button>
+          <a class="plus" href=""><img src="../assets/image/plus.png"></a>
+          <a class="starimg" href=""><img src="../assets/image/star.png"></a>
         </div>
         <!-- //모달시작 -->
 
@@ -129,7 +131,7 @@
 
         <hr />
         <h5>
-          <img src="../assets/image/ticket.png" alt="" width="20px" height="20px" />왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상
+          <img src="../assets/image/ticket.png" alt=""/>왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상
           가능합니다.
         </h5>
       </div>
@@ -221,7 +223,7 @@
       </div>
       <div class="col-lg-4 col-sm-mt-4">
         <div class="avg float-lg-end">
-          <h2>나의 평점</h2>
+          <h2>나의 코멘트</h2>
           <form>
             <div class="rating mb-3">
               <div id="starContainer" @click="handleStarClick">
@@ -332,6 +334,7 @@ h1 {
   height: 100%;
   object-fit: cover;
   mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
   margin-top: 0;
   padding: 0;
 }
@@ -373,7 +376,7 @@ h1 {
   outline: 0;
   appearance: none;
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .watch:hover {
@@ -387,7 +390,20 @@ h5 {
 }
 
 h5>img {
-  margin-right: 0.25rem;
+  margin-right: 0.4rem;
+}
+
+.movie {
+  display: flex;
+  align-items: center;
+}
+.plus>img{
+  margin-left: 1rem;
+  width: 1.25rem;
+}
+.starimg>img{
+  margin-left: 1.2rem;
+  height: 1.25rem;
 }
 
 .theme {
@@ -455,7 +471,6 @@ h4 {
 .more {
   color: #b3b3b3;
 }
-
 .more:hover {
   color: #ededed;
 }
@@ -499,6 +514,7 @@ h4 {
 /* 모달시작 */
 
 .moresee {
+  font-family: "Noto Sans KR", sans-serif;
   background-color: inherit;
   border: 0;
   color: #fff
@@ -600,7 +616,7 @@ h4 {
 }
 
 hr {
-  margin: 16px 0 16px 0;
+  margin: 12px 0 16px 0;
 }
 
 .mid-center {
