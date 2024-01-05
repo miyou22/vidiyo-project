@@ -477,3 +477,16 @@
        url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff) format('woff');
   font-display: swap;
 }
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+
+@font-face {
+  font-family: 'JalnanGothic';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_231029@1.1/JalnanGothic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+.notosanskr * { 
+ font-family: 'Noto Sans KR', sans-serif;
+}
