@@ -92,6 +92,8 @@
         <!-- 2번쨰 모달 시작 -->
         <div class="movie">
           <button type="button" class="watch" @click="popup2()">▶ 무료로 감상하기</button>
+          <a class="plus" href=""><img src="../assets/image/plus.png"></a>
+          <a class="starimg" href=""><img src="../assets/image/star.png"></a>
         </div>
         <!-- //모달시작 -->
 
@@ -105,7 +107,8 @@
             <div class="container">
               <!--x버튼을 클릭하면 pClose()함수 호출-->
               <span @click="pClose2()" class="close2">&times;</span>
-              <p class="modal2-top">로그인을 시작하고 전체 콘 <br> 텐츠를 감상해보세요!</p>
+              <p class="modal2-top">로그인을 시작하고 <br> 전체 콘텐츠를 감상해보세요!</p>
+              <br>
               <p class="modal2-mid">지금은 미리보기만 감상할 수 있어요</p>
               <router-link to="/login">
                 <button type="button" class="modal-login">로그인하기</button>
@@ -135,12 +138,12 @@
 
         <hr />
         <h5>
-          <img src="../assets/image/ticket.png" alt="" width="20px" height="20px" />왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상
+          <img src="../assets/image/ticket.png" alt=""/>왓챠 이용권이 있다면, 추가 구매 없이 무제한 감상
           가능합니다.
         </h5>
       </div>
       <div class="pic col-lg-5">
-        <img src="../assets/image/ifonly.jpg" class="img-fluid" alt="" width="100%" />
+        <img src="../assets/image/ifonlyposter.png" class="img-fluid" alt=""/>
       </div>
     </div>
     <div class="row r2">
@@ -227,7 +230,7 @@
       </div>
       <div class="col-lg-4 col-sm-mt-4">
         <div class="avg float-lg-end">
-          <h2>나의 평점</h2>
+          <h2>나의 코멘트</h2>
           <form>
             <div class="rating mb-3">
               <div id="starContainer" @click="handleStarClick">
@@ -333,7 +336,12 @@ h1 {
   margin-bottom: 12px;
 }
 
-.pic {
+.pic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: linear-gradient(to right, transparent, black);
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
   margin-top: 0;
   padding: 0;
 }
@@ -349,7 +357,8 @@ h1 {
 .inform>b {
   color: #fff;
   font-size: 1rem;
-  background-color: #b3b3b3;
+  background-color: #363636;
+  border-radius: 0.2rem;
   padding: 0 0.25rem;
 }
 
@@ -374,7 +383,7 @@ h1 {
   outline: 0;
   appearance: none;
   margin-top: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .watch:hover {
@@ -388,7 +397,20 @@ h5 {
 }
 
 h5>img {
-  margin-right: 0.25rem;
+  margin-right: 0.4rem;
+}
+
+.movie {
+  display: flex;
+  align-items: center;
+}
+.plus>img{
+  margin-left: 1rem;
+  width: 1.25rem;
+}
+.starimg>img{
+  margin-left: 1.2rem;
+  height: 1.25rem;
 }
 
 .theme {
@@ -456,7 +478,6 @@ h4 {
 .more {
   color: #b3b3b3;
 }
-
 .more:hover {
   color: #ededed;
 }
@@ -500,6 +521,7 @@ h4 {
 /* 모달시작 */
 
 .moresee {
+  font-family: "Noto Sans KR", sans-serif;
   background-color: inherit;
   border: 0;
   color: #fff
@@ -601,7 +623,7 @@ h4 {
 }
 
 hr {
-  margin: 16px 0 16px 0;
+  margin: 12px 0 16px 0;
 }
 
 .mid-center {
