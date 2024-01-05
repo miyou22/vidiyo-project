@@ -110,6 +110,13 @@
               <p class="modal2-top">로그인을 시작하고 <br> 전체 콘텐츠를 감상해보세요!</p>
               <br>
               <p class="modal2-mid">지금은 미리보기만 감상할 수 있어요</p>
+              <router-link to="/login">
+                <button type="button" class="modal-login">로그인하기</button>
+              </router-link>
+              <button type="button" class="modal-seemore">미리보기</button>
+
+
+
 
             </div>
           </form>
@@ -711,5 +718,36 @@ hr {
   line-height: 20px;
   color: rgb(186, 186, 193);
   text-align: center;
+}
+
+.modal-login {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #da0037;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 7px;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.modal-seemore {
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #303133;
+  color: #fff;
+  width: 150px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 7px;
+  border: 0;
+  outline: 0;
+  appearance: none;
+  margin-top: 12px;
+  margin-bottom: 20px;
 }
 </style>
