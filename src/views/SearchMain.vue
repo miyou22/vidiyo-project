@@ -79,9 +79,9 @@
         }"
         class="mySwiper textSwiper"
       >
-        <swiper-slide class="s1 textSwiper" v-for="item in items" :key="item">
+        <swiper-slide class="s1 textSwiper" v-for="items in shuffledImages" :key="items">
           <div class="onlyImage">
-            <img :src="item.img" @click="$router.push('/detail')"/>
+            <img :src="items.img" @click="$router.push('/detail')"/>
         </div>
         </swiper-slide>
         <div class="swiper-button-prev prevArrow navi"></div>
@@ -113,17 +113,17 @@
           },
           '1200': {
             slidesPerView: 5,
-            spaceBetween: 40,
+            spaceBetween: 45,
             slidesPerGroup: 5,
           },
         }"
         class="mySwiper textSwiper"
       >
-        <swiper-slide v-for="cate in categori" :key="cate">
+        <swiper-slide v-for="categori in shuffledImages1" :key="categori">
           <div class="img-list">
-            <img :src="cate.img" class="ct-image r1" />
+            <img :src="categori.img" class="ct-image r1" />
             <div class="text-box">
-              <p class="ct-text">{{cate.p}}</p>
+              <p class="ct-text">{{categori.p}}</p>
             </div>
           </div>
         </swiper-slide>
@@ -156,17 +156,17 @@
           },
           '1200': {
             slidesPerView: 5,
-            spaceBetween: 40,
+            spaceBetween: 45,
             slidesPerGroup: 5,
           },
         }"
         class="mySwiper textSwiper"
       >
-        <swiper-slide v-for="cate2 in categori2" :key="cate2">
+        <swiper-slide v-for="categori2 in shuffledImages2" :key="categori2">
           <div class="img-list">
-            <img :src="cate2.img" class="ct-image r1" />
+            <img :src="categori2.img" class="ct-image r1" />
             <div class="text-box">
-              <p class="ct-text">{{cate2.p}}</p>
+              <p class="ct-text">{{categori2.p}}</p>
             </div>
           </div>
         </swiper-slide>
@@ -186,107 +186,34 @@
         :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
-        :navigation="true"
+        :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
         :loop="true"
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 14,
+            spaceBetween: 40,
             slidesPerGroup: 4,
           },
           '1200': {
             slidesPerView: 5,
-            spaceBetween: 14,
+            spaceBetween: 40,
             slidesPerGroup: 5,
           },
         }"
-        class="mySwiper"
+        class="mySwiper textSwiper"
       >
-        <swiper-slide>
+      <swiper-slide v-for="categori3 in shuffledImages3" :key="categori3">
           <div class="img-list">
-            <img src="../assets/image/search_korea.png" class="ct-image r5" />
+            <img :src="categori3.img" class="ct-image r1" />
             <div class="text-box">
-              <p class="ct-text">한국</p>
+              <p class="ct-text">{{categori3.p}}</p>
             </div>
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_usa.png" class="ct-image r8" />
-            <div class="text-box">
-              <p class="ct-text">미국</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_taguk.png" class="ct-image r4" />
-            <div class="text-box">
-              <p class="ct-text">태국</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_japan.png" class="ct-image r1" />
-            <div class="text-box">
-              <p class="ct-text">일본</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_china.png" class="ct-image r10" />
-            <div class="text-box">
-              <p class="ct-text">중국</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_uk.png" class="ct-image r6" />
-            <div class="text-box">
-              <p class="ct-text">영국</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_indo.png" class="ct-image r7" />
-            <div class="text-box">
-              <p class="ct-text">인도</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img
-              src="../assets/image/search_hongkong.png"
-              class="ct-image r2"
-            />
-            <div class="text-box">
-              <p class="ct-text">홍콩</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_mongol.png" class="ct-image r9" />
-            <div class="text-box">
-              <p class="ct-text">몽골</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_romance.png" class="ct-image r2" />
-            <div class="text-box">
-              <p class="ct-text">아프리카</p>
-            </div>
-          </div>
-        </swiper-slide>
+        <div class="swiper-button-prev prevArrow navi"></div>
+      <div class="swiper-button-next nextArrow navi"></div>
       </swiper>
     </div>
 
@@ -301,107 +228,34 @@
         :slidesPerGroup="2"
         :centeredSlides="false"
         :spaceBetween="14"
-        :navigation="true"
+        :navigation="{ nextEl: '.nextArrow', prevEl: '.prevArrow' }"
         :loop="true"
         :modules="modules"
         :autoHeight="true"
         :breakpoints="{
           '1024': {
             slidesPerView: 4,
-            spaceBetween: 14,
+            spaceBetween: 40,
             slidesPerGroup: 4,
           },
           '1200': {
             slidesPerView: 5,
-            spaceBetween: 14,
+            spaceBetween: 45,
             slidesPerGroup: 5,
           },
         }"
-        class="mySwiper"
+        class="mySwiper textSwiper"
       >
-        <swiper-slide>
+      <swiper-slide v-for="images in shuffledImages4" :key="images">
           <div class="img-list">
-            <img src="../assets/image/search_slil.png" class="ct-image r4" />
+            <img :src="images.img" class="ct-image r1" />
             <div class="text-box">
-              <p class="ct-text">스릴러</p>
+              <p class="ct-text">{{images.p}}</p>
             </div>
           </div>
         </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_life.png" class="ct-image r1" />
-            <div class="text-box">
-              <p class="ct-text">생존, 재난</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_fanta.png" class="ct-image r3" />
-            <div class="text-box">
-              <p class="ct-text">판타지</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_lovely.png" class="ct-image r1" />
-            <div class="text-box">
-              <p class="ct-text">귀여운, 사랑스러운</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img
-              src="../assets/image/search_romance.png"
-              class="ct-image r10"
-            />
-            <div class="text-box">
-              <p class="ct-text">로맨스</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_uk.png" class="ct-image r6" />
-            <div class="text-box">
-              <p class="ct-text">영국</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_indo.png" class="ct-image r7" />
-            <div class="text-box">
-              <p class="ct-text">인도</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_japan.png" class="ct-image r3" />
-            <div class="text-box">
-              <p class="ct-text">일본</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_mongol.png" class="ct-image r5" />
-            <div class="text-box">
-              <p class="ct-text">몽골</p>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img-list">
-            <img src="../assets/image/search_murder.png" class="ct-image r4" />
-            <div class="text-box">
-              <p class="ct-text">살인, 복수</p>
-            </div>
-          </div>
-        </swiper-slide>
+        <div class="swiper-button-prev prevArrow navi"></div>
+      <div class="swiper-button-next nextArrow navi"></div>
       </swiper>
     </div>
   </div>
@@ -548,9 +402,236 @@ export default {
           img:require('../assets/image/s_murder.png'),
           p:'살인, 복수'
         },
+      ],
+      categori3:[
+        {
+          img: require('../assets/image/s_korea.png'),
+          p:'한국'
+        },
+        {
+          img: require('../assets/image/s_usa.png'),
+          p:'미국'
+        },
+        {
+          img: require('../assets/image/s_taguk.png'),
+          p:'태국'
+        },
+        {
+          img: require('../assets/image/s_japan.png'),
+          p:'일본'
+        },
+        {
+          img: require('../assets/image/s_china.png'),
+          p:'중국'
+        },
+        {
+          img: require('../assets/image/s_uk.png'),
+          p:'영국'
+        },
+        {
+          img: require('../assets/image/s_indo.png'),
+          p:'인도'
+        },
+        {
+          img: require('../assets/image/s_germ.png'),
+          p:'독일'
+        },
+        {
+          img: require('../assets/image/s_mongol.png'),
+          p:'몽골'
+        },
+        {
+          img: require('../assets/image/s_africa.png'),
+          p:'아프리카'
+        },
+      ],
+      images:[
+      {
+          img:require('../assets/image/s_music.png'),
+          p:'음악, 예능'
+        },
+        {
+          img:require('../assets/image/s_lovely.png'),
+          p:'귀여운, 사랑스러운'
+        },
+        {
+          img:require('../assets/image/s_family.png'),
+          p:'가족, 힐링'
+        },
+        {
+          img:require('../assets/image/s_fun.png'),
+          p:'웃긴, 연인'
+        },
+        {
+          img:require('../assets/image/s_hero.png'),
+          p:'슈퍼히어로'
+        },
+        {
+          img:require('../assets/image/s_life.png'),
+          p:'생존, 재난'
+        },
+        {
+          img:require('../assets/image/s_smart.png'),
+          p:'재능, 천재'
+        },
+        {
+          img:require('../assets/image/s_sf.png'),
+          p:'SF'
+        },
+        {
+          img:require('../assets/image/s_war.png'),
+          p:'전쟁'
+        },
+        {
+          img:require('../assets/image/s_murder.png'),
+          p:'살인, 복수'
+        },
+      {
+          img: require('../assets/image/s_comedy.png'),
+          p:'코미디'
+        },
+        {
+          img: require('../assets/image/s_sidae.png'),
+          p:'시대극'
+        },
+        {
+          img: require('../assets/image/s_churi.png'),
+          p:'추리'
+        },
+        {
+          img: require('../assets/image/s_family.png'),
+          p:'가족, 힐링'
+        },
+        {
+          img: require('../assets/image/s_beom.png'),
+          p:'범죄'
+        },
+        {
+          img: require('../assets/image/s_horor.png'),
+          p:'공포'
+        },
+        {
+          img: require('../assets/image/s_korea.png'),
+          p:'한국영화'
+        },
+        {
+          img: require('../assets/image/s_slil.png'),
+          p:'스릴러'
+        },
+        {
+          img: require('../assets/image/s_romance.png'),
+          p:'로맨스'
+        },
+        {
+          img: require('../assets/image/s_fanta.png'),
+          p:'판타지'
+        },
+      {
+          img: require('../assets/image/s_korea.png'),
+          p:'한국'
+        },
+        {
+          img: require('../assets/image/s_usa.png'),
+          p:'미국'
+        },
+        {
+          img: require('../assets/image/s_taguk.png'),
+          p:'태국'
+        },
+        {
+          img: require('../assets/image/s_japan.png'),
+          p:'일본'
+        },
+        {
+          img: require('../assets/image/s_china.png'),
+          p:'중국'
+        },
+        {
+          img: require('../assets/image/s_uk.png'),
+          p:'영국'
+        },
+        {
+          img: require('../assets/image/s_indo.png'),
+          p:'인도'
+        },
+        {
+          img: require('../assets/image/s_germ.png'),
+          p:'독일'
+        },
+        {
+          img: require('../assets/image/s_mongol.png'),
+          p:'몽골'
+        },
+        {
+          img: require('../assets/image/s_africa.png'),
+          p:'아프리카'
+        },
       ]
     }
-  }
+  },
+  computed: {
+    shuffledImages() {
+      // Copy the original images array to avoid modifying it directly
+      const imagesCopy = [...this.items];
+      
+      // Shuffle the copied array
+      for (let i = imagesCopy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagesCopy[i], imagesCopy[j]] = [imagesCopy[j], imagesCopy[i]];
+      }
+      
+      return imagesCopy;
+    },
+    shuffledImages1() {
+      // Copy the original images array to avoid modifying it directly
+      const imagesCopy1 = [...this.categori];
+      
+      // Shuffle the copied array
+      for (let i = imagesCopy1.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagesCopy1[i], imagesCopy1[j]] = [imagesCopy1[j], imagesCopy1[i]];
+      }
+      
+      return imagesCopy1;
+    },
+    shuffledImages2() {
+      // Copy the original images array to avoid modifying it directly
+      const imagesCopy2 = [...this.categori2];
+
+      // Shuffle the copied array
+      for (let i = imagesCopy2.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagesCopy2[i], imagesCopy2[j]] = [imagesCopy2[j], imagesCopy2[i]];
+      }
+      
+      return imagesCopy2;
+    },
+    shuffledImages3() {
+      // Copy the original images array to avoid modifying it directly
+      const imagesCopy3 = [...this.categori3];
+      
+      // Shuffle the copied array
+      for (let i = imagesCopy3.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagesCopy3[i], imagesCopy3[j]] = [imagesCopy3[j], imagesCopy3[i]];
+      }
+      
+      return imagesCopy3;
+    },
+    shuffledImages4() {
+      // Copy the original images array to avoid modifying it directly
+      const imagesCopy = [...this.images];
+  
+      // Shuffle the copied array
+      for (let i = imagesCopy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [imagesCopy[i], imagesCopy[j]] = [imagesCopy[j], imagesCopy[i]];
+      }
+  
+      return imagesCopy;
+    },
+  },
+
 };
 </script>
 
@@ -687,36 +768,7 @@ export default {
   border-radius: 4px;
 }
 
-.r1 {
-  background: rgb(21, 95, 83);
-}
-.r2 {
-  background: rgb(85, 40, 209);
-}
-.r3 {
-  background: rgb(68, 110, 103);
-}
-.r4 {
-  background: rgb(141, 30, 30);
-}
-.r5 {
-  background: rgb(5, 49, 42);
-}
-.r6 {
-  background: rgb(39, 85, 99);
-}
-.r7 {
-  background: rgb(78, 77, 16);
-}
-.r8 {
-  background: rgb(0, 108, 158);
-}
-.r9 {
-  background: rgb(114, 7, 109);
-}
-.r10 {
-  background: rgb(124, 111, 51);
-}
+
 
 .play {
   width: 30px;
@@ -773,5 +825,8 @@ export default {
   cursor: pointer;
   display: flex;
   justify-content: space-between;
+}
+.ct-image{
+  width: 100%;
 }
 </style>
