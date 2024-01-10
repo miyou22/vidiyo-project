@@ -794,13 +794,13 @@ export default {
 
 .prevArrow {
   position: absolute;
-  left: -40px;
+  left: -35px;
   display: block;
   color: red;
 }
 .nextArrow {
   position: absolute;
-  right: -40px;
+  right: -35px;
   display: block;
   color: red;
 }
