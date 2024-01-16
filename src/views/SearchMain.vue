@@ -776,20 +776,21 @@ export default {
   position: absolute;
   left: 20%;
   top: 30%;
-  display: none;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
 .img {
   position: relative;
 }
 .c1:hover .play {
-  display: block;
+  opacity: 1;
 }
 .c2:hover .play {
-  display: block;
+  opacity: 1;
 }
 .c3:hover .play {
-  display: block;
+  opacity: 1;
 }
 
 .prevArrow {
@@ -829,4 +830,10 @@ export default {
 .ct-image{
   width: 100%;
 }
+.img-list,.onlyImage{
+  cursor: pointer;
+  opacity: 0.9;
+}
+.img-list:hover,.onlyImage:hover
+{opacity: 1;}
 </style>
