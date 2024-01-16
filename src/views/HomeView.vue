@@ -9,9 +9,9 @@
     <div class="movieTitle">
       <div class="movieImage">
         <div class="image"></div>
-        <!-- <div class="video">
-            <video src="../assets/image/leave.mp4" autoplay loop muted height="520" id="video10"></video>
-        </div> -->
+        <div class="video">
+            <video src="../assets/image/leave.mp4" autoplay loop muted id="video10"></video>
+        </div>
       </div>
       <div class="movieText">
         <div class="bgi"></div>
@@ -411,10 +411,13 @@ hr{
   top: 0;
   width: 100%;
   display: none;
+  aspect-ratio: 16 / 5;
+
 }
 
 video{
   width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .movieImage{
