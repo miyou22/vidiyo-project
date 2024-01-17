@@ -11,11 +11,19 @@ import AppProfile from '../views/AppProfile.vue'
 import ActorDetail from '../views/ActorDetail.vue'
 import CustomerView from '../views/CustomerView.vue'
 import MovieDetail from '../views/MovieDetail.vue'
-import QustList from '../views/QustList.vue'
+import AccountManagement from '../views/AccountManagement.vue'
 import QusttList from '../views/QusttList.vue'
 import RegisterInquiry from '../views/RegisterInquiry.vue'
-import CustomerAnswer from '../views/CustomerAnswer.vue'
+import CustomerAnswer01 from '../views/CustomerAnswer01.vue'
 import InquiryList from '../views/InquiryList.vue'
+import UsageInquiries from '../views/UsageInquiries.vue'
+import Contents from '../views/Contents.vue'
+import DiscontinueLicense from '../views/DiscontinueLicense.vue'
+import PaymentLicense from '../views/PaymentLicense.vue'
+import CouPon from '../views/CouPon.vue'
+import ReFund from '../views/ReFund.vue'
+import ReplayError from '../views/ReplayError.vue'
+
 
 const routes = [
   {
@@ -80,9 +88,9 @@ const routes = [
     component: MovieDetail
   },
   {
-    path: '/customorlist',
-    name: 'customorlist',
-    component: QustList
+    path: '/accountm',
+    name: 'accountm',
+    component: AccountManagement
   },
   {
     path: '/customerand',
@@ -97,12 +105,47 @@ const routes = [
   {
     path: '/answer',
     name: 'answer',
-    component: CustomerAnswer
+    component: CustomerAnswer01
   },
   {
     path: '/inlist',
     name: 'inlist',
     component: InquiryList
+  },
+  {
+    path: '/usagei',
+    name: 'usagei',
+    component: UsageInquiries
+  },
+  {
+    path: '/contents',
+    name: 'contents',
+    component: Contents
+  },
+  {
+    path: '/discontinue',
+    name: 'discontinue',
+    component: DiscontinueLicense
+  },
+  {
+    path: '/paymentl',
+    name: 'paymentl',
+    component: PaymentLicense
+  },
+  {
+    path: '/coupona',
+    name: 'coupona',
+    component: CouPon
+  },
+  {
+    path: '/refunda',
+    name: 'refunda',
+    component: ReFund
+  },
+  {
+    path: '/replayue',
+    name: 'replayue',
+    component: ReplayError
   },
 ]
 

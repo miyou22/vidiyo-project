@@ -103,6 +103,9 @@ export default {
   max-width: 780px;
   margin: auto;
   text-align: start;
+  padding-left: 20px; 
+  padding-right: 20px; 
+  overflow-y: hidden;
 }
 
 h1 {

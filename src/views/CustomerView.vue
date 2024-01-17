@@ -16,7 +16,7 @@
           <ul class="grid">
             <ul v-for="(items, category) in categories" :key="category" :class="[category === 'form_a' || category === 'form_b' ? 'form' : '']">
               <li v-for="item in items" :key="item">
-                <button class="button" @click="$router.push(getRoute(item))">{{ item }}</button>
+                <button class="button" @click="redirectToCustomerList(item)">{{ item }}</button>
               </li>
             </ul>
           </ul>
@@ -56,9 +56,29 @@ export default {
     redirectToCustomerList(item) {
       switch (item) {
         case '계정관리':
-          this.$router.push('/customorlist');
+          this.$router.push('/accountm');
           break;
-        // 다른 버튼에 대한 처리도 추가
+        case '사용문의':
+          this.$router.push('/usagei');
+          break;
+        case '콘텐츠':
+          this.$router.push('/contents');
+          break;
+        case '이용권 구독 해지':
+          this.$router.push('/discontinue');
+          break;
+        case '결제 및 이용권':
+          this.$router.push('/paymentl');
+          break;
+        case '쿠폰':
+          this.$router.push('/coupona');
+          break;
+        case '환불':
+          this.$router.push('/refunda');
+          break;
+        case '재생 및 사용 오류':
+          this.$router.push('/replayue');
+          break;
         default:
           break;
       }
