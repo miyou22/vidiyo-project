@@ -111,7 +111,6 @@ export default {
 
 .box_a {
   max-width: 48.75rem;
-  /* height: 910px; */
   margin: auto;
   
 }
@@ -124,8 +123,8 @@ input {
   float: Left;
 }
 
-input:focus {outline: 2px solid #d50000;} /* outline 테두리 속성 수정 */
-input:focus {outline: none;} /* outline 테두리 없애기 */
+input:focus {outline: 2px solid #d50000;} 
+input:focus {outline: none;} 
 
 .gnb h1 {
   text-align: start;
@@ -196,7 +195,7 @@ ul {
 
 .form_a,
 .form_b {
-  margin:  20px; /* 양쪽 여유 너비 설정 */
+  margin:  30px; /* 양쪽 여유 너비 설정 */
 }
 
 
