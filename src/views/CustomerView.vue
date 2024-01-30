@@ -8,9 +8,9 @@
           <div class="icon">
             <img src="../assets/image/search2.jpg" @click="$router.push('/customerand')">
           </div>
-           <input class="search-bar__input" type="search" placeholder="검색" v-model="searchQuery">
+          <input class="search-bar__input" type="search" placeholder="검색" v-model="searchQuery">
           <!-- 검색 결과를 표시할 컴포넌트 추가 -->
-          <search-results :searchQuery="searchQuery" @selectResult="redirectToCustomerList" />
+          <search-results :searchQuery="searchQuery" />
         </div>
       </div>
       <div class="info">
@@ -39,13 +39,13 @@
 
 
 <script>
+import SearchResults from "../views/SearchResults.vue";
 import CustomerHeader from "../components/CustomerHeader.vue";
 import CustomerFooter from "../components/CustomerFooter.vue";
 
 export default {
   name: "HelloWorld",
-  components: { CustomerHeader, CustomerFooter },
-  props: { msg: String },
+  components: { CustomerHeader, CustomerFooter, SearchResults },
   data() {
     return {
       searchQuery: "",
@@ -159,6 +159,26 @@ h2 {
 
 .search-bar__input {
   background-color: transparent;
+}
+
+.search-results {
+  margin-top: 10px;
+}
+
+.search-results ul {
+  list-style: none;
+  padding: 0;
+}
+
+.search-results li {
+  font-size: 18px;
+  color: #555; /* 회색 글씨 */
+  margin-bottom: 8px;
+}
+
+.search-results hr {
+  border: 1px solid #ddd; /* 회색 선 */
+  margin: 10px 0;
 }
 
 .icon {

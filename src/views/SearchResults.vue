@@ -1,43 +1,35 @@
 <template>
-  <div class="search-results">
-    <ul>
-      <li v-for="result in filteredResults" :key="result.id" @click="selectResult(result.title)">
-        {{ result.title }}
-      </li>
+  <div>
+    <ul v-if="searchResults.length > 0">
+      <li v-for="result in searchResults" :key="result.id">{{ result.title }}</li>
     </ul>
   </div>
 </template>
 
 <script>
 export default {
-  props: ['searchQuery'],
+  props: {
+    searchQuery: String,
+  },
   data() {
     return {
-      searchResults: [
-        { id: 1, title: '계정관리' },
-        { id: 2, title: '사용문의' },
-        { id: 3, title: '콘텐츠' },
-        // ... (기타 검색 결과)
-      ],
+      searchResults: [],
     };
   },
-  computed: {
-    filteredResults() {
-      // 검색어가 비어있으면 전체 결과 반환
-      if (!this.searchQuery) {
-        return this.searchResults;
-      }
-
-      // 검색어가 있는 경우 검색어와 일치하는 결과만 반환
-      return this.searchResults.filter(result =>
-        result.title.toLowerCase().includes(this.searchQuery.toLowerCase())
-      );
-    },
+  watch: {
+    searchQuery: 'getSearchResults',
   },
   methods: {
-    selectResult(resultTitle) {
-      // 선택된 결과를 부모 컴포넌트에 알림
-      this.$emit('selectResult', resultTitle);
+    getSearchResults() {
+      // 여기에서 실제 API 호출을 수행하고 검색 결과를 업데이트합니다.
+      // 이 예제에서는 간단히 하드코딩된 결과를 사용합니다.
+      // 실제로는 백엔드에서 데이터를 받아오는 비동기 작업이 필요합니다.
+      // 여기서는 입력된 검색어와 관련된 결과를 하드코딩된 형태로 표시합니다.
+      this.searchResults = [
+        { id: 1, title: `${this.searchQuery}에 대한 검색 결과 ` },
+        { id: 2, title: `${this.searchQuery}에 대한 검색 결과 ` },
+        { id: 3, title: `${this.searchQuery}에 대한 검색 결과` },
+      ];
     },
   },
 };

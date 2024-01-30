@@ -100,8 +100,9 @@ export default {
   left: 0;
   top: 0;
   z-index: 9999;
-   width: 100%;
+  width: 100%;
   height: 100%;
+  overflow: auto;
   background-color: #f5f5f5;
 }
 
