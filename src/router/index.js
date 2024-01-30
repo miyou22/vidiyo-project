@@ -23,6 +23,7 @@ import PaymentLicense from '../views/PaymentLicense.vue'
 import CouPon from '../views/CouPon.vue'
 import ReFund from '../views/ReFund.vue'
 import ReplayError from '../views/ReplayError.vue'
+import SearchResults from '../views/SearchResults.vue'
 
 
 const routes = [
@@ -147,6 +148,11 @@ const routes = [
     name: 'replayue',
     component: ReplayError
   },
+  {
+    path: '/searchresult',
+    name: 'searchresult',
+    component: SearchResults
+  }
 ]
 
 const router = createRouter({

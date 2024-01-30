@@ -8,7 +8,9 @@
           <div class="icon">
             <img src="../assets/image/search2.jpg" @click="$router.push('/customerand')">
           </div>
-          <input class="search-bar__input" type="search" placeholder="검색">
+           <input class="search-bar__input" type="search" placeholder="검색" v-model="searchQuery">
+          <!-- 검색 결과를 표시할 컴포넌트 추가 -->
+          <search-results :searchQuery="searchQuery" @selectResult="redirectToCustomerList" />
         </div>
       </div>
       <div class="info">
@@ -46,6 +48,7 @@ export default {
   props: { msg: String },
   data() {
     return {
+      searchQuery: "",
       categories: {
         form_a: ['계정관리', '사용문의', '콘텐츠', '이용권 구독 해지'],
         form_b: ['결제 및 이용권', '쿠폰', '환불', '재생 및 사용 오류'],
@@ -81,7 +84,8 @@ export default {
           break;
         default:
           break;
-      }
+      }// 실제로는 검색 결과에 대한 라우팅 로직을 구현해야 함
+      console.log("Redirect to", item);
     },
   },
 };
@@ -192,6 +196,7 @@ ul {
   border-bottom: 1px solid #C1A2A2;
   padding-bottom: 0.75rem;
 }
+
 
 .form_a,
 .form_b {
