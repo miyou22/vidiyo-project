@@ -114,9 +114,13 @@ export default {
 }
 
 .box_a {
-  max-width: 48.75rem;
+  max-width: 51rem;
   margin: auto;
   
+}
+
+.box {
+  padding-top: 20px;
 }
 
 input {
@@ -132,9 +136,8 @@ input:focus {outline: none;}
 
 .gnb h1 {
   text-align: start;
-  width: 32.875rem;
-  margin-left: 7.875rem;
-  padding: 60px 0 12px 0;
+  width: 51rem;
+  padding: 60px 0 12px 140px;
   font-family: "Noto Sans KR";
   font-weight: bold;
   font-size: 32px;
@@ -218,20 +221,14 @@ ul {
 }
 
 
-.form_a,
-.form_b {
-  margin:  30px; /* 양쪽 여유 너비 설정 */
-}
-
-
 button {
   font-family: 'Roboto', sans-serif;
-  background-color: #fff;
+  background-color: #f5f5f5;
   width: 380px;
   height: 68px;
-  box-shadow: 5px 5px 15px rgb(209, 209, 209);
+  box-shadow: 5px 5px 20px rgb(209, 209, 209);
   border-radius: 5px;
-  margin: 10px 0;
+  margin: 14px 0;
   font-size: 24px;
 }
 

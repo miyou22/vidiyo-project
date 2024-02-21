@@ -57,7 +57,6 @@
         </p>
         <p><a href="#">인증 메일이 오지 않아요.</a></p>
         <div class="step">
-          <p><a href="#">문서 10개 더보기</a></p>
         </div>
       </div>
     </div>
